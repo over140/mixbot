@@ -25,6 +25,6 @@
   },
   "store": {
     "title": "Mixin Messenger Bots",
-    "button.open": "OPEN"
+    "button.view": "View"
   }
 }

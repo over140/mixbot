@@ -11,3 +11,28 @@ $color-side-bid: #00B56E;
 $color-side-bid-light: #127B57;
 $color-side-ask: #E55541;
 $color-side-ask-light: #824243;
+
+.tabs {
+    background: $color-main-background;
+    display: flex;
+    font-size: 14px;
+    line-height: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 48px;
+}
+  
+.tab {
+    flex: 1;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    color: $color-main-foreground-light;
+
+    &.active {
+        border-bottom: 2px solid $color-main-highlight;
+    }
+}

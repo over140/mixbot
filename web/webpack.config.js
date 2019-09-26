@@ -12,7 +12,7 @@ const extractSass = new ExtractTextPlugin({
 
 const webRoot = function (env) {
   if (env === 'production') {
-    return 'https://bot.mixcoin.one';
+    return 'http://mixbot.e32qg.com';
   } else {
     return 'http://bots.mixin.local';
   }

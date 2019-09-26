@@ -43,8 +43,10 @@ OfflinePlugin.install({
 });
 
 router.on({
+  '/': function () {
+    new Store(router).render();
+  },
   '/bots': function () {
-    document.title = window.i18n.t('store.title');
     new Store(router).render();
   }
 }).notFound(function () {
