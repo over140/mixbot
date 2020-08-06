@@ -29,7 +29,7 @@
 
       &:first-child {
         text-align: center;
-        padding: 10px 0px 10px 12px;
+        padding: 10px 8px 10px 20px;
       }
 
       img {
@@ -38,6 +38,7 @@
       }
 
       &:last-child {
+        font-weight: 500;
         padding: 10px 20px 10px 8px;
       }
 
@@ -57,6 +58,7 @@
 
       .description {
         font-size: 14px;
+        font-weight: 400;
         color: #9B9B9B;
       }
     }

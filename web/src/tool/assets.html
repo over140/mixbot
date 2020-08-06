@@ -3,18 +3,21 @@
     {{#each assets}}
       <tr class="asset item">
         <td>
-          <img class="asset-icon" src="{{this.asset_icon_url}}" />
-          <img class="chain-icon" src="{{this.chain_icon_url}}" />
+          <img class="asset-icon" src="{{asset_icon_url}}" />
+          <img class="chain-icon" src="{{chain_icon_url}}" />
         </td>
         <td>
-          <span>{{this.amount}} {{this.symbol}}</span><br />
-          <span class="description">≈ ${{this.capitalization}}</span>
+          <span>{{amount}} {{symbol}}</span><br />
+          <span class="description">≈ ${{capitalization}}</span>
         </td>
         <td>
-          <span class="change {{#if this.change_usd_red}}red{{/if}}">{{this.change_usd}}%</span><br />
-          <span class="description">${{this.price_usd}}</span>
+          <span class="change {{#if change_usd_red}}red{{/if}}">{{change_usd}}%</span><br />
+          <span class="description">${{price_usd}}</span>
         </td>
       </tr>
     {{/each}}
   </tbody>
 </table>
+<div class="total capitalization">
+  全网排名前 100 资产除 BOX 和 XIN 总市值 {{totalCapitalization}} 美元
+</div>

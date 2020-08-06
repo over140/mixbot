@@ -53,7 +53,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/dLK5T9I4YFA094o6nn-qZ_TWLUtIrL0xtjxOyURaLoPcl94m0JKQhXQiOrC775LS9d8apDfLXVfbpDzGmWDf0CWJ=s128",
     "name": "Litecoin",
     "symbol": "LTC",
-    "average_block_time": 200
+    "average_block_time": 150
   },
   {
     "chain_id": "25dabac5-056a-48ff-b9f9-f67395dc407c",

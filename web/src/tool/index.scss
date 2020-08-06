@@ -16,7 +16,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 40px;
+    height: 44px;
     background-color: #ffffff;
 
     &:after {
@@ -27,8 +27,9 @@
 
     .tab {
       background-color: #ffffff;
-      padding-top: 6px;
+      padding-top: 4px;
       float: left;
+      font-size: 16px;
 
       &.active {
         border-bottom: 2px solid $color-main-highlight;
@@ -38,7 +39,7 @@
 
   .tools.list {
     padding: 0px;
-    margin-top: 40px;
+    margin-top: 44px;
   }
 
   .spinner-container {

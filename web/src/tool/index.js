@@ -142,10 +142,14 @@ Tool.prototype = {
         }
   
         // Top 100 assets
+        var totalCapitalization = new BigNumber(0);
         var topAssets = resp.data
         var assetMap = {};
         topAssets.forEach(function(asset) {
           assetMap[asset.asset_id] = asset;
+          if (asset.asset_id != "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c" && asset.asset_id != "c94ac88f-4671-3976-b60a-09064f1811e8") {
+            totalCapitalization = totalCapitalization.plus(asset.capitalization); 
+          }
         });
         
         for (var i = 0; i < assets.length; i++) {
@@ -173,7 +177,8 @@ Tool.prototype = {
           }
         }
         $('#tools-content').html(self.templateAssets({
-          assets: assets
+          assets: assets,
+          totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
         }));
       });
     });

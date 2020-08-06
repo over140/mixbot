@@ -2,6 +2,16 @@
 
 .tool.layout {
 
+  .total.capitalization {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+  }
+
   .assets.list {
     width: 100%;
     border-collapse: collapse;
@@ -17,10 +27,6 @@
 
     tr {
       border-bottom: 1px solid rgba(0,0,0,0.03);
-
-      &:last-child {
-        border-bottom: none;
-      }
     }
 
     td {
@@ -53,6 +59,7 @@
 
       &:nth-child(2) {
         padding: 16px 0 16px 4px;
+        font-weight: 500;
       }
 
       &:last-child {
@@ -75,6 +82,7 @@
 
       .description {
         font-size: 14px;
+        font-weight: 400;
         color: #9B9B9B;
       }
     }
