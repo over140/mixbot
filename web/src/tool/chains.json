@@ -21,7 +21,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/a5dtG-IAg2IO0Zm4HxqJoQjfz-5nf1HWZ0teCyOnReMd3pmB8oEdSAXWvFHt2AJkJj5YgfyceTACjGmXnI-VyRo=s128",
     "name": "EOS",
     "symbol": "EOS",
-    "average_block_time": 2
+    "average_block_time": 1
   },
   {
     "chain_id": "fd11b6e3-0b87-41f1-a41f-f0e9b49e5bf0",
@@ -84,7 +84,8 @@
     "asset_id": "17f78d7c-ed96-40ff-980c-5dc62fecbc85",
     "icon_url": "https://mixin-images.zeromesh.net/HCjLu6VM0XA7ouRcZJGDTOzE7zoXaA8LgESw075VW5teZ27AGUgyGrc4jnzuK5LtgT5HJQDSNSOImnU3IcUsBLoF=s128",
     "name": "Binance",
-    "symbol": "BNB"
+    "symbol": "BNB",
+    "average_block_time": 1
   },
   {
     "chain_id": "05891083-63d2-4f3d-bfbe-d14d7fb9b25a",
@@ -115,7 +116,8 @@
     "asset_id": "7397e9f1-4e42-4dc8-8a3b-171daaadd436",
     "icon_url": "https://mixin-images.zeromesh.net/t-HH_7zAE5Y7OG9WgC1muIeFWJee4WypzbdJ5FjakEIivRYnSz89CBR4twXH-K_wFFodURRhYulVY-PrOO35ZoQ=s128",
     "name": "Cosmos",
-    "symbol": "ATOM"
+    "symbol": "ATOM",
+    "average_block_time": 1
   },
   {
     "chain_id": "13036886-6b83-4ced-8d44-9f69151587bf",
@@ -130,7 +132,8 @@
     "asset_id": "27921032-f73e-434e-955f-43d55672ee31",
     "icon_url": "https://mixin-images.zeromesh.net/I9f9bWw457YiAGMxyrNtu4aCezzgnnIYuxnNBzkN3aGG32HeOzFl-nA4miBRnU-3qnNylyiDZqoS-JfzfstnuQ=s128",
     "name": "NEM",
-    "symbol": "XEM"
+    "symbol": "XEM",
+    "average_block_time": 60
   },
   {
     "chain_id": "c996abc9-d94e-4494-b1cf-2a3fd3ac5714",
