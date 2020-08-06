@@ -1,14 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
-
-const extractSass = new ExtractTextPlugin({
-    filename: "[name]-[hash].css"
-});
 
 const webRoot = function (env) {
   if (env === 'production') {
@@ -40,15 +36,17 @@ module.exports = {
     rules: [{
       test: /\.html$/, loader: "handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"
     }, {
-      test: /\.(scss|css)$/,
-      use: extractSass.extract({
-        use: [{
-          loader: "css-loader"
-        }, {
-          loader: "sass-loader"
-        }],
-        fallback: "style-loader"
-      })
+      test: /\.(sa|sc|c)ss$/,
+      use: [
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            hmr: process.env.NODE_ENV === 'development',
+          },
+        },
+        'css-loader',
+        'sass-loader',
+      ]
     }, {
       test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
       use: [
@@ -74,7 +72,10 @@ module.exports = {
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
     }),
-    extractSass
-    ,new OfflinePlugin()
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    }),
+    new OfflinePlugin()
   ]
 };

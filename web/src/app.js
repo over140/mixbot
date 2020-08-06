@@ -1,13 +1,15 @@
-import 'simple-line-icons/scss/simple-line-icons.scss';
 import './layout.scss';
 import $ from 'jquery';
 import Navigo from 'navigo';
 import Locale from './locale';
 import Store from './store';
+import Tool from './tool';
+import API from './api';
 
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
 const router = new Navigo(WEB_ROOT);
+const api = new API(router);
 const OfflinePlugin = require('offline-plugin/runtime');
 
 window.i18n = new Locale(navigator.language);
@@ -48,6 +50,9 @@ router.on({
   },
   '/bots': function () {
     new Store(router).render();
+  },
+  '/tools': function () {
+    new Tool(router, api, PartialLoading).render();
   }
 }).notFound(function () {
   $('#layout-container').html(Error404());
