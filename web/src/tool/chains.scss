@@ -1,0 +1,66 @@
+@import '../constant.scss';
+
+.tool.layout {
+
+  .chains.list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    tbody {
+      display: table-row-group;
+      vertical-align: top;
+    }
+
+    tr {
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      text-align: left;
+      line-height: 20px;
+
+      &:first-child {
+        text-align: center;
+        padding: 10px 0 10px 12px;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      &:last-child {
+        padding: 10px 20px 10px 8px;
+      }
+
+      .symbol {
+        font-size: 14px;
+      }
+
+      .green {
+        font-size: 14px;
+        color: #29BE73;
+      }
+
+      .red {
+        font-size: 14px;
+        color: #F67070;
+      }
+
+      .description {
+        font-size: 14px;
+        color: #9B9B9B;
+      }
+    }
+
+
+  }
+}

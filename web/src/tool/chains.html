@@ -1,0 +1,25 @@
+<table class="chains list">
+  <tbody>
+    {{#each chains}}
+      <tr class="chain item">
+        <td>
+          <img src="{{icon_url}}" /><br />
+          {{#if is_synchronized}}
+            <span class="green">正常</span><br />
+          {{else}}
+            <span class="red">异常</span><br />
+          {{/if}}
+        </td>
+        <td>
+          <span style="{{#if is_error}}color: #F67070;{{/if}}">{{name}}</span><br />
+          <span class="description">
+            区块高度：{{deposit_block_height}}（{{#if is_slow}}慢{{else}}快{{/if}} {{difference_block_height}} 个区块）<br/>
+            正在提现：{{withdrawal_pending_count}} 笔<br/>
+            充值确认数：{{threshold}} {{#if deposit_time}}（{{deposit_time}}）{{/if}}<br/>
+            提现手续费：{{withdrawal_fee}} {{symbol}}
+          </span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,50 @@
+@import '../constant.scss';
+
+.tool.layout {
+
+  .container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 8px 0;
+  }
+
+  .tabs {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .tab {
+      background-color: #ffffff;
+      padding-top: 6px;
+      float: left;
+
+      &.active {
+        border-bottom: 2px solid $color-main-highlight;
+      }
+    }
+  }
+
+  .tools.list {
+    padding: 0px;
+    margin-top: 40px;
+  }
+
+  .spinner-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+}

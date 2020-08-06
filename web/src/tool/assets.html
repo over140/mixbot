@@ -1,0 +1,20 @@
+<table class="assets list">
+  <tbody>
+    {{#each assets}}
+      <tr class="asset item">
+        <td>
+          <img class="asset-icon" src="{{this.asset_icon_url}}" />
+          <img class="chain-icon" src="{{this.chain_icon_url}}" />
+        </td>
+        <td>
+          <span>{{this.amount}} {{this.symbol}}</span><br />
+          <span class="description">≈ ${{this.capitalization}}</span>
+        </td>
+        <td>
+          <span class="change {{#if this.change_usd_red}}red{{/if}}">{{this.change_usd}}%</span><br />
+          <span class="description">${{this.price_usd}}</span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
