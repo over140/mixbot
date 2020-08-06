@@ -35,7 +35,7 @@ Tool.prototype = {
     $('body').attr('class', 'tool layout');
     $('#layout-container').html(self.templateTools());
 
-    self.renderChains();
+    self.renderAssets();
 
     $('.assets.tab').on('click', function (event) {
       self.renderAssets();
