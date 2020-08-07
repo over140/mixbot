@@ -133,6 +133,16 @@ Tool.prototype = {
     if (!boxCirculatingSupply) {
       boxCirculatingSupply = "24046809";
     }
+    self.api.requestBox('GET', '/funds', undefined, function(resp) {
+      if (resp.error || !resp.data || resp.data.length < 1) {
+        return; 
+      }
+      const circulatingSupply = resp.data[0].circulating_supply;
+      if (circulatingSupply) {
+        boxCirculatingSupply = circulatingSupply
+        window.localStorage.setItem('box_circulating_supply', circulatingSupply);
+      }
+    });
 
     self.api.request('GET', '/network', undefined, function(resp) {
       if (resp.error) {
@@ -210,26 +220,6 @@ Tool.prototype = {
           assets: assets,
           totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
         }));
-
-        if (boxAsset) {
-          self.api.requestBox('GET', '/funds', undefined, function(resp) {
-            if (resp.error || !resp.data || resp.data.length < 1) {
-              return; 
-            }
-            const circulatingSupply = resp.data[0].circulating_supply;
-            if (circulatingSupply) {
-              const amount = new BigNumber(circulatingSupply);
-              const priceUsd = new BigNumber(boxAsset.price_usd);
-              const capitalization = amount.multipliedBy(priceUsd);
-              const amountString = new BigNumber(amount.toFixed(0)).toFormat();
-              const capitalizationString = new BigNumber(capitalization.toFixed(2)).toFormat();
-              
-              $('#amount-' + boxAsset.asset_id).html(amountString + ' ' + boxAsset.symbol);
-              $('#capitalization-' + boxAsset.asset_id).html('≈ $' + capitalizationString);
-              window.localStorage.setItem('box_circulating_supply', circulatingSupply);
-            }
-          });
-        }
       });
     });
   }
