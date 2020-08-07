@@ -11,7 +11,7 @@
     "chain_id": "43d61dcd-e413-450d-80b8-101d5e903357",
     "asset_id": "43d61dcd-e413-450d-80b8-101d5e903357",
     "icon_url": "https://mixin-images.zeromesh.net/zVDjOxNTQvVsA8h2B4ZVxuHoCF3DJszufYKWpd9duXUSbSapoZadC7_13cnWBqg0EmwmRcKGbJaUpA8wFfpgZA=s128",
-    "name": "Ether",
+    "name": "Ethereum",
     "symbol": "ETH",
     "average_block_time": 15
   },
@@ -195,7 +195,7 @@
     "chain_id": "2204c1ee-0ea2-4add-bb9a-b3719cfff93a",
     "asset_id": "2204c1ee-0ea2-4add-bb9a-b3719cfff93a",
     "icon_url": "https://mixin-images.zeromesh.net/fM9wgyNyB3Uiopx2FRFxhr-sYrvXZtJ-uCpk975wGdpoehoA59rIU-BQ4s_6YFMDEthQ74KCPysOIWSFK4vUG_Y=s128",
-    "name": "Ether Classic",
+    "name": "Ethereum Classic",
     "symbol": "ETC",
     "average_block_time": 15
   },

@@ -129,6 +129,11 @@ Tool.prototype = {
     const self = this;
     $('#tools-content').html(self.loading());
 
+    var boxCirculatingSupply = window.localStorage.getItem('box_circulating_supply');
+    if (!boxCirculatingSupply) {
+      boxCirculatingSupply = "24046809";
+    }
+
     self.api.request('GET', '/network', undefined, function(resp) {
       if (resp.error) {
         return;
@@ -151,6 +156,12 @@ Tool.prototype = {
             totalCapitalization = totalCapitalization.plus(asset.capitalization); 
           }
         });
+
+        var boxAsset = assetMap["f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c"];
+        if (boxAsset) {
+          boxAsset.amount = boxCirculatingSupply;
+          assets = [boxAsset, ...assets];
+        }
         
         for (var i = 0; i < assets.length; i++) {
           var asset = assets[i];
@@ -180,6 +191,20 @@ Tool.prototype = {
           assets: assets,
           totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
         }));
+
+        if (boxAsset) {
+          self.api.requestBox('GET', '/funds', undefined, function(resp) {
+            if (resp.error || !resp.data || resp.data.length < 1) {
+              return; 
+            }
+            const circulatingSupply = resp.data[0].circulating_supply;
+            if (circulatingSupply) {
+              const amount = new BigNumber(new BigNumber(circulatingSupply).toFixed(0)).toFormat();
+              $('#' + boxAsset.asset_id).html(amount + ' ' + boxAsset.symbol);
+              window.localStorage.setItem('box_circulating_supply', circulatingSupply);
+            }
+          });
+        }
       });
     });
   }

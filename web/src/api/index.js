@@ -31,6 +31,28 @@ API.prototype = {
     });
   }, 
 
+  requestBox: function (method, path, params, callback) {
+    const self = this;
+    $.ajax({
+      type: method,
+      url: 'https://box-api.xue.cn' + path,
+      contentType: "application/json",
+      data: JSON.stringify(params),
+      success: function(resp) {
+        var consumed = false;
+        if (typeof callback === 'function') {
+          consumed = callback(resp);
+        }
+        if (!consumed && resp.error !== null && resp.error !== undefined) {
+          self.error(resp);
+        }
+      },
+      error: function(event) {
+        self.error(event.responseJSON, callback);
+      }
+    });
+  }, 
+
   error: function(resp, callback) {
     if (resp == null || resp == undefined || resp.error === null || resp.error === undefined) {
       resp = {error: { code: 0, description: 'unknown error' }};
