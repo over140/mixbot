@@ -169,17 +169,24 @@ Tool.prototype = {
           if (topAsset) {
             const priceUsd = new BigNumber(topAsset.price_usd);
             const changeUsd = new BigNumber(topAsset.change_usd);
+            const amount = new BigNumber(asset.amount);
+            var capitalization = new BigNumber(topAsset.capitalization);
+            if (asset.asset_id === "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c") {
+              capitalization = amount.multipliedBy(priceUsd);
+            }
+
             if (priceUsd.isGreaterThan(1)) {
               asset.price_usd = priceUsd.toFixed(2);  
             } else {
               asset.price_usd = priceUsd.toString();
             }
-            asset.amount = new BigNumber(new BigNumber(asset.amount).toFixed(0)).toFormat();
+            asset.amount = new BigNumber(amount.toFixed(0)).toFormat();
             asset.change_usd = changeUsd.multipliedBy(100).toFixed(2);
             if (changeUsd.isLessThan(0)) {
               asset.change_usd_red = true;
             }
-            asset.capitalization = new BigNumber(new BigNumber(topAsset.capitalization).toFixed(2)).toFormat();
+            asset.org_capitalization = capitalization.toString();
+            asset.capitalization = new BigNumber(capitalization.toFixed(2)).toFormat();
             asset.asset_icon_url = asset.icon_url;
             var chainAsset = self.chainMap[topAsset.chain_id];
             if (chainAsset) {
@@ -187,6 +194,18 @@ Tool.prototype = {
             }
           }
         }
+
+        assets.sort(function (a, b) {
+          const value = new BigNumber(a.org_capitalization).minus(b.org_capitalization)
+          if (value.isZero()) {
+            return 0;
+          } else if (value.isNegative()) {
+            return 1;
+          } else {
+            return -1;
+          }
+        });
+
         $('#tools-content').html(self.templateAssets({
           assets: assets,
           totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
@@ -199,8 +218,14 @@ Tool.prototype = {
             }
             const circulatingSupply = resp.data[0].circulating_supply;
             if (circulatingSupply) {
-              const amount = new BigNumber(new BigNumber(circulatingSupply).toFixed(0)).toFormat();
-              $('#' + boxAsset.asset_id).html(amount + ' ' + boxAsset.symbol);
+              const amount = new BigNumber(circulatingSupply);
+              const priceUsd = new BigNumber(boxAsset.price_usd);
+              const capitalization = amount.multipliedBy(priceUsd);
+              const amountString = new BigNumber(amount.toFixed(0)).toFormat();
+              const capitalizationString = new BigNumber(capitalization.toFixed(2)).toFormat();
+              
+              $('#amount-' + boxAsset.asset_id).html(amountString + ' ' + boxAsset.symbol);
+              $('#capitalization-' + boxAsset.asset_id).html('≈ $' + capitalizationString);
               window.localStorage.setItem('box_circulating_supply', circulatingSupply);
             }
           });

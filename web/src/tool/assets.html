@@ -7,8 +7,8 @@
           <img class="chain-icon" src="{{chain_icon_url}}" />
         </td>
         <td>
-          <span id="{{asset_id}}">{{amount}} {{symbol}}</span><br />
-          <span class="description">≈ ${{capitalization}}</span>
+          <span id="amount-{{asset_id}}">{{amount}} {{symbol}}</span><br />
+          <span id="capitalization-{{asset_id}}" class="description">≈ ${{capitalization}}</span>
         </td>
         <td>
           <span class="change {{#if change_usd_red}}red{{/if}}">{{change_usd}}%</span><br />
