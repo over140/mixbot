@@ -196,7 +196,7 @@ Tool.prototype = {
               asset.change_usd_red = true;
             }
             asset.org_capitalization = capitalization.toString();
-            asset.capitalization = new BigNumber(capitalization.toFixed(2)).toFormat();
+            asset.capitalization = new BigNumber(capitalization.toFixed(0)).toFormat();
             asset.asset_icon_url = asset.icon_url;
             var chainAsset = self.chainMap[topAsset.chain_id];
             if (chainAsset) {
