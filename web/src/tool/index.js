@@ -85,12 +85,34 @@ Tool.prototype = {
     const self = this;
     var network = self.getNetwork();
 
-    $('#tools-content').html(self.templateStats({
-      snapshots_count: new BigNumber(network.snapshots_count).toFormat(),
-      assets_count: new BigNumber(network.assets_count).toFormat(),
-      peak_throughput: network.peak_throughput
-    }));
-    //https://api.blockchair.com/mixin/stats
+    self.fetchStats(function(stats) {
+      $('#tools-content').html(self.templateStats({
+        snapshots_count: new BigNumber(network.snapshots_count).toFormat(),
+        assets_count: new BigNumber(network.assets_count).toFormat(),
+        peak_throughput: network.peak_throughput,
+        mintings: stats.mintings,
+        best_snapshot_height: new BigNumber(stats.best_snapshot_height).toFormat(),
+        accepted_nodes: stats.accepted_nodes,
+        circulation_xin: new BigNumber(new BigNumber(stats.circulation_xin).toFixed(0)).toFormat()
+      }));
+    });
+  },
+
+  fetchStats: function (callback) {
+    const self = this;
+    if (self.stats) {
+      callback(self.stats);
+    } else {
+      $('#tools-content').html(self.loading());
+      self.api.requestURL('GET', 'https://api.blockchair.com/mixin/stats', undefined, function(resp) {
+        if (resp.error) {
+          self.api.notifyError('error', resp.error);
+          return; 
+        }
+        self.stats = resp.data;
+        callback(self.stats);
+      });
+    }
   },
 
   renderChains: function () {
@@ -168,7 +190,7 @@ Tool.prototype = {
     const self = this;
     var network = self.getNetwork();
     if (!firstLoading) {
-      $('#tools-content').html(self.loading()); 
+      $('#tools-content').html(self.loading());
     }
 
     var boxCirculatingSupply = window.localStorage.getItem('box_circulating_supply');

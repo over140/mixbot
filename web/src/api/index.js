@@ -53,6 +53,28 @@ API.prototype = {
     });
   }, 
 
+  requestURL: function (method, url, params, callback) {
+    const self = this;
+    $.ajax({
+      type: method,
+      url: url,
+      contentType: "application/json",
+      data: JSON.stringify(params),
+      success: function(resp) {
+        var consumed = false;
+        if (typeof callback === 'function') {
+          consumed = callback(resp);
+        }
+        if (!consumed && resp.error !== null && resp.error !== undefined) {
+          self.error(resp);
+        }
+      },
+      error: function(event) {
+        self.error(event.responseJSON, callback);
+      }
+    });
+  }, 
+
   error: function(resp, callback) {
     if (resp == null || resp == undefined || resp.error === null || resp.error === undefined) {
       resp = {error: { code: 0, description: 'unknown error' }};
@@ -78,6 +100,19 @@ API.prototype = {
           this.notify('error', i18n.t('general.errors.' + resp.error.code));
           break;
       }
+    }
+  },
+
+  notifyError: function(type, error) {
+    var errorInfo = '';
+    if (error.description) {
+      errorInfo += error.description;
+    }
+    if (error.code) {
+      errorInfo += ' ' + error.code;
+    }
+    if (errorInfo !== '') {
+      this.notify('error', errorInfo);
     }
   },
 
