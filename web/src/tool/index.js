@@ -198,7 +198,7 @@ Tool.prototype = {
     if (!boxCirculatingSupply) {
       boxCirculatingSupply = "24046809";
     }
-    self.api.requestBox('GET', '/funds', undefined, function(resp) {
+    self.api.requestURL('GET', 'https://box-api.xue.cn/funds', undefined, function(resp) {
       if (resp.error || !resp.data || resp.data.length < 1) {
         return; 
       }
