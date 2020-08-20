@@ -37,16 +37,7 @@ module.exports = {
       test: /\.html$/, loader: "handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"
     }, {
       test: /\.(sa|sc|c)ss$/,
-      use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            hmr: process.env.NODE_ENV === 'development',
-          },
-        },
-        'css-loader',
-        'sass-loader',
-      ]
+      use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
     }, {
       test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
       use: [
@@ -73,8 +64,8 @@ module.exports = {
       defaultAttribute: 'async'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: '[name]-[hash].css',
+      chunkFilename: '[id]-[hash].css'
     }),
     new OfflinePlugin()
   ]

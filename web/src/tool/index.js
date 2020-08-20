@@ -93,6 +93,7 @@ Tool.prototype = {
         mintings: stats.mintings,
         best_snapshot_height: new BigNumber(stats.best_snapshot_height).toFormat(),
         accepted_nodes: stats.accepted_nodes,
+        market_price_usd: stats.market_price_usd,
         circulation_xin: new BigNumber(new BigNumber(stats.circulation_xin).toFixed(0)).toFormat()
       }));
     });
