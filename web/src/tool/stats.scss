@@ -1,0 +1,29 @@
+@import '../constant.scss';
+
+.tool.layout {
+
+  .stats {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    tbody {
+      display: table-row-group;
+    }
+
+    td {
+      padding: 10px 20px 10px 20px;
+    }
+
+    .box {
+      padding: 20px;
+      line-height: 24px;
+      background-color: #F5F7FA;
+      border: 1px solid #EFF4F9;
+      border-radius: 12px;
+    }
+  }
+}

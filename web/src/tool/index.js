@@ -1,6 +1,7 @@
 import './index.scss';
 import './assets.scss';
 import './chains.scss';
+import './stats.scss';
 import $ from 'jquery';
 import {BigNumber} from 'bignumber.js';
 
@@ -11,6 +12,7 @@ function Tool(router, api, loading) {
   this.templateTools = require('./tools.html');
   this.templateAssets = require('./assets.html');
   this.templateChains = require('./chains.html');
+  this.templateStats = require('./stats.html');
   this.chains = require('./chains.json');
   var chainMap = {};
   this.chains.forEach(function(chain) {
@@ -40,6 +42,7 @@ Tool.prototype = {
     $('.assets.tab').on('click', function (event) {
       self.renderAssets();
       $('.chains.tab').removeClass('active');
+      $('.stats.tab').removeClass('active');
       $(this).addClass('active');
       $(window).scrollTop(0);
     });
@@ -47,9 +50,37 @@ Tool.prototype = {
     $('.chains.tab').on('click', function (event) {
       self.renderChains();
       $('.assets.tab').removeClass('active');
+      $('.stats.tab').removeClass('active');
       $(this).addClass('active');
       $(window).scrollTop(0);
     });
+
+    $('.stats.tab').on('click', function (event) {
+      self.renderStats();
+      $('.chains.tab').removeClass('active');
+      $('.assets.tab').removeClass('active');
+      $(this).addClass('active');
+      $(window).scrollTop(0);
+    });
+  },
+
+  renderStats: function () {
+    const self = this;
+    $('#tools-content').html(self.loading());
+
+    self.api.request('GET', '/network', undefined, function(resp) {
+      if (resp.error) {
+        return;
+      }
+
+      $('#tools-content').html(self.templateStats({
+        snapshots_count: new BigNumber(resp.data.snapshots_count).toFormat(),
+        assets_count: new BigNumber(resp.data.assets_count).toFormat(),
+        peak_throughput: resp.data.peak_throughput
+      }));
+    });
+
+    //https://api.blockchair.com/mixin/stats
   },
 
   renderChains: function () {
