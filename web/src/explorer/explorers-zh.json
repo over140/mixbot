@@ -15,7 +15,7 @@
     "name": "Etherscan",
     "icon_url": "./etherscan.png",
     "description": "以太坊区块链浏览器，支持地址、交易哈希、区块编号、代币、ENS 查询",
-    "url": "https://etherscan.io/"
+    "url": "https://cn.etherscan.com/"
   },
   {
     "name": "eosflare.io",
