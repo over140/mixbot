@@ -10,12 +10,12 @@
           <img class="chain-icon" src="{{chain_icon_url}}" />
         </td>
         <td>
-          <span>{{amount}} {{symbol}}</span><br />
+          <span>{{amountStr}} {{symbol}}</span><br />
           <span class="description">
             充值价值：${{capitalization}} <br/>
             充值进度：{{confirmations}}/{{threshold}} <br/>
             充值哈希：{{#if explorer_url}}<a href="{{explorer_url}}">{{txid}}</a>{{else}}{{txid}}{{/if}} <br/>
-            充值时间：{{created_at}}% <br/>
+            充值时间：{{created_at}}
           </span>
         </td>
       </tr>

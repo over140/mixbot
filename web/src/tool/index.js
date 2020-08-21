@@ -134,6 +134,8 @@ Tool.prototype = {
             transaction.capitalization = new BigNumber(new BigNumber(transaction.amount).multipliedBy(asset.price_usd).toFixed(2)).toFormat();
           }
 
+          transaction.amountStr = new BigNumber(transaction.amount).toFormat();
+
           var chainAsset = self.chainMap[transaction.chain_id];
           if (chainAsset) {
             transaction.chain_icon_url = chainAsset.icon_url;
