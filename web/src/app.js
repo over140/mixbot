@@ -5,6 +5,8 @@ import Locale from './locale';
 import Store from './store';
 import Tool from './tool';
 import API from './api';
+import Auth from './auth';
+import Explorer from './explorer';
 
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
@@ -50,6 +52,12 @@ router.on({
   },
   '/bots': function () {
     new Store(router).render();
+  },
+  '/explorer': function () {
+    new Explorer(router, api).render();
+  },
+  '/explorer/auth': function () {
+    new Auth(router, api).render();
   },
   '/tools': function () {
     new Tool(router, api, PartialLoading).render();

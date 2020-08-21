@@ -9,7 +9,7 @@ function Tool(router, api, loading) {
   this.router = router;
   this.api = api;
   this.loading = loading;
-  this.templateTools = require('./tools.html');
+  this.templateTools = require('./index.html');
   this.templateAssets = require('./assets.html');
   this.templateChains = require('./chains.html');
   this.templateStats = require('./stats.html');

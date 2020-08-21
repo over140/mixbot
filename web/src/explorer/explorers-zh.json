@@ -1,0 +1,26 @@
+[
+  {
+    "name": "币印区块链浏览器",
+    "icon_url": "./poolin.png",
+    "description": "提供比特币、比特币现金、莱特币、达世币、DCR、大零币、等多币种查询及统计服务",
+    "url": "https://explorer.poolin.com/"
+  },
+  {
+    "name": "Blockchair",
+    "icon_url": "./blockchair.png",
+    "description": "综合区块链浏览器，支持查询 Bitcoin, Ethereum, Ripple, Bitcoin Cash, Cardano, Mixin 等 16 条公链",
+    "url": "https://blockchair.com/"
+  },
+  {
+    "name": "Etherscan",
+    "icon_url": "./etherscan.png",
+    "description": "以太坊区块链浏览器，支持地址、交易哈希、区块编号、代币、ENS 查询",
+    "url": "https://etherscan.io/"
+  },
+  {
+    "name": "eosflare.io",
+    "icon_url": "./eosflare.png",
+    "description": "EOS 区块链浏览器，支持账户、公钥、交易、区块查询",
+    "url": "https://eosflare.io/"
+  }
+]

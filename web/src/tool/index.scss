@@ -1,15 +1,7 @@
 @import '../constant.scss';
 
 .tool.layout {
-
-  .container {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 8px 0;
-  }
-
+  
   .tabs {
     position: fixed;
     z-index: 10000;

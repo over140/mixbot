@@ -1,10 +1,12 @@
 import $ from 'jquery';
 import Noty from 'noty';
+import Account from './account.js';
 
 function API(router) {
   this.router = router;
   this.Error404 = require('../404.html');
   this.ErrorGeneral = require('../error.html');
+  this.account = new Account(this);
 }
 
 API.prototype = {
@@ -16,6 +18,31 @@ API.prototype = {
       url: 'https://mixin-api.zeromesh.net' + path,
       contentType: "application/json",
       data: JSON.stringify(params),
+      success: function(resp) {
+        var consumed = false;
+        if (typeof callback === 'function') {
+          consumed = callback(resp);
+        }
+        if (!consumed && resp.error !== null && resp.error !== undefined) {
+          self.error(resp);
+        }
+      },
+      error: function(event) {
+        self.error(event.responseJSON, callback);
+      }
+    });
+  },
+
+  requestMixin: function(method, path, params, callback) {
+    const self = this;
+    $.ajax({
+      type: method,
+      url: 'https://mixin-api.zeromesh.net' + path,
+      contentType: "application/json",
+      data: JSON.stringify(params),
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader("Authorization", "Bearer " + self.account.token());
+      },
       success: function(resp) {
         var consumed = false;
         if (typeof callback === 'function') {
@@ -63,6 +90,15 @@ API.prototype = {
       consumed = callback(resp);
     }
     if (!consumed) {
+      const clientId = this.account.clientId();
+      const clientScope = this.account.clientScope();
+      if (clientId && clientScope && resp.error.code == 401) {
+        this.account.clear();
+        var obj = new URL(window.location);
+        var returnTo = encodeURIComponent(obj.href.substr(obj.origin.length));
+        window.location.replace('https://mixin-www.zeromesh.net/oauth/authorize?client_id=' + clientId + '&scope=' + clientScope + '&response_type=code&return_to=' + returnTo);
+        return
+      }
       switch (resp.error.code) {
         case 404:
           $('#layout-container').html(this.Error404());

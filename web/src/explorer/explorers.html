@@ -1,0 +1,15 @@
+
+{{#each explorers}}
+<tr class="account item" data-id="{{this.identity_number}}">
+  <td>
+    <img src="{{this.icon_url}}" alt="{{this.name}}" />
+  </td>
+  <td>
+    <span class="title">{{this.name}}</span><br />
+    <span class="description">{{this.description}}</span>
+  </td>
+  <td>
+    <a href="{{this.url}}" class="action">Go</a>
+  </td>
+</tr>
+{{/each}}

@@ -1,0 +1,18 @@
+
+<tr id="tr-{{snapshot.snapshot_id}}">
+  <td>
+    <img class="asset-icon" src="{{snapshot.asset_icon_url}}" />
+    <img class="chain-icon" src="{{snapshot.chain_icon_url}}" />
+  </td>
+  <td>
+    <span class="title {{#if snapshot.is_deposit}}green{{else}}red{{/if}}">{{snapshot.amount}} {{snapshot.symbol}}</span><br />
+    <span class="description">
+      交易类型：{{#if snapshot.is_deposit}}充值{{else}}提现{{/if}}<br/>
+      {{#if snapshot.withdrawal_address}}
+      提现地址：{{snapshot.withdrawal_address}}<br/>
+      {{/if}}
+      交易哈希：{{#if snapshot.txid}}<a href="{{snapshot.explorer_url}}">{{snapshot.txid}}</a>{{else}}数据上链中...{{/if}}<br/>
+      交易时间：{{snapshot.created_at}}
+    </span>
+  </td>
+</tr>

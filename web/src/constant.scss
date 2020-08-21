@@ -36,3 +36,11 @@ $color-side-ask-light: #824243;
         border-bottom: 2px solid $color-main-highlight;
     }
 }
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 8px 0;
+}
