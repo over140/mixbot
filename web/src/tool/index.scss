@@ -28,10 +28,16 @@
       }
     }
   }
-
+  
   .tools.list {
-    padding: 0px;
+    position: relative;
+    top: 44px;
+    padding-bottom: 44px;
     margin-top: 44px;
+    display: none;
+    &.active {
+      display: inline;
+    }
   }
 
   .spinner-container {
