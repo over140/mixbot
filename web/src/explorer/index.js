@@ -60,7 +60,7 @@ Explorer.prototype = {
       });
 
       self.assetMap = assetMap;
-      self.fetchSnapshots(TimeUtils.rfc3339(new Date()))
+      self.fetchSnapshots(TimeUtils.rfc3339(new Date()));
     });
   },
 

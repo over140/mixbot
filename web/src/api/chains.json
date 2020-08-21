@@ -158,7 +158,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/9QWOYgcD0H7q1cH6PaSM08FQ549epnEzqIQ2EgEfK2s82jhsIu1wDKmsR7rkPFwjIYKOILteq7mW1hIaXcy4DhI=s128",
     "name": "Zcash",
     "symbol": "ZEC",
-    "explore": "https://blockchair.com/zcash/transaction/",
+    "explore": "https://explorer.zcha.in/transactions/",
     "average_block_time": 150
   },
   {

@@ -2,8 +2,10 @@ import './index.scss';
 import './assets.scss';
 import './chains.scss';
 import './stats.scss';
-import $ from 'jquery';
+import './transactions.scss';
+import $, { contains } from 'jquery';
 import {BigNumber} from 'bignumber.js';
+import TimeUtils from '../utils/time.js';
 
 function Tool(router, api, loading) {
   this.router = router;
@@ -13,6 +15,7 @@ function Tool(router, api, loading) {
   this.templateAssets = require('./assets.html');
   this.templateChains = require('./chains.html');
   this.templateStats = require('./stats.html');
+  this.templateTransactions = require('./transactions.html');
   this.chains = require('../api/chains.json');
   var chainMap = {};
   this.chains.forEach(function(chain) {
@@ -43,10 +46,7 @@ Tool.prototype = {
         return
       }
       self.renderAssets(false);
-      $('.chains.tab').removeClass('active');
-      $('.stats.tab').removeClass('active');
-      $(this).addClass('active');
-      $(window).scrollTop(0);
+      self.activeTab('.assets.tab');
     });
 
     $('.chains.tab').on('click', function (event) {
@@ -54,10 +54,7 @@ Tool.prototype = {
         return
       }
       self.renderChains();
-      $('.assets.tab').removeClass('active');
-      $('.stats.tab').removeClass('active');
-      $(this).addClass('active');
-      $(window).scrollTop(0);
+      self.activeTab('.chains.tab');
     });
 
     $('.stats.tab').on('click', function (event) {
@@ -65,10 +62,15 @@ Tool.prototype = {
         return
       }
       self.renderStats();
-      $('.chains.tab').removeClass('active');
-      $('.assets.tab').removeClass('active');
-      $(this).addClass('active');
-      $(window).scrollTop(0);
+      self.activeTab('.stats.tab');
+    });
+
+    $('.transactions.tab').on('click', function (event) {
+      if (!self.network) {
+        return
+      }
+      self.renderTransactions();
+      self.activeTab('.transactions.tab');
     });
 
     self.api.request('GET', '/network', undefined, function(resp) {
@@ -78,6 +80,77 @@ Tool.prototype = {
       
       self.network = resp.data;
       self.renderAssets(true);
+    });
+  },
+
+  activeTab: function (tabClass) {
+    $('.chains.tab').removeClass('active');
+    $('.assets.tab').removeClass('active');
+    $('.transactions.tab').removeClass('active');
+    $('.stats.tab').removeClass('active');
+
+    $(tabClass).addClass('active');
+    $(window).scrollTop(0);
+  },
+
+  simpleHash: function (hash) {
+    if (hash && hash.length > 28) {
+      return hash.substring(0, 8) + "......" + hash.substring(hash.length - 6, hash.length);
+    }
+    return hash
+  },
+
+  renderTransactions: function (firstLoading) {
+    const self = this;
+    $('#tools-content').html(self.loading());
+
+    self.api.request('GET', '/network/assets/top', undefined, function(resp) {
+      if (resp.error) {
+        return;
+      }
+
+      var topAssets = resp.data
+      var assetMap = {};
+      topAssets.forEach(function(asset) {
+        assetMap[asset.asset_id] = asset;
+      });
+      var totalCapitalization = new BigNumber(0);
+
+      self.api.request('GET', '/external/transactions?limit=500&offset=' + TimeUtils.rfc3339(new Date()), undefined, function(resp) {
+        if (resp.error) {
+          return;
+        }
+
+        var transactions = resp.data;
+        for (var i = 0; i < transactions.length; i++) {
+          var transaction = transactions[i];
+          var asset = assetMap[transaction.asset_id];
+          if (asset) {
+            transaction.asset_icon_url = asset.icon_url;
+            transaction.symbol = asset.symbol;
+            transaction.txid = self.simpleHash(transaction.transaction_hash);
+            transaction.created_at = new Date(transaction.created_at).toLocaleString();
+            totalCapitalization = totalCapitalization.plus(new BigNumber(transaction.amount).multipliedBy(asset.price_usd));
+            transaction.capitalization = new BigNumber(new BigNumber(transaction.amount).multipliedBy(asset.price_usd).toFixed(2)).toFormat();
+          }
+
+          var chainAsset = self.chainMap[transaction.chain_id];
+          if (chainAsset) {
+            transaction.chain_icon_url = chainAsset.icon_url;
+            if (asset.asset_id === "815b0b1a-2764-3736-8faa-42d694fa620a") {
+              transaction.explorer_url = 'https://omniexplorer.info/tx/' + transaction.transaction_hash;
+            } else {
+              transaction.explorer_url = chainAsset.explore + transaction.transaction_hash;
+            }
+          }
+        }
+
+        $('#tools-content').html(self.templateTransactions({
+          totalCapitalization: new BigNumber(totalCapitalization.toFixed(0)).toFormat(),
+          totalTransactions: transactions.length,
+          transactions: transactions
+        }));
+      });
     });
   },
 
