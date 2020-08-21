@@ -13,7 +13,7 @@ function Tool(router, api, loading) {
   this.templateAssets = require('./assets.html');
   this.templateChains = require('./chains.html');
   this.templateStats = require('./stats.html');
-  this.chains = require('./chains.json');
+  this.chains = require('../api/chains.json');
   var chainMap = {};
   this.chains.forEach(function(chain) {
     chainMap[chain.chain_id] = chain;

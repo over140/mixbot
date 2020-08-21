@@ -5,6 +5,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/HvYGJsV5TGeZ-X9Ek3FEQohQZ3fE9LBEBGcOcn4c4BNHovP4fW4YB97Dg5LcXoQ1hUjMEgjbl1DPlKg1TW7kK6XP=s128",
     "name": "Bitcoin",
     "symbol": "BTC",
+    "explore": "https://explorer.poolin.com/tx/",
     "average_block_time": 600
   },
   {
@@ -13,6 +14,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/zVDjOxNTQvVsA8h2B4ZVxuHoCF3DJszufYKWpd9duXUSbSapoZadC7_13cnWBqg0EmwmRcKGbJaUpA8wFfpgZA=s128",
     "name": "Ethereum",
     "symbol": "ETH",
+    "explore": "https://cn.etherscan.com/tx/",
     "average_block_time": 15
   },
   {
@@ -21,6 +23,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/a5dtG-IAg2IO0Zm4HxqJoQjfz-5nf1HWZ0teCyOnReMd3pmB8oEdSAXWvFHt2AJkJj5YgfyceTACjGmXnI-VyRo=s128",
     "name": "EOS",
     "symbol": "EOS",
+    "explore": "https://eosflare.io/tx/",
     "average_block_time": 1
   },
   {
@@ -29,6 +32,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/tqt14x8iwkiCR_vIKIw6gAAVO8XpZH7ku7ZJYB5ArMRA6grN9M1oCI7kKt2QqBODJwr17sZxDCDTjXHOgIixzv6X=s128",
     "name": "Bitcoin Cash",
     "symbol": "BCH",
+    "explore": "https://blockchair.com/bitcoin-cash/transaction/",
     "average_block_time": 600
   },
   {
@@ -37,6 +41,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/1iUl5doLjMSv-ElcVCI4YgD1uIayDbZcQP0WjFEajoY1-qQZmVEl5GgUCtsp8CP0aj96a5Rwi-weQ5YA64lyQzU=s128",
     "name": "Bitcoin SV",
     "symbol": "BSV",
+    "explore": "https://blockchair.com/bitcoin-sv/transaction/",
     "average_block_time": 600
   },
   {
@@ -45,6 +50,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/vffCzX0PPO1f1D0sRFCkpJuSRYbxEM5u-hl4FMoUeWk8g899U5eyVKnFENiEJ4AXU0s-62mx1nBR3c_pHFROuw=s128",
     "name": "Monero",
     "symbol": "XMR",
+    "explore": "https://blockchair.com/monero/transaction/",
     "average_block_time": 120
   },
   {
@@ -53,6 +59,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/dLK5T9I4YFA094o6nn-qZ_TWLUtIrL0xtjxOyURaLoPcl94m0JKQhXQiOrC775LS9d8apDfLXVfbpDzGmWDf0CWJ=s128",
     "name": "Litecoin",
     "symbol": "LTC",
+    "explore": "https://blockchair.com/litecoin/transaction/",
     "average_block_time": 150
   },
   {
@@ -61,6 +68,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/SXfRh0WJZpHrDAbBItuwwLp_TPML7hrbAPHGIz_EQRga0fFm5yGtNd55_W0ZZv9HRj_6W6kE4O4tq8W78mutAPE=s128",
     "name": "TRON",
     "symbol": "TRX",
+    "explore": "https://tronscan.org/#/transaction/",
     "average_block_time": 15
   },
   {
@@ -69,6 +77,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/PYek3gX0bUJyYhdewmrhh0IUAlbDf-gXpVEZrkW74v0Bsk24FO0jvP71IcjTOeDOlqUdjUVK-S0jdJ4BOkXi2XY=s128",
     "name": "Stellar",
     "symbol": "XLM",
+    "explore": "https://blockchair.com/stellar/transaction/",
     "average_block_time": 6
   },
   {
@@ -77,6 +86,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/pZQ0HL075WytmDYtyVdNXfn_zvAkCMtwcv9665oXtm8h86W_5mf1ROqidtq2ByY7xBM2xxxxbHP3oKScCjnQK5GR=s128",
     "name": "Bytom",
     "symbol": "BTM",
+    "explore": "https://blockmeta.com/tx/",
     "average_block_time": 160
   },
   {
@@ -85,6 +95,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/HCjLu6VM0XA7ouRcZJGDTOzE7zoXaA8LgESw075VW5teZ27AGUgyGrc4jnzuK5LtgT5HJQDSNSOImnU3IcUsBLoF=s128",
     "name": "Binance",
     "symbol": "BNB",
+    "explore": "https://binance.mintscan.io/txs/",
     "average_block_time": 1
   },
   {
@@ -93,6 +104,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/vPCw4G1BhBWLzFSVt8jMJxq7LhQgVRbn_IbgJif9mixgLyJfBTlrc4TbELTThAwQCdVqikJQNDDQ84nQZLVf1yGm=s128",
     "name": "BitShares",
     "symbol": "BTS",
+    "explore": "https://bts.ai/tx/",
     "average_block_time": 3
   },
   {
@@ -101,6 +113,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/0rUV7Qlq3BkRbjf9DL1gt0f2cH92-oeDmnr2SL2MBe6h0WLDqX6krEKR-IXGC6O2y2CLwyYcikLbUVc_GbwUgz4=s128",
     "name": "Grin",
     "symbol": "GRIN",
+    "explore": "https://grin.blockscan.com/kernel/",
     "average_block_time": 60
   },
   {
@@ -109,6 +122,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/OzfqNm0HPcHmqQOlkGGU5GoaAI3EznfbALmDBOZJdl2lDhlkNMVFDIC_CUsaeHEfyIeYT7A6vNLSR-MyqpnaBlY=s128",
     "name": "VCash",
     "symbol": "VCASH",
+    "explore": "https://vcash.tech/block/",
     "average_block_time": 600
   },
   {
@@ -117,6 +131,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/t-HH_7zAE5Y7OG9WgC1muIeFWJee4WypzbdJ5FjakEIivRYnSz89CBR4twXH-K_wFFodURRhYulVY-PrOO35ZoQ=s128",
     "name": "Cosmos",
     "symbol": "ATOM",
+    "explore": "https://www.mintscan.io/txs/",
     "average_block_time": 1
   },
   {
@@ -125,6 +140,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/VvNrYJDwMh4HbKmnSQrzFvJbNd3pRtP1N-4cXFi09BluI2BMUAmxHsoXXXRO7y4q9cqs5qAXz-XondTANQgklzKu=s128",
     "name": "Handshake",
     "symbol": "HNS",
+    "explore": "https://hnsxplorer.com/tx/",
     "average_block_time": 600
   },
   {
@@ -133,6 +149,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/I9f9bWw457YiAGMxyrNtu4aCezzgnnIYuxnNBzkN3aGG32HeOzFl-nA4miBRnU-3qnNylyiDZqoS-JfzfstnuQ=s128",
     "name": "NEM",
     "symbol": "XEM",
+    "explore": "http://chain.nem.ninja/#/transfer/",
     "average_block_time": 60
   },
   {
@@ -141,6 +158,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/9QWOYgcD0H7q1cH6PaSM08FQ549epnEzqIQ2EgEfK2s82jhsIu1wDKmsR7rkPFwjIYKOILteq7mW1hIaXcy4DhI=s128",
     "name": "Zcash",
     "symbol": "ZEC",
+    "explore": "https://blockchair.com/zcash/transaction/",
     "average_block_time": 150
   },
   {
@@ -149,6 +167,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/K1qFRFwAn2aJ-SEM4Tya7y_HBelBZsL5J1WEdZX4S3-APXHExcsZUYdyQAMRhgebcto3CF_OLoImx8U9-4-M7C4=s128",
     "name": "Siacoin",
     "symbol": "SC",
+    "explore": "https://explorer.siahub.info/hash/",
     "average_block_time": 600
   },
   {
@@ -157,6 +176,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/SyX2tH2mBbSc45IfkOysbbd8WtPEjla5R3xT9ym0tbKv_vAyzl_Jd5qEYsOhKyuFRv09w3uB4Vzs2XJuJzZeO7e_=s128",
     "name": "Ripple",
     "symbol": "XRP",
+    "explore": "https://blockchair.com/ripple/transaction/",
     "average_block_time": 30
   },
   {
@@ -165,6 +185,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/D1quwKOIaKBNIx6EL1znNS09vRnh00FP7BWwOJUtI_9CFlohJLuyG6CjcU9x4YXu9LSzGs0QqRSG54wcfsOtTMU=s128",
     "name": "Dogecoin",
     "symbol": "DOGE",
+    "explore": "https://blockchair.com/dogecoin/transaction/",
     "average_block_time": 60
   },
   {
@@ -173,6 +194,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/0jykqkeqXVw16MXjMxcpA-7kd0Lo55jjqoKxXgq-WdI2ln4kaDnFUB6IqfktpX_x1wXxtow5MHkCNuH8f7PFBg=s128",
     "name": "Nervos",
     "symbol": "CKB",
+    "explore": "https://explorer.nervos.org/transaction/",
     "average_block_time": 16
   },
   {
@@ -181,6 +203,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/CFQzgS3lZztswzt8mKVWAOWAJDhlQQw2gQZN4_-2bRAzRivObDq-KOdjGIv_vcY6FGJLFlFxN4vSrFb7t0uxsQ=s128",
     "name": "Horizen",
     "symbol": "ZEN",
+    "explore": "https://explorer.zen-solutions.io/tx/",
     "average_block_time": 150
   },
   {
@@ -189,6 +212,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/ATSnFPH9vp6WPJ-KB9h_2JT93519YUPBbbbgAbPJBStlF3tFkP70iiZqDGi8ha-LssoqHMdRItF2_Un4FbglYMI=s128",
     "name": "Decred",
     "symbol": "DCR",
+    "explore": "https://explorer.dcrdata.org/tx/",
     "average_block_time": 300
   },
   {
@@ -197,6 +221,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/fM9wgyNyB3Uiopx2FRFxhr-sYrvXZtJ-uCpk975wGdpoehoA59rIU-BQ4s_6YFMDEthQ74KCPysOIWSFK4vUG_Y=s128",
     "name": "Ethereum Classic",
     "symbol": "ETC",
+    "explore": "https://etcblockexplorer.com/tx/",
     "average_block_time": 15
   },
   {
@@ -205,6 +230,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/ReOP8DBeVc4VO5myA0zuURtNBJJGJCL4KB3Gj5bvBOeP4LW_ZZrwl7CesWhE3aSTm931sOGz69DcGIUmdb6RkF4=s128",
     "name": "Dash",
     "symbol": "DASH",
+    "explore": "https://blockchair.com/dash/transaction/",
     "average_block_time": 180
   },
   {
@@ -213,6 +239,7 @@
     "icon_url": "https://mixin-images.zeromesh.net/qC2t9WkMv8f3O4LolVvaXKP9cuHXklYW-3bSu4Cl3WSRHkAkIGdQlBH4qqluZxqy7lnyuP9ffIVGXMNKTFF2AFQY=s128",
     "name": "Ravencoin",
     "symbol": "RVN",
+    "explore": "https://blockbook.ravencoin.org/tx/",
     "average_block_time": 60
   },
   {
@@ -220,6 +247,7 @@
     "asset_id": "b207bce9-c248-4b8e-b6e3-e357146f3f4c",
     "icon_url": "https://mixin-images.zeromesh.net/PbftbKJkl5Fu34falXrpoaEqDRIdNonuISYlz2ripfchyCSXEafNqZYTP_4pvFXql8Hhd6GznWe2SsC_sGLDHgo=s128",
     "name": "MassGrid",
+    "explore": "https://explorer.massgrid.com/tx/",
     "symbol": "MGD"
   }
 ]
