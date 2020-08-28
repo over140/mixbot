@@ -196,15 +196,15 @@ Tool.prototype = {
         var chainAsset = chainMap[chain.chain_id];
         if (chainAsset) {
           const depositBlockHeight = new BigNumber(chainAsset.deposit_block_height);
-          const externalBlockHeight = new BigNumber(chainAsset.external_block_height);
+          const managedBlockHeight = new BigNumber(chainAsset.managed_block_height);
           chain.is_synchronized = chainAsset.is_synchronized;
           chain.threshold = chainAsset.threshold;
           chain.withdrawal_fee = chainAsset.withdrawal_fee;
           chain.withdrawal_pending_count = chainAsset.withdrawal_pending_count;
           chain.deposit_block_height = depositBlockHeight.toFormat();
           chain.is_error = !chainAsset.is_synchronized;
-          chain.is_slow = depositBlockHeight < externalBlockHeight;
-          chain.difference_block_height = externalBlockHeight.minus(depositBlockHeight).abs().toFormat();
+          chain.is_slow = depositBlockHeight < managedBlockHeight;
+          chain.difference_block_height = managedBlockHeight.minus(depositBlockHeight).abs().toFormat();
           if (chainAsset.is_synchronized && chain.average_block_time) {
             const blockTime = parseInt(chain.average_block_time) * parseInt(chain.threshold)
             if (blockTime < 60) {
