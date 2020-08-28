@@ -90,36 +90,57 @@ Tool.prototype = {
           return;
         }
 
+        var groups = [];
+        var trasactionGroups = {};
         var transactions = resp.data;
         for (var i = 0; i < transactions.length; i++) {
           var transaction = transactions[i];
           var asset = assetMap[transaction.asset_id];
-          if (asset) {
-            transaction.asset_icon_url = asset.icon_url;
-            transaction.symbol = asset.symbol;
-            transaction.txid = self.simpleHash(transaction.transaction_hash);
-            transaction.created_at = new Date(transaction.created_at).toLocaleString();
-            totalCapitalization = totalCapitalization.plus(new BigNumber(transaction.amount).multipliedBy(asset.price_usd));
-            transaction.capitalization = new BigNumber(new BigNumber(transaction.amount).multipliedBy(asset.price_usd).toFixed(2)).toFormat();
-          }
-
-          transaction.amountStr = new BigNumber(transaction.amount).toFormat();
-
           var chainAsset = self.chainMap[transaction.chain_id];
-          if (chainAsset) {
-            transaction.chain_icon_url = chainAsset.icon_url;
-            if (asset.asset_id === "815b0b1a-2764-3736-8faa-42d694fa620a") {
-              transaction.explorer_url = 'https://omniexplorer.info/tx/' + transaction.transaction_hash;
+          if (asset && chainAsset) {
+            var trasactionGroup = trasactionGroups[transaction.asset_id];
+            if (trasactionGroup) {
+              trasactionGroup.amount = new BigNumber(trasactionGroup.amount).plus(transaction.amount);
+              trasactionGroup.number++;
             } else {
-              transaction.explorer_url = chainAsset.explore + transaction.transaction_hash;
+              var group = {
+                chain_icon_url: chainAsset.icon_url,
+                asset_icon_url: asset.icon_url,
+                asset_id: transaction.asset_id,
+                symbol: asset.symbol,
+                price_usd: asset.price_usd,
+                amount: transaction.amount,
+                number: 1
+              };
+              trasactionGroups[transaction.asset_id] = group;
+              groups.push(group);
             }
+            totalCapitalization = totalCapitalization.plus(new BigNumber(transaction.amount).multipliedBy(asset.price_usd));
           }
         }
+
+        groups.forEach(function(trasactionGroup){
+          trasactionGroup.capitalization = new BigNumber(new BigNumber(trasactionGroup.amount).multipliedBy(trasactionGroup.price_usd).toFixed(2)).toFormat();
+          trasactionGroup.amountStr = new BigNumber(trasactionGroup.amount).toFormat();
+        });
+
+        groups.sort(function (a, b) {
+          const aCapitalization = new BigNumber(a.amount).multipliedBy(a.price_usd);
+          const bCapitalization = new BigNumber(b.amount).multipliedBy(b.price_usd);
+          const value = new BigNumber(aCapitalization).minus(bCapitalization);
+          if (value.isZero()) {
+            return 0;
+          } else if (value.isNegative()) {
+            return 1;
+          } else {
+            return -1;
+          }
+        });
 
         $('#transactions-content').html(self.templateTransactions({
           totalCapitalization: new BigNumber(totalCapitalization.toFixed(0)).toFormat(),
           totalTransactions: transactions.length,
-          transactions: transactions
+          transactions: groups
         }));
       });
     });
