@@ -69,6 +69,29 @@ Tool.prototype = {
     return hash
   },
 
+  fetchTransactions: function (callback, offset, transactions) {
+    const self = this;
+    if (!offset) {
+      offset = TimeUtils.rfc3339(new Date())
+    }
+    self.api.request('GET', '/external/transactions?limit=500&offset=' + offset, undefined, function(resp) {
+      if (resp.error) {
+        return;
+      }
+      if (transactions) {
+        transactions = transactions.concat(resp.data);
+      } else {
+        transactions = resp.data;
+      }
+      if (resp.data.length >= 500) {
+        const lastTransaction = resp.data[resp.data.length - 1];
+        self.fetchTransactions(callback, lastTransaction.created_at, transactions);
+      } else {
+        callback(transactions);
+      }
+    });
+  },
+
   renderTransactions: function () {
     const self = this;
     $('#transactions-content').html(self.loading());
@@ -85,14 +108,13 @@ Tool.prototype = {
       });
       var totalCapitalization = new BigNumber(0);
 
-      self.api.request('GET', '/external/transactions?limit=500&offset=' + TimeUtils.rfc3339(new Date()), undefined, function(resp) {
+      self.fetchTransactions(function(transactions) {
         if (resp.error) {
           return;
         }
 
         var groups = [];
         var trasactionGroups = {};
-        var transactions = resp.data;
         for (var i = 0; i < transactions.length; i++) {
           var transaction = transactions[i];
           var asset = assetMap[transaction.asset_id];
