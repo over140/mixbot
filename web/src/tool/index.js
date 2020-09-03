@@ -326,7 +326,7 @@ Tool.prototype = {
             const changeUsd = new BigNumber(topAsset.change_usd);
             const amount = new BigNumber(asset.amount);
             var capitalization = new BigNumber(topAsset.capitalization);
-            if (asset.asset_id === "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c") {
+            if (asset.asset_id === "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c" || asset.asset_id === "c94ac88f-4671-3976-b60a-09064f1811e8") {
               capitalization = amount.multipliedBy(priceUsd);
             }
 
