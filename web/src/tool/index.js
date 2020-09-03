@@ -40,14 +40,14 @@ Tool.prototype = {
     $('body').attr('class', 'tool layout');
     $('#layout-container').html(self.templateTools());
 
-    self.renderAssets();
-    self.renderChains();
-    self.renderStats();
-    self.renderTransactions();
+    self.renderAssets(true);
+    self.renderChains(true);
+    self.renderStats(true);
+    self.renderTransactions(true);
 
+    const tabs = ['chains', 'assets', 'transactions', 'stats'];
     $('.tabs').on('click', '.tab', function (event) {
       const activeClassName = this.className.split(/\s+/)[0];
-      const tabs = ['chains', 'assets', 'transactions', 'stats'];
       for (var i = 0; i < tabs.length; i++) {
         const tab = tabs[i];
         if (tab === activeClassName) {
@@ -60,6 +60,24 @@ Tool.prototype = {
       }
       $(window).scrollTop(0);
     });
+
+    setInterval(function(){
+      const activeClassName =  $('.tabs').children('.active')[0].className.split(/\s+/)[0];
+      switch(activeClassName) {
+        case 'chains':
+          self.renderChains(false);
+          break;
+        case 'assets':
+          self.renderAssets(false);
+          break;
+        case 'transactions':
+          self.renderTransactions(false);
+          break;
+        case 'stats':
+          self.renderStats(false);
+          break;
+      }
+    }, 5000);
   },
 
   simpleHash: function (hash) {
@@ -92,9 +110,11 @@ Tool.prototype = {
     });
   },
 
-  renderTransactions: function () {
+  renderTransactions: function (firstLoading) {
     const self = this;
-    $('#transactions-content').html(self.loading());
+    if (firstLoading) {
+      $('#transactions-content').html(self.loading());
+    }
 
     self.api.request('GET', '/network/assets/top', undefined, function(resp) {
       if (resp.error) {
@@ -168,9 +188,11 @@ Tool.prototype = {
     });
   },
 
-  renderStats: function () {
+  renderStats: function (firstLoading) {
     const self = this;
-    $('#stats-content').html(self.loading());
+    if (firstLoading) {
+      $('#stats-content').html(self.loading());
+    }
 
     self.api.request('GET', '/network', undefined, function(resp) {
       if (resp.error) {
@@ -198,10 +220,12 @@ Tool.prototype = {
     });
   },
 
-  renderChains: function () {
+  renderChains: function (firstLoading) {
     const self = this;
     var chains = this.chains.concat();
-    $('#chains-content').html(self.loading());
+    if (firstLoading) {
+      $('#chains-content').html(self.loading());
+    }
     
     self.api.request('GET', '/network', undefined, function(resp) {
       if (resp.error) {
@@ -270,10 +294,12 @@ Tool.prototype = {
     });
   },
 
-  renderAssets: function () {
+  renderAssets: function (firstLoading) {
     const self = this;
-    $('#assets-content').html(self.loading());
-
+    if (firstLoading) {
+      $('#assets-content').html(self.loading());
+    }
+    
     var boxCirculatingSupply = window.localStorage.getItem('box_circulating_supply');
     if (!boxCirculatingSupply) {
       boxCirculatingSupply = "24046809";
