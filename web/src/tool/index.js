@@ -143,7 +143,7 @@ Tool.prototype = {
 
         groups.forEach(function(trasactionGroup){
           trasactionGroup.capitalization = new BigNumber(new BigNumber(trasactionGroup.amount).multipliedBy(trasactionGroup.price_usd).toFixed(2)).toFormat();
-          trasactionGroup.amountStr = new BigNumber(trasactionGroup.amount).toFormat();
+          trasactionGroup.amountStr = new BigNumber(new BigNumber(trasactionGroup.amount).toFixed(8)).toFormat();
         });
 
         groups.sort(function (a, b) {
