@@ -27,6 +27,15 @@
     "average_block_time": 1
   },
   {
+    "chain_id": "05c5ac01-31f9-4a69-aa8a-ab796de1d041",
+    "asset_id": "05c5ac01-31f9-4a69-aa8a-ab796de1d041",
+    "icon_url": "https://mixin-images.zeromesh.net/vffCzX0PPO1f1D0sRFCkpJuSRYbxEM5u-hl4FMoUeWk8g899U5eyVKnFENiEJ4AXU0s-62mx1nBR3c_pHFROuw=s128",
+    "name": "Monero",
+    "symbol": "XMR",
+    "explore": "https://blockchair.com/monero/transaction/",
+    "average_block_time": 120
+  },
+  {
     "chain_id": "fd11b6e3-0b87-41f1-a41f-f0e9b49e5bf0",
     "asset_id": "fd11b6e3-0b87-41f1-a41f-f0e9b49e5bf0",
     "icon_url": "https://mixin-images.zeromesh.net/tqt14x8iwkiCR_vIKIw6gAAVO8XpZH7ku7ZJYB5ArMRA6grN9M1oCI7kKt2QqBODJwr17sZxDCDTjXHOgIixzv6X=s128",
@@ -43,15 +52,6 @@
     "symbol": "BSV",
     "explore": "https://blockchair.com/bitcoin-sv/transaction/",
     "average_block_time": 600
-  },
-  {
-    "chain_id": "05c5ac01-31f9-4a69-aa8a-ab796de1d041",
-    "asset_id": "05c5ac01-31f9-4a69-aa8a-ab796de1d041",
-    "icon_url": "https://mixin-images.zeromesh.net/vffCzX0PPO1f1D0sRFCkpJuSRYbxEM5u-hl4FMoUeWk8g899U5eyVKnFENiEJ4AXU0s-62mx1nBR3c_pHFROuw=s128",
-    "name": "Monero",
-    "symbol": "XMR",
-    "explore": "https://blockchair.com/monero/transaction/",
-    "average_block_time": 120
   },
   {
     "chain_id": "76c802a2-7c88-447f-a93e-c29c9e5dd9c8",
