@@ -12,7 +12,7 @@
         "effects": ""
       },
       {
-        "name": "ExinEarn",
+        "name": "水龙头",
         "tags": "购物返佣",
         "identity_number": "7000000014",
         "icon_url": "https://mixin-images.zeromesh.net/RWo-Mff0wEnMhbJygusHLUeQB1DfWGqWSCo11u9bz3pu9G0nYK6-hmPcr0H50gmwUzvZ1LcQKJe3UpS4R3YoVOE=s256",
@@ -25,7 +25,7 @@
         "tags": "工具",
         "identity_number": "7000101425",
         "icon_url": "https://mixin-images.zeromesh.net/GACcimWp8rxKjGKdXnjFHQHER2G69pPkgu92rgJ0r_Bh-TXht12-8h0MK5JaBYo5whL3eSfxs2jMLIqjZXAcwws=s256",
-        "description": "由 Fox.ONE 提供，媲美原生钱包，服务于 iOS 畅聊版用户，通过 API 安全管理用户资产，添加提现地址和提现操作都必须通过用户进一步授权。",
+        "description": "由 Fox.ONE 提供，媲美原生钱包，通过 API 安全管理用户资产，提供资产管理、定投、理财、币币、OTC、借贷等一站式服务。",
         "url": "https://mixin.one/users/f49c073a-f92c-4268-ab81-25805d8a108f",
         "effects": ""
       },
@@ -45,15 +45,6 @@
         "icon_url": "https://mixin-images.zeromesh.net/rDy3RBIAc5hkWabgfp03q7ZXS5DBnaKHspClX2QcyKNOj-QU9gcKbTD9d186faAXpHatC8CDdeYC1WiXHNAuayKo=s256",
         "description": "糟糕！是心动的感觉！欢迎投稿那些曾经令你心动过的妹子图 😋",
         "url": "https://mixin.one/users/dba5895c-9e35-4b1f-a261-91ae947c6999",
-        "effects": ""
-      },
-      {
-        "name": "群助手",
-        "tags": "工具",
-        "identity_number": "7000101417",
-        "icon_url": "https://mixin-images.zeromesh.net/rOq9nv5Xj6ugCGLIpVK1LizJD4YMr0pQ1az-CxJKw24WsXCOpRUKeUaHU-3cJf775WhFo3VhZZkIeA3blZnCzNk=s256",
-        "description": "Fox.ONE 旗下的小群助手，支持群收款、签到题库、筛子等实用功能",
-        "url": "https://mixin.one/users/244f2757-d170-4191-91eb-d73157df1461",
         "effects": ""
       },
       {
@@ -161,15 +152,6 @@
         "effects": ""
       },
       {
-        "name": "Fox · 闪电交易",
-        "tags": "交易",
-        "identity_number": "7000101996",
-        "icon_url": "https://mixin-images.zeromesh.net/nScYvKoJbEEaDsX2c55MQR64b_x7Ox-IRdKujR-Pv-1dw27NP6zSEJeFKxXQAqIXQBHpvGGZnIjae7CGQX0_vXU=s256",
-        "description": "Fox.ONE 的闪兑服务，界面华丽交互优秀",
-        "url": "https://mixin.one/users/edb0bcf9-4521-43aa-a50d-21a2266a9d41",
-        "effects": " github"
-      },
-      {
         "name": "Mixcoin",
         "tags": "交易所",
         "identity_number": "7000101524",
@@ -177,15 +159,6 @@
         "description": "基于 OceanONE 的开源前端交易小程序，根据钱包自动显示交易对，直接下单给 Ocean 撮合引擎。",
         "url": "https://mixin.one/users/82d20bc7-9a97-4a69-bcd0-4da502374f6c",
         "effects": " github"
-      },
-      {
-        "name": "Fox · Boxwe 迷你交易所",
-        "tags": "交易所",
-        "identity_number": "7000102066",
-        "icon_url": "https://mixin-images.zeromesh.net/oThmOJsTH2PEhSIaSEacvfuLg6auiljDEEIMtTJk9WWFynfgfGhiJsnJhnaXgdR9u7GlblsRV72ZglnFj-vWOO_i=s256",
-        "description": "Boxer 迷你交易所，由 Fox.ONE 交易引擎驱动，原理与 Mixcoin 类似。",
-        "url": "https://mixin.one/users/069eafbc-8a45-4fc6-8904-4fb42675f6f1",
-        "effects": ""
       },
       {
         "name": "Coin Exchange",
@@ -206,7 +179,7 @@
         "tags": "大群",
         "identity_number": "7000101982",
         "icon_url": "https://mixin-images.zeromesh.net/LDtQNnjOOvKe-yjYYplRAq1nOw4qq_ATYe-Pm1h_gRcFVUU4GkMXIjei6BHyqrLM3DIH5_pFkrUWUHgiLfD4Ec-y=s256",
-        "description": "听李老师讲课，免费、不需要邀请码，群成员 24,000+",
+        "description": "听李老师讲课，免费、不需要邀请码，群成员 30,000+",
         "url": "https://mixin.one/users/0642bca1-7ce3-4cf8-b48f-3f97771c8ce3",
         "effects": ""
       },
@@ -242,7 +215,7 @@
         "tags": "大群",
         "identity_number": "7000103455",
         "icon_url": "https://mixin-images.zeromesh.net/V3N6OEfG8OzsG8EcUh-_5UCOwrHunKHfjtomOYSFpwIvnsPmMxlqg70qIKjm5QJg3oXFQEoK_tbBmk5Dx8oP2ZU=s256",
-        "description": "安桥 Mixin 群，安桥专注于海外房产以及比特币投资，Mixin 节点运营方之一，群成员 590+",
+        "description": "安桥 Mixin 群，安桥专注于海外房产以及比特币投资，Mixin 节点运营方之一，群成员 600+",
         "url": "https://mixin.one/users/df0967d1-cb4c-4ab4-ba0e-93e8a130189d",
         "effects": ""
       },
@@ -464,6 +437,15 @@
         "effects": ""
       },
       {
+        "name": "MiFi 大本营",
+        "tags": "资讯",
+        "identity_number": "7000103572",
+        "icon_url": "https://mixin-images.zeromesh.net/EcUEAWQRUJO5dJKXzJT3OILUa4aQN6W908nfVo9yy_X90T2CNmig4pszEg-dupgWj-tWpfNvyFqxkz1PhEua4g=s256",
+        "description": "本社群由 Exin 骚总创建，期望与 XIN 的持有者共同探讨 DeFi 在 Mixin 生态的应用并推进落地，社群会不定时邀请行业大佬过来做分享，入圈费 0.2 XIN，每增加 100 人价格涨 0.1 XIN",
+        "url": "https://mixin.one/users/6f70b925-1c83-4982-9347-34f2056287fb",
+        "effects": ""
+      },
+      {
         "name": "发条的小迷圈",
         "tags": "资讯",
         "identity_number": "7000102295",
@@ -511,6 +493,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/Tpftb9f_2e91bkKaa31wlQcwqT96L-gRyqlF6Q7d_tHE5qP2rsyMoyeXOgMMW-7Cc7bS9fCsGze0k8xgjtDmr44=s256",
         "description": "一键直达自己充值提现的区块浏览器，还有常用区块链浏览器导航。",
         "url": "https://mixin.one/users/bb8f402b-0546-43f5-bcf9-f9439a4322c6",
+        "effects": ""
+      },
+      {
+        "name": "群助手",
+        "tags": "工具",
+        "identity_number": "7000101417",
+        "icon_url": "https://mixin-images.zeromesh.net/rOq9nv5Xj6ugCGLIpVK1LizJD4YMr0pQ1az-CxJKw24WsXCOpRUKeUaHU-3cJf775WhFo3VhZZkIeA3blZnCzNk=s256",
+        "description": "Fox.ONE 旗下的小群助手，支持群收款、签到题库、筛子等实用功能",
+        "url": "https://mixin.one/users/244f2757-d170-4191-91eb-d73157df1461",
         "effects": ""
       },
       {
