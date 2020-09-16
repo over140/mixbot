@@ -2,6 +2,18 @@
 
 .tool.layout {
 
+  .total.chains {
+    width: calc(100% - 40px);
+    max-width: 640px;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px 10px;
+    margin: 0px 10px 0px 10px;
+    background-color: #F5F7FA;
+    border: 1px solid #EFF4F9;
+    border-radius: 12px;
+  }
+
   .chains.list {
     width: 100%;
     border-collapse: collapse;

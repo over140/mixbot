@@ -212,6 +212,8 @@ Tool.prototype = {
       resp.data.chains.forEach(function(chain) {
         chainMap[chain.chain_id] = chain;
       });
+
+      var totalWithdrawals = new BigNumber(0);
       
       for (var i = 0; i < chains.length; i++) {
         var chain = chains[i];
@@ -223,6 +225,7 @@ Tool.prototype = {
           chain.threshold = chainAsset.threshold;
           chain.withdrawal_fee = chainAsset.withdrawal_fee;
           chain.withdrawal_pending_count = chainAsset.withdrawal_pending_count;
+          totalWithdrawals = totalWithdrawals.plus(chainAsset.withdrawal_pending_count);
           chain.deposit_block_height = depositBlockHeight.toFormat();
           chain.is_error = !chainAsset.is_synchronized;
           chain.is_slow = depositBlockHeight < managedBlockHeight;
@@ -265,6 +268,8 @@ Tool.prototype = {
       });
 
       $('#chains-content').html(self.templateChains({
+        totalChains: chains.length,
+        totalWithdrawals: totalWithdrawals.toString(),
         chains: chains
       }));
     });
