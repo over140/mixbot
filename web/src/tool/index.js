@@ -316,9 +316,6 @@ Tool.prototype = {
         var assetMap = {};
         topAssets.forEach(function(asset) {
           assetMap[asset.asset_id] = asset;
-          if (asset.asset_id != "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c" && asset.asset_id != "c94ac88f-4671-3976-b60a-09064f1811e8") {
-            totalCapitalization = totalCapitalization.plus(asset.capitalization); 
-          }
         });
 
         var boxAsset = assetMap["f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c"];
@@ -338,6 +335,7 @@ Tool.prototype = {
             if (asset.asset_id === "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c" || asset.asset_id === "c94ac88f-4671-3976-b60a-09064f1811e8") {
               capitalization = amount.multipliedBy(priceUsd);
             }
+            totalCapitalization = totalCapitalization.plus(capitalization); 
 
             if (priceUsd.isGreaterThan(1)) {
               asset.price_usd = priceUsd.toFixed(2);  
