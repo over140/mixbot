@@ -224,8 +224,12 @@ Tool.prototype = {
           chain.is_synchronized = chainAsset.is_synchronized;
           chain.threshold = chainAsset.threshold;
           chain.withdrawal_fee = chainAsset.withdrawal_fee;
-          chain.withdrawal_pending_count = chainAsset.withdrawal_pending_count;
-          totalWithdrawals = totalWithdrawals.plus(chainAsset.withdrawal_pending_count);
+          var withdrawalPendingCount = new BigNumber(chainAsset.withdrawal_pending_count);
+          if (chain.chain_id === "990c4c29-57e9-48f6-9819-7d986ea44985") {
+            withdrawalPendingCount = withdrawalPendingCount.minus(1);
+          }
+          chain.withdrawal_pending_count = withdrawalPendingCount.toString();
+          totalWithdrawals = totalWithdrawals.plus(withdrawalPendingCount);
           chain.deposit_block_height = depositBlockHeight.toFormat();
           chain.is_error = !chainAsset.is_synchronized;
           chain.is_slow = depositBlockHeight < managedBlockHeight;
