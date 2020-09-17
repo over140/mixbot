@@ -243,6 +243,15 @@
     "average_block_time": 60
   },
   {
+    "chain_id": "5649ca42-eb5f-4c0e-ae28-d9a4e77eded3",
+    "asset_id": "5649ca42-eb5f-4c0e-ae28-d9a4e77eded3",
+    "icon_url": "https://mixin-images.zeromesh.net/5st3i_y2vTKd6HAbxSKk9HtC68oj_m5BowKpXNzzgjiSnYQRLfF14pFS_4pMCNQVjjQyA6EO6E5Gn_BhyGv02OA=s128",
+    "name": "Tezos",
+    "symbol": "XTZ",
+    "explore": "https://tzstats.com/",
+    "average_block_time": 60
+  },
+  {
     "chain_id": "f8b77dc0-46fd-4ea1-9821-587342475869",
     "asset_id": "f8b77dc0-46fd-4ea1-9821-587342475869",
     "icon_url": "https://mixin-images.zeromesh.net/UtlEMoi7t6Q9p99oJ2KNLnMjajCrxdPanUJVw7_Emq4_G7fGsFhyWBQljFTrCFe-STHq3fsyt1asO78AtrD2ci4=s128",
