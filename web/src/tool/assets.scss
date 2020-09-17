@@ -3,14 +3,15 @@
 .tool.layout {
 
   .total.capitalization {
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 640px;
-    margin: 0 auto;
-    box-sizing: border-box;
     text-align: center;
-    font-size: 16px;
-    padding: 12px 20px 12px 20px;
-    color: #9B9B9B;
+    font-size: 15px;
+    padding: 20px 10px;
+    margin: 0px 10px 0px 10px;
+    background-color: #F5F7FA;
+    border: 1px solid #EFF4F9;
+    border-radius: 12px;
   }
 
   .assets.list {
