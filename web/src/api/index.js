@@ -78,7 +78,24 @@ API.prototype = {
         self.error(event.responseJSON, callback);
       }
     });
-  }, 
+  },
+
+  requestPromise: function (method, url, params) {
+    return new Promise( (resovle, reject) => {
+      $.ajax({
+        type: method,
+        url: url,
+        contentType: "application/json",
+        data: JSON.stringify(params),
+        success: res => {
+          resovle(res);
+        },
+        error: err => {
+          reject(err);
+        }
+      });
+    })
+  },
 
   error: function(resp, callback) {
     if (resp == null || resp == undefined || resp.error === null || resp.error === undefined) {

@@ -3,6 +3,15 @@
     "title": "热门",
     "bots": [
       {
+        "name": "小钱包",
+        "tags": "工具",
+        "identity_number": "7000101425",
+        "icon_url": "https://mixin-images.zeromesh.net/GACcimWp8rxKjGKdXnjFHQHER2G69pPkgu92rgJ0r_Bh-TXht12-8h0MK5JaBYo5whL3eSfxs2jMLIqjZXAcwws=s256",
+        "description": "由 Fox.ONE 提供，媲美原生钱包，通过 API 安全管理用户资产，提供资产管理、定投、理财、币币、OTC、借贷等一站式服务。",
+        "url": "https://mixin.one/users/f49c073a-f92c-4268-ab81-25805d8a108f",
+        "effects": ""
+      },
+      {
         "name": "Mixin 商店🔥",
         "tags": "购物",
         "identity_number": "7000103274",
@@ -18,15 +27,6 @@
         "icon_url": "https://mixin-images.zeromesh.net/RWo-Mff0wEnMhbJygusHLUeQB1DfWGqWSCo11u9bz3pu9G0nYK6-hmPcr0H50gmwUzvZ1LcQKJe3UpS4R3YoVOE=s256",
         "description": "网购返利，不花钱也能定投比特币，再也不怕媳妇买买买啦 😂",
         "url": "https://mixin.one/users/1da1124a-9c97-4f2b-b332-f11f77c7604a",
-        "effects": ""
-      },
-      {
-        "name": "小钱包",
-        "tags": "工具",
-        "identity_number": "7000101425",
-        "icon_url": "https://mixin-images.zeromesh.net/GACcimWp8rxKjGKdXnjFHQHER2G69pPkgu92rgJ0r_Bh-TXht12-8h0MK5JaBYo5whL3eSfxs2jMLIqjZXAcwws=s256",
-        "description": "由 Fox.ONE 提供，媲美原生钱包，通过 API 安全管理用户资产，提供资产管理、定投、理财、币币、OTC、借贷等一站式服务。",
-        "url": "https://mixin.one/users/f49c073a-f92c-4268-ab81-25805d8a108f",
         "effects": ""
       },
       {
@@ -131,6 +131,24 @@
         "icon_url": "https://mixin-images.zeromesh.net/IUpgTYOMh_oO3vCODEKjmfyizsOz49bPxY0DLDAi3kgXYHjOJ1eexCjLdFZs8dl5gSzkrnDqa5E2xBD_Hc_IUek=s256",
         "description": "Fox.ONE 的场外交易平台，承兑人秒哥与 BigONE 的 OTC 秒哥是同一人",
         "url": "https://mixin.one/users/fb523769-e4f9-4148-b16d-1ca0edcdb955",
+        "effects": ""
+      },
+      {
+        "name": "ExinSwap",
+        "tags": "交易所",
+        "identity_number": "7000102352",
+        "icon_url": "https://mixin-images.zeromesh.net/daVk5A4KnEJqHgjZ3rXSy7L9PbrPzFpB4d7TlycIGVigcAaIMNJWoWsKOtlxjLOukmFjIKRJ9KrMF4KqzZ_zHL8=s256",
+        "description": "Exin 旗下的自动化做市交易平台，目前专注 XIN/USDT ，资金池规模超过 100 万美元",
+        "url": "https://mixin.one/users/29f23576-4651-47ff-8c16-6c8a5d76985e",
+        "effects": ""
+      },
+      {
+        "name": "4swap",
+        "tags": "交易所",
+        "identity_number": "7000103537",
+        "icon_url": "https://mixin-images.zeromesh.net/puv4bKhpNP93xWLLsdUVZWs_N5weDeHvLOg_2JAhnVujbys82eYSFv9t_qGWomzJRvJD53WE-pst6HzOaJ377yfm=s256",
+        "description": "Fox 旗下自动化做市交易平台，XIN/BTC 和 XIN/EOS 深度很好，资金池规模超过 100 万美元",
+        "url": "https://mixin.one/users/a753e0eb-3010-4c4a-a7b2-a7bda4063f62",
         "effects": ""
       },
       {

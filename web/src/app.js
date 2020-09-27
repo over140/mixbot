@@ -8,6 +8,7 @@ import API from './api';
 import Auth from './auth';
 import Explorer from './explorer';
 import Demo from './demo';
+import Swap from './swap';
 
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
@@ -62,6 +63,9 @@ router.on({
   },
   '/demo': function () {
     new Demo(router).render();
+  },
+  '/swap': function () {
+    new Swap(router, api, PartialLoading).render();
   },
   '/tools': function () {
     new Tool(router, api, PartialLoading).render();
