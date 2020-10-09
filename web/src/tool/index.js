@@ -279,13 +279,13 @@ Tool.prototype = {
     });
   },
 
-  renderAssets: function () {
+  requestAssetData: function (callback) {
     const self = this;
-    $('#assets-content').html(self.loading());
-
-    var boxCirculatingSupply = window.localStorage.getItem('box_circulating_supply');
-    if (!boxCirculatingSupply) {
-      boxCirculatingSupply = "24046809";
+    var result = {};
+    function checkResult() {
+      if (result.circulatingSupply && result.topAssets && result.assets) {
+        callback(result);
+      }
     }
     self.api.requestURL('GET', 'https://box-api.xue.cn/funds', undefined, function(resp) {
       if (resp.error || !resp.data || resp.data.length < 1) {
@@ -293,86 +293,100 @@ Tool.prototype = {
       }
       const circulatingSupply = resp.data[0].circulating_supply;
       if (circulatingSupply) {
-        boxCirculatingSupply = circulatingSupply
+        result.circulatingSupply = circulatingSupply
         window.localStorage.setItem('box_circulating_supply', circulatingSupply);
+      } else {
+        result.circulatingSupply = window.localStorage.getItem('box_circulating_supply');
       }
+      checkResult();
     });
 
     self.api.request('GET', '/network', undefined, function(resp) {
       if (resp.error) {
         return;
       }
+      result.assets = resp.data.assets;
+      checkResult();
+    });
 
-      // Top 20 assets
-      var assets = resp.data.assets;
-      self.api.request('GET', '/network/assets/top', undefined, function(resp) {
-        if (resp.error) {
-          return;
-        }
+    self.api.request('GET', '/network/assets/top', undefined, function(resp) {
+      if (resp.error) {
+        return;
+      }
+      result.topAssets = resp.data;
+      checkResult();
+    });
+  },
 
-        // Top 100 assets
-        var totalCapitalization = new BigNumber(0);
-        var topAssets = resp.data
-        var assetMap = {};
-        topAssets.forEach(function(asset) {
-          assetMap[asset.asset_id] = asset;
-        });
+  renderAssets: function () {
+    const self = this;
+    $('#assets-content').html(self.loading());
 
-        var boxAsset = assetMap["f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c"];
-        if (boxAsset) {
-          boxAsset.amount = boxCirculatingSupply;
-          assets = [boxAsset, ...assets];
-        }
-        
-        for (var i = 0; i < assets.length; i++) {
-          var asset = assets[i];
-          var topAsset = assetMap[asset.asset_id];
-          if (topAsset) {
-            const priceUsd = new BigNumber(topAsset.price_usd);
-            const changeUsd = new BigNumber(topAsset.change_usd);
-            const amount = new BigNumber(asset.amount);
-            var capitalization = new BigNumber(topAsset.capitalization);
-            if (asset.asset_id === "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c" || asset.asset_id === "c94ac88f-4671-3976-b60a-09064f1811e8") {
-              capitalization = amount.multipliedBy(priceUsd);
-            }
-            totalCapitalization = totalCapitalization.plus(capitalization); 
+    self.requestAssetData(function(data) {
+      const boxCirculatingSupply = data.circulatingSupply;
+      const topAssets = data.topAssets;
+      var assets = data.assets;
 
-            if (priceUsd.isGreaterThan(1)) {
-              asset.price_usd = priceUsd.toFixed(2);  
-            } else {
-              asset.price_usd = priceUsd.toString();
-            }
-            asset.amount = new BigNumber(amount.toFixed(0)).toFormat();
-            asset.change_usd = changeUsd.multipliedBy(100).toFixed(2);
-            if (changeUsd.isLessThan(0)) {
-              asset.change_usd_red = true;
-            }
-            asset.org_capitalization = capitalization.toString();
-            asset.capitalization = new BigNumber(capitalization.toFixed(0)).toFormat();
-            asset.asset_icon_url = asset.icon_url;
-            var chainAsset = self.chainMap[topAsset.chain_id];
-            if (chainAsset) {
-              asset.chain_icon_url = chainAsset.icon_url;
-            }
-          }
-        }
-
-        assets.sort(function (a, b) {
-          const value = new BigNumber(a.org_capitalization).minus(b.org_capitalization)
-          if (value.isZero()) {
-            return 0;
-          } else if (value.isNegative()) {
-            return 1;
-          } else {
-            return -1;
-          }
-        });
-
-        $('#assets-content').html(self.templateAssets({
-          assets: assets,
-          totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
-        }));
+      var totalCapitalization = new BigNumber(0);
+      var assetMap = {};
+      topAssets.forEach(function(asset) {
+        assetMap[asset.asset_id] = asset;
       });
+
+      var boxAsset = assetMap["f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c"];
+      if (boxAsset) {
+        boxAsset.amount = boxCirculatingSupply;
+        assets = [boxAsset, ...assets];
+      }
+      
+      for (var i = 0; i < assets.length; i++) {
+        var asset = assets[i];
+        var topAsset = assetMap[asset.asset_id];
+        if (topAsset) {
+          const priceUsd = new BigNumber(topAsset.price_usd);
+          const changeUsd = new BigNumber(topAsset.change_usd);
+          const amount = new BigNumber(asset.amount);
+          var capitalization = new BigNumber(topAsset.capitalization);
+          if (asset.asset_id === "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c" || asset.asset_id === "c94ac88f-4671-3976-b60a-09064f1811e8") {
+            capitalization = amount.multipliedBy(priceUsd);
+          }
+          totalCapitalization = totalCapitalization.plus(capitalization); 
+
+          if (priceUsd.isGreaterThan(1)) {
+            asset.price_usd = priceUsd.toFixed(2);  
+          } else {
+            asset.price_usd = priceUsd.toString();
+          }
+          asset.amount = new BigNumber(amount.toFixed(0)).toFormat();
+          asset.change_usd = changeUsd.multipliedBy(100).toFixed(2);
+          if (changeUsd.isLessThan(0)) {
+            asset.change_usd_red = true;
+          }
+          asset.org_capitalization = capitalization.toString();
+          asset.capitalization = new BigNumber(capitalization.toFixed(0)).toFormat();
+          asset.asset_icon_url = asset.icon_url;
+          var chainAsset = self.chainMap[topAsset.chain_id];
+          if (chainAsset) {
+            asset.chain_icon_url = chainAsset.icon_url;
+          }
+        }
+      }
+
+      assets.sort(function (a, b) {
+        const value = new BigNumber(a.org_capitalization).minus(b.org_capitalization)
+        if (value.isZero()) {
+          return 0;
+        } else if (value.isNegative()) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+
+      $('#assets-content').html(self.templateAssets({
+        assets: assets,
+        totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
+      }));
     });
   }
 };
