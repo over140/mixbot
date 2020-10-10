@@ -1,0 +1,55 @@
+
+<div class="container">
+  <table class="rate table">
+    <tbody>
+      <tr>
+        <td>
+          <div class="box">
+            <select id="fromCurrency">
+              <option value="CNY">人民币(CNY)</option>
+              <option value="HKD">港元(HKD)</option>
+              <option value="EUR">欧元(EUR)</option>
+              <option value="USD" selected="selected">美元(USD)</option>
+              <option value="GBP">英镑(GBP)</option>
+              <option value="AUD">澳元(AUD)</option>
+              <option value="KRW">韩元(KRW)</option>
+              <option value="JPY">日元(JPY)</option>
+            </select>
+            =>
+            <select id="toCurrency" >
+              <option value="CNY" selected="selected">人民币(CNY)</option>
+              <option value="HKD">港元(HKD)</option>
+              <option value="EUR">欧元(EUR)</option>
+              <option value="USD">美元(USD)</option>
+              <option value="GBP">英镑(GBP)</option>
+              <option value="AUD">澳元(AUD)</option>
+              <option value="KRW">韩元(KRW)</option>
+              <option value="JPY">日元(JPY)</option>
+            </select>
+            <br />
+            <div class="result">
+              兑换金额：
+              <input class="amount" type="text" autocomplete="off" name="amount" value="100" id="amount" maxlength="8">
+              <button id="exchange">兑换</button>
+              <br/>
+              <label id="currentCurrency"></label><br/>
+              <label id="exchangeResult"></label>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="box">
+            <div class="loading">
+              <img id="more-loading" />
+            </div>
+            <div id="result">
+            </div>
+          </div>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

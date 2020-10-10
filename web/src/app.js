@@ -9,6 +9,7 @@ import Auth from './auth';
 import Explorer from './explorer';
 import Demo from './demo';
 import Swap from './swap';
+import ExchangeRate from './rate'
 
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
@@ -66,6 +67,9 @@ router.on({
   },
   '/swap': function () {
     new Swap(router, api, PartialLoading).render();
+  },
+  '/rate': function () {
+    new ExchangeRate(router, api, PartialLoading).render();
   },
   '/tools': function () {
     new Tool(router, api, PartialLoading).render();
