@@ -81,6 +81,15 @@
     "average_block_time": 6
   },
   {
+    "chain_id": "08285081-e1d8-4be6-9edc-e203afa932da",
+    "asset_id": "08285081-e1d8-4be6-9edc-e203afa932da",
+    "icon_url": "https://mixin-images.zeromesh.net/tS53GsHItszDc8OTpREDTL1mGdUlL-oJrt0unKEPxeb35Y7V7XtdmSd9dq0rgghyrfT_KllP5w_31bwDIRsuaQg=s128",
+    "name": "Filecoin",
+    "symbol": "FIL",
+    "explore": "https://filfox.info/zh/block/",
+    "average_block_time": 30
+  },
+  {
     "chain_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
     "asset_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
     "icon_url": "https://mixin-images.zeromesh.net/pZQ0HL075WytmDYtyVdNXfn_zvAkCMtwcv9665oXtm8h86W_5mf1ROqidtq2ByY7xBM2xxxxbHP3oKScCjnQK5GR=s128",
