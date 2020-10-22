@@ -256,12 +256,12 @@
         "effects": ""
       },
       {
-        "name": "W3c.Group 官方群",
-        "tags": "大群",
-        "identity_number": "7000102563",
-        "icon_url": "https://mixin-images.zeromesh.net/ppyOLB1aF0f7YdGQeF5Gizj4eSquTIWzILdACh4al21kn0iTrX32UL_sd2sZb2dYx-D5HgSFawNaMJZwoiaUbw=s256",
-        "description": "W3c.Group（Web3.0 Content Group）区块链创作者社区的官方中文群",
-        "url": "https://mixin.one/users/18bc32dc-9e63-475c-954f-2cdc0e288d7a",
+        "name": "W3协作组",
+        "tags": "工具",
+        "identity_number": "7000102203",
+        "icon_url": "https://mixin-images.zeromesh.net/qaxo1HNIqUypZNXwYWifxjal_mUMCB25I3oo5jNY2QeprN55jqvztX-F_5tcRjZNLawSEx-nb0l6qB8gyZI1nKE=s256",
+        "description": "区块链驱动的创造者协作社区，让小组成员共同创造价值，共建信任并获益。",
+        "url": "https://mixin.one/users/4ef084f8-709c-490d-9a10-03f466496c5e",
         "effects": ""
       },
       {
@@ -520,15 +520,6 @@
         "icon_url": "https://mixin-images.zeromesh.net/rOq9nv5Xj6ugCGLIpVK1LizJD4YMr0pQ1az-CxJKw24WsXCOpRUKeUaHU-3cJf775WhFo3VhZZkIeA3blZnCzNk=s256",
         "description": "Fox.ONE 旗下的小群助手，支持群收款、签到题库、筛子等实用功能",
         "url": "https://mixin.one/users/244f2757-d170-4191-91eb-d73157df1461",
-        "effects": ""
-      },
-      {
-        "name": "W3C 区块链创作者社区",
-        "tags": "工具",
-        "identity_number": "7000102203",
-        "icon_url": "https://mixin-images.zeromesh.net/SAQREf4M4WvFopEHocWB-AH0r5zH9f09YgnKXQH6QMw2WDwePL4lOUuJnF4SoSjvh005St2whsCCymAURn9xgO0Q=s256",
-        "description": "让创作者熟悉区块链并真正获益，同时更好地进行社群协作。",
-        "url": "https://mixin.one/users/4ef084f8-709c-490d-9a10-03f466496c5e",
         "effects": ""
       },
       {
