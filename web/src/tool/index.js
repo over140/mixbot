@@ -196,6 +196,7 @@ Tool.prototype = {
           best_snapshot_height: new BigNumber(stats.best_snapshot_height).toFormat(),
           accepted_nodes: stats.accepted_nodes,
           market_price_usd: stats.market_price_usd,
+          minting_reward: new BigNumber(45000 * 0.9).div(365).div(stats.accepted_nodes).toFixed(8),
           circulation_xin: new BigNumber(new BigNumber(stats.circulation_xin).toFixed(0)).toFormat()
         }));
       });
