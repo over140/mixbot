@@ -35,6 +35,7 @@ Swap.prototype = {
 
       if (i == arrlen - 1) {
         console.info('orders not enough');
+        return undefined;
       }
     }
     return totalMoney
@@ -48,7 +49,7 @@ Swap.prototype = {
         callback(result);
       }
     }
-    self.api.requestURL('POST', 'https://bigone.donate.cafe', { "url": "https://www.bigonezh.com/api/v3/asset_pairs/XIN-USDT/depth?limit=200" }, function(resp) {
+    self.api.requestURL('POST', 'https://bigone.donate.cafe', { "url": "https://www.bigonezh.com/api/v3/asset_pairs/XIN-USDT/depth?limit=300" }, function(resp) {
       if (!resp.data) {
         self.api.notifyError('error', resp.error);
         return; 
@@ -113,6 +114,13 @@ Swap.prototype = {
     });
   },
 
+  subPrice: function(price, number) {
+    if (price) {
+      return price.toFixed(number);
+    }
+    return price;
+  },
+
   //async 
   render: function () {
     const self = this;
@@ -120,7 +128,7 @@ Swap.prototype = {
     $('#layout-container').html(self.loading());
 
     self.requestData(function(data) {
-      const BigONEUSDT = data.BigONEUSDT; //(await self.api.requestPromise('POST', 'https://bigone.donate.cafe', { "url": "https://www.bigonezh.com/api/v3/asset_pairs/XIN-USDT/depth?limit=200" })).data;
+      const BigONEUSDT = data.BigONEUSDT;
       const bigoneBuyUsdtOne = self.bigPrice(BigONEUSDT.asks, new BigNumber(1));
       const bigoneSellUsdtOne = self.bigPrice(BigONEUSDT.bids, new BigNumber(1));
       const bigoneBuyUsdtTen = self.bigPrice(BigONEUSDT.asks, new BigNumber(10));
@@ -128,19 +136,19 @@ Swap.prototype = {
       const bigoneBuyUsdtHundred = self.bigPrice(BigONEUSDT.asks, new BigNumber(100));
       const bigoneSellUsdtHundred = self.bigPrice(BigONEUSDT.bids, new BigNumber(100));
   
-      const BigONEEOS = data.BigONEEOS; //(await self.api.requestPromise('POST', 'https://bigone.donate.cafe', { "url": "https://www.bigonezh.com/api/v3/asset_pairs/XIN-EOS/depth?limit=100" })).data;
+      const BigONEEOS = data.BigONEEOS;
       const bigoneBuyEosOne = self.bigPrice(BigONEEOS.asks, new BigNumber(1));
       const bigoneSellEosOne = self.bigPrice(BigONEEOS.bids, new BigNumber(1));
       const bigoneBuyEosTen = self.bigPrice(BigONEEOS.asks, new BigNumber(10));
       const bigoneSellEosTen = self.bigPrice(BigONEEOS.bids, new BigNumber(10));
   
-      const BigONEBTC = data.BigONEBTC; //(await self.api.requestPromise('POST', 'https://bigone.donate.cafe', { "url": "https://www.bigonezh.com/api/v3/asset_pairs/XIN-BTC/depth?limit=100" })).data;
+      const BigONEBTC = data.BigONEBTC;
       const bigoneBuyBtcOne = self.bigPrice(BigONEBTC.asks, new BigNumber(1));
       const bigoneSellBtcOne = self.bigPrice(BigONEBTC.bids, new BigNumber(1));
       const bigoneBuyBtcTen = self.bigPrice(BigONEBTC.asks, new BigNumber(10));
       const bigoneSellBtcTen = self.bigPrice(BigONEBTC.bids, new BigNumber(10));
   
-      const topAssets = data.topAssets; //(await self.api.requestPromise('GET', 'https://mixin-api.zeromesh.net/network/assets/top', undefined)).data;
+      const topAssets = data.topAssets;
       var assetMap = {};
       topAssets.forEach(asset => {
         assetMap[asset.asset_id] = asset;
@@ -149,9 +157,9 @@ Swap.prototype = {
       const priceEOS = new BigNumber(assetMap["6cfe566e-4aad-470b-8c9a-2fd35b49c68d"].price_usd);
       const priceXIN = new BigNumber(assetMap["c94ac88f-4671-3976-b60a-09064f1811e8"].price_usd);
   
-      const ExinSwap  = data.ExinSwap; //(await self.api.requestPromise('GET', 'https://app.exinswap.com/api/v1/pairs', undefined)).data[0];
-      const FoxSwapEOS = data.FoxSwapEOS; //(await self.api.requestPromise('GET', 'https://f1-uniswap-api.firesbox.com/api/pairs/c94ac88f-4671-3976-b60a-09064f1811e8/6cfe566e-4aad-470b-8c9a-2fd35b49c68d', undefined)).data;
-      const FoxSwapBTC = data.FoxSwapBTC; //(await self.api.requestPromise('GET', 'https://f1-uniswap-api.firesbox.com/api/pairs/c94ac88f-4671-3976-b60a-09064f1811e8/c6d0c728-2624-429b-8e0d-d9d19b6592fa', undefined)).data;
+      const ExinSwap  = data.ExinSwap;
+      const FoxSwapEOS = data.FoxSwapEOS;
+      const FoxSwapBTC = data.FoxSwapBTC;
       
       const foxSwapEosOne = self.price(FoxSwapEOS.quote_amount, FoxSwapEOS.base_amount, 1);
       const foxSwapEosTen = self.price(FoxSwapEOS.quote_amount, FoxSwapEOS.base_amount, 10);
@@ -166,10 +174,10 @@ Swap.prototype = {
         price_xin: priceXIN.toFixed(2),
         bigone_buy_usdt_one: bigoneBuyUsdtOne.toFixed(2),
         bigone_sell_usdt_one: bigoneSellUsdtOne.toFixed(2),
-        bigone_buy_usdt_ten: bigoneBuyUsdtTen.toFixed(2),
-        bigone_sell_usdt_ten: bigoneSellUsdtTen.toFixed(2),
-        bigone_buy_usdt_hundred: bigoneBuyUsdtHundred.toFixed(2),
-        bigone_sell_usdt_hundred: bigoneSellUsdtHundred.toFixed(2),
+        bigone_buy_usdt_ten: self.subPrice(bigoneBuyUsdtTen, 2),
+        bigone_sell_usdt_ten: self.subPrice(bigoneSellUsdtTen, 2),
+        bigone_buy_usdt_hundred: self.subPrice(bigoneBuyUsdtHundred, 2),
+        bigone_sell_usdt_hundred: self.subPrice(bigoneSellUsdtHundred, 2),
         
         bigone_buy_eos_one: bigoneBuyEosOne.toFixed(2),
         bigone_buy_eos_usdt_one: bigoneBuyEosOne.multipliedBy(priceEOS).toFixed(2),

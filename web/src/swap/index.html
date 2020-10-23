@@ -49,7 +49,11 @@
           ExinSwap：{{exin_swap_hundred}} USDT <br />
           4swap：{{fox_swap_eos_hundred}} EOS ≈ {{fox_swap_eos_usdt_hundred}} USDT <br />
           4swap：{{fox_swap_btc_hundred}} BTC ≈ {{fox_swap_btc_usdt_hundred}} USDT <br />
-          BigONE（买）：{{bigone_buy_usdt_hundred}} USDT<br />
+          {{#if bigone_buy_usdt_hundred}}
+            BigONE（买）：{{bigone_buy_usdt_hundred}} USDT<br />
+          {{else}}
+            BigONE（买）：深度不够<br />
+          {{/if}}
           BigONE（卖）：{{bigone_sell_usdt_hundred}} USDT<br />
         </div>
         </td>
