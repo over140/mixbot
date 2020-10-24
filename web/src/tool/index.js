@@ -284,82 +284,46 @@ Tool.prototype = {
     });
   },
 
-  requestAssetData: function (callback) {
+  renderAssets: function () {
     const self = this;
-    var result = {};
-    function checkResult() {
-      if (result.topAssets && result.assets) {
-        callback(result);
-      }
-    }
-
-    self.api.request('GET', '/network', undefined, function(resp) {
-      if (resp.error) {
-        return;
-      }
-      result.assets = resp.data.assets;
-      checkResult();
-    });
+    $('#assets-content').html(self.loading());
 
     self.api.request('GET', '/network/assets/top', undefined, function(resp) {
       if (resp.error) {
         return;
       }
-      result.topAssets = resp.data;
-      checkResult();
-    });
-  },
 
-  renderAssets: function () {
-    const self = this;
-    $('#assets-content').html(self.loading());
-
-    self.requestAssetData(function(data) {
-      const topAssets = data.topAssets;
-      var assets = data.assets;
-
+      const topAssets = resp.data;
       var totalCapitalization = new BigNumber(0);
-      var assetMap = {};
-      topAssets.forEach(function(asset) {
-        assetMap[asset.asset_id] = asset;
-      });
       
-      for (var i = 0; i < assets.length; i++) {
-        var asset = assets[i];
-        var topAsset = assetMap[asset.asset_id];
-        if (topAsset) {
-          const priceUsd = new BigNumber(topAsset.price_usd);
-          const changeUsd = new BigNumber(topAsset.change_usd);
-          const liquidity = new BigNumber(topAsset.liquidity);
-          var amount = new BigNumber(asset.amount);
-          var capitalization = new BigNumber(topAsset.capitalization);
-          if (liquidity.isGreaterThan(0)) {
-            amount = liquidity;
-            capitalization = amount.multipliedBy(priceUsd);
-          }
-          totalCapitalization = totalCapitalization.plus(capitalization); 
+      for (var i = 0; i < topAssets.length; i++) {
+        var asset = topAssets[i];
+        const priceUsd = new BigNumber(asset.price_usd);
+        const changeUsd = new BigNumber(asset.change_usd);
+        const amount = new BigNumber(asset.liquidity);
+        const capitalization = new BigNumber(asset.capitalization);
+        totalCapitalization = totalCapitalization.plus(capitalization); 
 
-          if (priceUsd.isGreaterThan(1)) {
-            asset.price_usd = priceUsd.toFixed(2);  
-          } else {
-            asset.price_usd = priceUsd.toString();
-          }
-          asset.amount = new BigNumber(amount.toFixed(0)).toFormat();
-          asset.change_usd = changeUsd.multipliedBy(100).toFixed(2);
-          if (changeUsd.isLessThan(0)) {
-            asset.change_usd_red = true;
-          }
-          asset.org_capitalization = capitalization.toString();
-          asset.capitalization = new BigNumber(capitalization.toFixed(0)).toFormat();
-          asset.asset_icon_url = asset.icon_url;
-          var chainAsset = self.chainMap[topAsset.chain_id];
-          if (chainAsset) {
-            asset.chain_icon_url = chainAsset.icon_url;
-          }
+        if (priceUsd.isGreaterThan(1)) {
+          asset.price_usd = priceUsd.toFixed(2);  
+        } else {
+          asset.price_usd = priceUsd.toString();
+        }
+        asset.amount = new BigNumber(amount.toFixed(0)).toFormat();
+        asset.change_usd = changeUsd.multipliedBy(100).toFixed(2);
+        if (changeUsd.isLessThan(0)) {
+          asset.change_usd_red = true;
+        }
+        asset.org_capitalization = capitalization.toString();
+        asset.capitalization = new BigNumber(capitalization.toFixed(0)).toFormat();
+        asset.asset_icon_url = asset.icon_url;
+        var chainAsset = self.chainMap[asset.chain_id];
+        if (chainAsset) {
+          asset.chain_icon_url = chainAsset.icon_url;
         }
       }
 
-      assets.sort(function (a, b) {
+      topAssets.sort(function (a, b) {
         const value = new BigNumber(a.org_capitalization).minus(b.org_capitalization)
         if (value.isZero()) {
           return 0;
@@ -371,7 +335,7 @@ Tool.prototype = {
       });
 
       $('#assets-content').html(self.templateAssets({
-        assets: assets,
+        assets: topAssets,
         totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
       }));
     });
