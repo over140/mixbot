@@ -288,23 +288,10 @@ Tool.prototype = {
     const self = this;
     var result = {};
     function checkResult() {
-      if (result.circulatingSupply && result.topAssets && result.assets) {
+      if (result.topAssets && result.assets) {
         callback(result);
       }
     }
-    self.api.requestURL('GET', 'https://box-api.xue.cn/funds', undefined, function(resp) {
-      if (resp.error || !resp.data || resp.data.length < 1) {
-        return; 
-      }
-      const circulatingSupply = resp.data[0].circulating_supply;
-      if (circulatingSupply) {
-        result.circulatingSupply = circulatingSupply
-        window.localStorage.setItem('box_circulating_supply', circulatingSupply);
-      } else {
-        result.circulatingSupply = window.localStorage.getItem('box_circulating_supply');
-      }
-      checkResult();
-    });
 
     self.api.request('GET', '/network', undefined, function(resp) {
       if (resp.error) {
@@ -328,7 +315,6 @@ Tool.prototype = {
     $('#assets-content').html(self.loading());
 
     self.requestAssetData(function(data) {
-      const boxCirculatingSupply = data.circulatingSupply;
       const topAssets = data.topAssets;
       var assets = data.assets;
 
@@ -337,12 +323,6 @@ Tool.prototype = {
       topAssets.forEach(function(asset) {
         assetMap[asset.asset_id] = asset;
       });
-
-      var boxAsset = assetMap["f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c"];
-      if (boxAsset) {
-        boxAsset.amount = boxCirculatingSupply;
-        assets = [boxAsset, ...assets];
-      }
       
       for (var i = 0; i < assets.length; i++) {
         var asset = assets[i];
@@ -350,9 +330,11 @@ Tool.prototype = {
         if (topAsset) {
           const priceUsd = new BigNumber(topAsset.price_usd);
           const changeUsd = new BigNumber(topAsset.change_usd);
-          const amount = new BigNumber(asset.amount);
+          const liquidity = new BigNumber(topAsset.liquidity);
+          var amount = new BigNumber(asset.amount);
           var capitalization = new BigNumber(topAsset.capitalization);
-          if (asset.asset_id === "f5ef6b5d-cc5a-3d90-b2c0-a2fd386e7a3c" || asset.asset_id === "c94ac88f-4671-3976-b60a-09064f1811e8") {
+          if (liquidity.isGreaterThan(0)) {
+            amount = liquidity;
             capitalization = amount.multipliedBy(priceUsd);
           }
           totalCapitalization = totalCapitalization.plus(capitalization); 
