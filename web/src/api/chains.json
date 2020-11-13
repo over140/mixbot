@@ -36,6 +36,15 @@
     "average_block_time": 120
   },
   {
+    "chain_id": "54c61a72-b982-4034-a556-0d99e3c21e39",
+    "asset_id": "54c61a72-b982-4034-a556-0d99e3c21e39",
+    "icon_url": "https://mixin-images.zeromesh.net/AeLhCJ6iDloyDS50ce8OgfK-0y5ExO-1rSeBSSRxMDQNuznc-rT3Hc07DiqD44G34QQYQwmctvIxpEbLhB7KDsQ7=s128",
+    "name": "Polkadot",
+    "symbol": "DOT",
+    "explore": "https://polkadot.subscan.cn/extrinsic/",
+    "average_block_time": 6
+  },
+  {
     "chain_id": "fd11b6e3-0b87-41f1-a41f-f0e9b49e5bf0",
     "asset_id": "fd11b6e3-0b87-41f1-a41f-f0e9b49e5bf0",
     "icon_url": "https://mixin-images.zeromesh.net/tqt14x8iwkiCR_vIKIw6gAAVO8XpZH7ku7ZJYB5ArMRA6grN9M1oCI7kKt2QqBODJwr17sZxDCDTjXHOgIixzv6X=s128",
