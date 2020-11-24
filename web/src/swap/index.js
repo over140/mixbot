@@ -91,7 +91,9 @@ Swap.prototype = {
         return; 
       }
       console.info("=== ExinSwap XIN-USDT");
-      result.ExinSwap = resp.data[0];
+      result.ExinSwap = resp.data.filter(function(pair){
+        return pair.asset0.uuid == "4d8c508b-91c5-375b-92b0-ee702ed2dac5" && pair.asset1.uuid == "c94ac88f-4671-3976-b60a-09064f1811e8";
+      })[0];
       checkResult();
     });
     self.api.requestURL('GET', 'https://f1-uniswap-api.firesbox.com/api/pairs/c94ac88f-4671-3976-b60a-09064f1811e8/6cfe566e-4aad-470b-8c9a-2fd35b49c68d', undefined, function(resp) {

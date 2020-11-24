@@ -40,6 +40,8 @@ Tool.prototype = {
     $('body').attr('class', 'tool layout');
     $('#layout-container').html(self.templateTools());
 
+    document.title = "Mixin 数据";
+
     self.renderAssets();
     self.renderChains();
     self.renderStats();
