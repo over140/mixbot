@@ -1,0 +1,23 @@
+<div class="search container">
+  <div class="search">
+     <input type="text" class="searchTerm" placeholder="User Id, Name">
+  </div>
+</div>
+<table class="contacts list">
+  <tbody>
+    {{#each contacts}}
+      <tr class="contact item" keywords="{{full_name}} {{user_id}}">
+        <td>
+          <img class="contact-icon" src="{{avatar_url}}" />
+        </td>
+        <td>
+          <span>{{full_name}}</span><br />
+          <span class="description">{{user_id}}</span>
+        </td>
+        <td>
+          <span class="copy action" data-clipboard-text="{{copy_info}}">{{t 'dev.button.copy'}}</span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

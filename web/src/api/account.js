@@ -34,6 +34,8 @@ Account.prototype = {
       } else {
         return "6b9816ce-8f38-48b5-9399-578c3fd0bdb0"
       }
+    } else if (this.isDevApp()) {
+      return "ce1cd3f3-9edb-4d9d-a91a-bc8cd12316dc"
     }
     return window.localStorage.getItem('client_id');
   },
@@ -45,22 +47,35 @@ Account.prototype = {
       } else {
         return "faf2b6a84c97fb35da5276443518400aa136cdb1276e2a4bf295f911eb48060e"
       }
+    } else if (this.isDevApp()) {
+      return "499d74c5baa0af7556ecfc87502c52f33d53b130acd8afe7ca9d26c53ae89e3b"
     }
   },
 
   clientScope: function () {
     if (this.isExplorerApp()) {
       return "PROFILE:READ+SNAPSHOTS:READ"
+    } else if (this.isDevApp()) {
+      return "PROFILE:READ+ASSETS:READ+CONTACTS:READ"
     }
     return ""
   },
 
   clientPrefix: function () {
-    return "explore_";
+    if (this.isExplorerApp()) {
+      return "explore_"
+    } else if (this.isDevApp()) {
+      return "dev_"
+    }
+    return ""
   },
 
   isExplorerApp: function () {
     return window.location.pathname.startsWith("/explore");
+  },
+
+  isDevApp: function () {
+    return window.location.pathname.startsWith("/dev");
   },
 
   userId: function () {

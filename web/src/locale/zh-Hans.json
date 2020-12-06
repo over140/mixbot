@@ -26,5 +26,11 @@
   "store": {
     "title": "Mixin 小程序精选",
     "button.view": "查看"
+  },
+  "dev": {
+    "tab.assets": "资产",
+    "tab.contacts": "联系人",
+    "button.copy": "复制",
+    "toast.copied": "已复制"
   }
 }

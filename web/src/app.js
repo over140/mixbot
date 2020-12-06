@@ -10,6 +10,7 @@ import Explorer from './explorer';
 import Demo from './demo';
 import Swap from './swap';
 import ExchangeRate from './rate'
+import Dev from './dev'
 
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
@@ -64,6 +65,12 @@ router.on({
   },
   '/demo': function () {
     new Demo(router).render();
+  },
+  '/dev': function () {
+    new Dev(router, api, PartialLoading).render();
+  },
+  '/dev/auth': function () {
+    new Auth(router, api).render();
   },
   '/swap': function () {
     new Swap(router, api, PartialLoading).render();

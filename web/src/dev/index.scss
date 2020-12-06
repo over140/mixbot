@@ -1,0 +1,73 @@
+@import '../constant.scss';
+
+.dev.layout {
+  
+  .tabs {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 44px;
+    background-color: #ffffff;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .tab {
+      background-color: #ffffff;
+      padding-top: 4px;
+      float: left;
+      font-size: 16px;
+
+      &.active {
+        border-bottom: 2px solid $color-main-highlight;
+      }
+    }
+  }
+
+  .dev.list {
+    position: relative;
+    top: 44px;
+    padding-bottom: 44px;
+    margin-top: 44px;
+    display: none;
+    &.active {
+      display: inline;
+    }
+  }
+
+  .spinner-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+  .search.container {
+    width: calc(100% - 40px);
+    max-width: 640px;
+    text-align: center;
+    font-size: 14px;
+
+    .search {
+      width: 100%;
+      position: relative;
+      display: flex;
+    }
+    
+    .searchTerm {
+      width: 100%;
+      border: 2px solid #F5F7FA;
+      padding: 6px;
+      height: 22px;
+      border-radius: 5px;
+      outline: none;
+      color: #000000;
+    }
+    
+  }
+
+}

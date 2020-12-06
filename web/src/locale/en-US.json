@@ -26,5 +26,11 @@
   "store": {
     "title": "Mixin Messenger Bots",
     "button.view": "View"
+  },
+  "dev": {
+    "tab.assets": "Assets",
+    "tab.contacts": "Contacts",
+    "button.copy": "Copy",
+    "toast.copied": "Copied"
   }
 }
