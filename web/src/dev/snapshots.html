@@ -1,0 +1,24 @@
+<div class="search container">
+  <div class="search">
+     <input type="text" class="searchTerm" placeholder="Snapshot Id">
+  </div>
+</div>
+<table class="snapshots list">
+  <tbody>
+    {{#each snapshots}}
+      <tr class="asset item" keywords="{{snapshot_id}}">
+        <td>
+          <img class="asset-icon" src="{{asset_icon_url}}" />
+          <img class="chain-icon" src="{{chain_icon_url}}" />
+        </td>
+        <td>
+          <span class="{{amount_style}}">{{amount}} {{symbol}}</span><br />
+          <span class="description">{{snapshot_id}}</span>
+        </td>
+        <td>
+          <span class="copy action" data-clipboard-text="{{copy_info}}">{{t 'dev.button.copy'}}</span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

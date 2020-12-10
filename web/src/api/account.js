@@ -56,7 +56,7 @@ Account.prototype = {
     if (this.isExplorerApp()) {
       return "PROFILE:READ+SNAPSHOTS:READ"
     } else if (this.isDevApp()) {
-      return "PROFILE:READ+ASSETS:READ+CONTACTS:READ"
+      return "PROFILE:READ+ASSETS:READ+CONTACTS:READ+SNAPSHOTS:READ"
     }
     return ""
   },
