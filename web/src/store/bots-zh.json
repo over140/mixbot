@@ -3,11 +3,20 @@
     "title": "热门",
     "bots": [
       {
+        "name": "ExinLocal",
+        "tags": "交易所",
+        "identity_number": "7000000015",
+        "icon_url": "https://mixin-images.zeromesh.net/TPVSyWaAVSJ4j2CqHSHRmzrRBeRg3fDMEqUUl8GITBQeNpGu4dvES7E8ZU9MBrR4RADbLfGbfI3PKULJODkGmik=s256",
+        "description": "全球点对点加密货币的交易市场，类似 LocalCryptos 但更安全更简单，应用多签、加密聊天等保障交易隐私和安全",
+        "url": "https://mixin.one/users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
+        "effects": ""
+      },
+      {
         "name": "小钱包",
         "tags": "工具",
         "identity_number": "7000101425",
         "icon_url": "https://mixin-images.zeromesh.net/GACcimWp8rxKjGKdXnjFHQHER2G69pPkgu92rgJ0r_Bh-TXht12-8h0MK5JaBYo5whL3eSfxs2jMLIqjZXAcwws=s256",
-        "description": "由 Fox.ONE 提供，媲美原生钱包，通过 API 安全管理用户资产，提供资产管理、定投、理财、币币、OTC、借贷等一站式服务。",
+        "description": "由 Fox.ONE 提供，媲美原生钱包，通过 API 安全管理用户资产，提供资产管理、定投、理财、币币、借贷等一站式服务。",
         "url": "https://mixin.one/users/f49c073a-f92c-4268-ab81-25805d8a108f",
         "effects": ""
       },
@@ -122,15 +131,6 @@
         "icon_url": "https://mixin-images.zeromesh.net/y10b63pl9TQy5Tr8-hguLVDZWl-Xt1ug3f-LgPSl6s6ZxKsYzdy9sWZFTarULKxWdnJQyDs_tr1q73ctdI6MKA=s256",
         "description": "基于 Mixin Network，支持法币入金，币币交易对接币安、火币和 BigONE 深度，定投免手续费且不托管资产，支持余币宝。",
         "url": "https://mixin.one/users/61103d28-3ac2-44a2-ae34-bd956070dab1",
-        "effects": ""
-      },
-      {
-        "name": "ZOTC",
-        "tags": "交易所",
-        "identity_number": "7000102035",
-        "icon_url": "https://mixin-images.zeromesh.net/IUpgTYOMh_oO3vCODEKjmfyizsOz49bPxY0DLDAi3kgXYHjOJ1eexCjLdFZs8dl5gSzkrnDqa5E2xBD_Hc_IUek=s256",
-        "description": "Fox.ONE 的场外交易平台，承兑人秒哥与 BigONE 的 OTC 秒哥是同一人",
-        "url": "https://mixin.one/users/fb523769-e4f9-4148-b16d-1ca0edcdb955",
         "effects": ""
       },
       {
