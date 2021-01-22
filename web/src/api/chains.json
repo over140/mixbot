@@ -36,6 +36,15 @@
     "average_block_time": 120
   },
   {
+    "chain_id": "eea900a8-b327-488c-8d8d-1428702fe240",
+    "asset_id": "eea900a8-b327-488c-8d8d-1428702fe240",
+    "icon_url": "https://mixin-images.zeromesh.net/JtSsCbZUzBpdDEI6JbLZ1-ZdAWUakaLBSpAp25gu0uHKoHC3kAeDTXZhsgMEOk_i3nFSAKI4QqFTEEPqv31QFD-hDQHpGA2zoG_A=s128",
+    "name": "MobileCoin",
+    "symbol": "MOB",
+    "explore": "",
+    "average_block_time": 1
+  },
+  {
     "chain_id": "54c61a72-b982-4034-a556-0d99e3c21e39",
     "asset_id": "54c61a72-b982-4034-a556-0d99e3c21e39",
     "icon_url": "https://mixin-images.zeromesh.net/AeLhCJ6iDloyDS50ce8OgfK-0y5ExO-1rSeBSSRxMDQNuznc-rT3Hc07DiqD44G34QQYQwmctvIxpEbLhB7KDsQ7=s128",
