@@ -8,7 +8,7 @@
         "identity_number": "7000000015",
         "icon_url": "https://mixin-images.zeromesh.net/TPVSyWaAVSJ4j2CqHSHRmzrRBeRg3fDMEqUUl8GITBQeNpGu4dvES7E8ZU9MBrR4RADbLfGbfI3PKULJODkGmik=s256",
         "description": "全球点对点加密货币的交易市场，类似 LocalCryptos 但更安全更简单，应用多签、加密聊天等保障交易隐私和安全",
-        "url": "https://mixin.one/users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
+        "url": "mixin://users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
         "effects": ""
       },
       {
@@ -17,7 +17,7 @@
         "identity_number": "7000101425",
         "icon_url": "https://mixin-images.zeromesh.net/GACcimWp8rxKjGKdXnjFHQHER2G69pPkgu92rgJ0r_Bh-TXht12-8h0MK5JaBYo5whL3eSfxs2jMLIqjZXAcwws=s256",
         "description": "由 Fox.ONE 提供，媲美原生钱包，通过 API 安全管理用户资产，提供资产管理、定投、理财、币币、借贷等一站式服务。",
-        "url": "https://mixin.one/users/f49c073a-f92c-4268-ab81-25805d8a108f",
+        "url": "mixin://users/f49c073a-f92c-4268-ab81-25805d8a108f",
         "effects": ""
       },
       {
@@ -26,7 +26,7 @@
         "identity_number": "7000103274",
         "icon_url": "https://mixin-images.zeromesh.net/eUgv3NdPvxXdeSekobAvT4_pOfYBe_CzBbSTZdamXdfVvomsGzOW2t5ldIHPLAI6jkXLpVbckIBNkT4sytG2jMkv=s256",
         "description": "Mixin T 恤火爆预售，限量 200 单，买一送一",
-        "url": "https://mixin.one/users/6cd39b0c-c61d-4c95-94ec-722903577970",
+        "url": "mixin://users/6cd39b0c-c61d-4c95-94ec-722903577970",
         "effects": ""
       },
       {
@@ -35,7 +35,7 @@
         "identity_number": "7000000014",
         "icon_url": "https://mixin-images.zeromesh.net/RWo-Mff0wEnMhbJygusHLUeQB1DfWGqWSCo11u9bz3pu9G0nYK6-hmPcr0H50gmwUzvZ1LcQKJe3UpS4R3YoVOE=s256",
         "description": "网购返利，不花钱也能定投比特币，再也不怕媳妇买买买啦 😂",
-        "url": "https://mixin.one/users/1da1124a-9c97-4f2b-b332-f11f77c7604a",
+        "url": "mixin://users/1da1124a-9c97-4f2b-b332-f11f77c7604a",
         "effects": ""
       },
       {
@@ -44,7 +44,7 @@
         "identity_number": "7000103013",
         "icon_url": "https://mixin-images.zeromesh.net/lkxdT13Z4NGYevVZc76IU1cqhqHMwic5zsMI1AjNZJGUZ1DryZ_qYS401DRxZ-Jpnkf4MJ_ihkvTy33xOX3NoYI=s256",
         "description": "完成每日任务，瓜分奖励，资产越多倍数越高，更有抽奖等你拿！",
-        "url": "https://mixin.one/users/e08207df-55de-4ad9-8463-af692824f988",
+        "url": "mixin://users/e08207df-55de-4ad9-8463-af692824f988",
         "effects": ""
       },
       {
@@ -53,7 +53,7 @@
         "identity_number": "7000103035",
         "icon_url": "https://mixin-images.zeromesh.net/rDy3RBIAc5hkWabgfp03q7ZXS5DBnaKHspClX2QcyKNOj-QU9gcKbTD9d186faAXpHatC8CDdeYC1WiXHNAuayKo=s256",
         "description": "糟糕！是心动的感觉！欢迎投稿那些曾经令你心动过的妹子图 😋",
-        "url": "https://mixin.one/users/dba5895c-9e35-4b1f-a261-91ae947c6999",
+        "url": "mixin://users/dba5895c-9e35-4b1f-a261-91ae947c6999",
         "effects": ""
       },
       {
@@ -62,7 +62,7 @@
         "identity_number": "7000102275",
         "icon_url": "https://mixin-images.zeromesh.net/PUh63FawGz6kfizE1YtCqKi_KQ5l7UNIIu2eoNFYWw8u8BezVVxQu2noYXD5EFpVM06su6Ba92LTN2f7RBoM77o=s256",
         "description": "区块链 ETF 产品 BOX 的官方社群机器人，一起定投 BOX 慢慢变富。",
-        "url": "https://mixin.one/users/b7c610d4-8e74-455d-ae82-c081ff80d511",
+        "url": "mixin://users/b7c610d4-8e74-455d-ae82-c081ff80d511",
         "effects": ""
       },
       {
@@ -71,7 +71,7 @@
         "identity_number": "7000101731",
         "icon_url": "https://mixin-images.zeromesh.net/skYt0xIOkcJhXXoGPWCzeGyhQTBb25HucaiFfy7cOztOBfFm_fQ5NROoZAoKUi_xpovPAqb1tl4rBHRKrLMdqTE=s256",
         "description": "把需要收藏的消息转发给小助手，方便手机端和桌面端互传文件，放心使用没有服务端（消息单钩），注意不要发敏感信息！",
-        "url": "https://mixin.one/users/b08dd779-7366-4d48-bf16-a2ce5014e213",
+        "url": "mixin://users/b08dd779-7366-4d48-bf16-a2ce5014e213",
         "effects": ""
       },
       {
@@ -80,7 +80,7 @@
         "identity_number": "7000101963",
         "icon_url": "https://mixin-images.zeromesh.net/Xjzqo2FaM8rN4Fsikffz7exDVFoC7XD1C8bg1xa7zwzOyMYfD3PLMsFEiNnjgWlor_aHtlccjnNeM1-SKT9ABjA=s256",
         "description": "Mixin 跳蚤市场、杂货铺，卖各种产品和服务，李安‘导演’亲情奉献！",
-        "url": "https://mixin.one/users/076ecd36-4c8e-4a12-9aa2-d541bdbba58d",
+        "url": "mixin://users/076ecd36-4c8e-4a12-9aa2-d541bdbba58d",
         "effects": ""
       },
       {
@@ -89,7 +89,7 @@
         "identity_number": "7000102275",
         "icon_url": "https://mixin-images.zeromesh.net/jmS95VZ4XzOpoTDncDTwmQiViG9pHx2x5OVbT8CEOA46s2IbEnBJAuey9ySGr5aUSsrsQuUYZLahyT6EeK2mXw=s256",
         "description": "领取各类价值币，了解各类价值消息，就在空投频道",
-        "url": "https://mixin.one/users/608ab780-41f4-435a-824e-b068c9c60124",
+        "url": "mixin://users/608ab780-41f4-435a-824e-b068c9c60124",
         "effects": ""
       },
       {
@@ -98,7 +98,7 @@
         "identity_number": "7000100178",
         "icon_url": "https://mixin-images.zeromesh.net/rTQQR9J_xdDYjpECPSM1_IrfJqUHu7aAegn4sZIduHN-KwZpG5ncBgunjukHO6FBkSm4TeKmf2DIs2TTTThKmw=s256",
         "description": "给机器人发电影名称机器人帮你找资源，可以一边聊天一边看电影！",
-        "url": "https://mixin.one/users/2cb83f7a-71cc-4316-b411-0a92d0fb569e",
+        "url": "mixin://users/2cb83f7a-71cc-4316-b411-0a92d0fb569e",
         "effects": ""
       },
       {
@@ -107,7 +107,7 @@
         "identity_number": "7000103051",
         "icon_url": "https://mixin-images.zeromesh.net/P_PXRrEBOptES9SSYJdd4M1aHHld0iRveU41k5BlxJXP3xXeuBKRW5TdqjgN-DyZ1_NbV-Ei8CLkQV0ieYk4jpQJ=s256",
         "description": "提供便捷的超清画质的在线观看影视剧集体验，不使用删减版片源",
-        "url": "https://mixin.one/users/72d087be-59de-4a86-9478-0b03df35f724",
+        "url": "mixin://users/72d087be-59de-4a86-9478-0b03df35f724",
         "effects": ""
       },
       {
@@ -116,7 +116,7 @@
         "identity_number": "7000103142",
         "icon_url": "https://mixin-images.zeromesh.net/nrSNxGQIGJRYoKFagDEZTTjjCO9zhRuAcPqvevgyovWkUo0DIFkkj6gwMybJDTgBeduMZX4t2T93QjSK7yfM8GY=s256",
         "description": "独播库:https://www.duboku.net",
-        "url": "https://mixin.one/users/0a655ba8-1b48-401d-b2d0-a215c634b24c",
+        "url": "mixin://users/0a655ba8-1b48-401d-b2d0-a215c634b24c",
         "effects": ""
       }
     ]
@@ -130,7 +130,7 @@
         "identity_number": "7000101276",
         "icon_url": "https://mixin-images.zeromesh.net/y10b63pl9TQy5Tr8-hguLVDZWl-Xt1ug3f-LgPSl6s6ZxKsYzdy9sWZFTarULKxWdnJQyDs_tr1q73ctdI6MKA=s256",
         "description": "基于 Mixin Network，支持法币入金，币币交易对接币安、火币和 BigONE 深度，定投免手续费且不托管资产，支持余币宝。",
-        "url": "https://mixin.one/users/61103d28-3ac2-44a2-ae34-bd956070dab1",
+        "url": "mixin://users/61103d28-3ac2-44a2-ae34-bd956070dab1",
         "effects": ""
       },
       {
@@ -139,7 +139,7 @@
         "identity_number": "7000102352",
         "icon_url": "https://mixin-images.zeromesh.net/daVk5A4KnEJqHgjZ3rXSy7L9PbrPzFpB4d7TlycIGVigcAaIMNJWoWsKOtlxjLOukmFjIKRJ9KrMF4KqzZ_zHL8=s256",
         "description": "Exin 旗下的自动化做市交易平台，目前专注 XIN/USDT ，资金池规模超过 100 万美元",
-        "url": "https://mixin.one/users/29f23576-4651-47ff-8c16-6c8a5d76985e",
+        "url": "mixin://users/29f23576-4651-47ff-8c16-6c8a5d76985e",
         "effects": ""
       },
       {
@@ -148,7 +148,7 @@
         "identity_number": "7000103537",
         "icon_url": "https://mixin-images.zeromesh.net/puv4bKhpNP93xWLLsdUVZWs_N5weDeHvLOg_2JAhnVujbys82eYSFv9t_qGWomzJRvJD53WE-pst6HzOaJ377yfm=s256",
         "description": "Fox 旗下自动化做市交易平台，XIN/BTC 和 XIN/EOS 深度很好，资金池规模超过 100 万美元",
-        "url": "https://mixin.one/users/a753e0eb-3010-4c4a-a7b2-a7bda4063f62",
+        "url": "mixin://users/a753e0eb-3010-4c4a-a7b2-a7bda4063f62",
         "effects": ""
       },
       {
@@ -157,7 +157,7 @@
         "identity_number": "7000103492",
         "icon_url": "https://mixin-images.zeromesh.net/VYpwrP_nI4zE6dcB2thEh3noEs5XR_o94ggwvCyZT3Lg7LU-odxp9HyG5WGcAUY6BCVkBRNmCW6HD6T2gO7mjw=s256",
         "description": "币格 BigONE 官方机器人，支持现货交易、杠杆交易、合约交易、理财、借贷、PoS矿池等，支持与 Mixin 钱包之间免费转账实时到账。",
-        "url": "https://mixin.one/users/91916ac9-3d66-4ca3-a063-14e24a688e54",
+        "url": "mixin://users/91916ac9-3d66-4ca3-a063-14e24a688e54",
         "effects": ""
       },
       {
@@ -166,7 +166,7 @@
         "identity_number": "7000000015",
         "icon_url": "https://mixin-images.zeromesh.net/TPVSyWaAVSJ4j2CqHSHRmzrRBeRg3fDMEqUUl8GITBQeNpGu4dvES7E8ZU9MBrR4RADbLfGbfI3PKULJODkGmik=s256",
         "description": "全球点对点加密货币的交易市场，类似 LocalCryptos 但更安全更简单，应用多签、加密聊天等保障交易隐私和安全",
-        "url": "https://mixin.one/users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
+        "url": "mixin://users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
         "effects": ""
       },
       {
@@ -175,7 +175,7 @@
         "identity_number": "7000101524",
         "icon_url": "https://mixin-images.zeromesh.net/c9gus9bjvikMKlszvmcVcMdAid1qOqhQoKKuohLsQJ6NEaA_C_XihIKorVOBbgOAdzxZq3Et821lc72gd6oyaDU=s256",
         "description": "基于 OceanONE 的开源前端交易小程序，根据钱包自动显示交易对，直接下单给 Ocean 撮合引擎。",
-        "url": "https://mixin.one/users/82d20bc7-9a97-4a69-bcd0-4da502374f6c",
+        "url": "mixin://users/82d20bc7-9a97-4a69-bcd0-4da502374f6c",
         "effects": " github"
       },
       {
@@ -184,7 +184,7 @@
         "identity_number": "7000100132",
         "icon_url": "https://mixin-images.zeromesh.net/5FCFO5LtieuJoZU7l9sFNe6YSKRONBMEFFOUyQ3BQLNskk8jAjxirqEQQbWOHZipLB4ftYBLSjzYJy4d2Wd-jqo=s256",
         "description": "简单的资产交换工具，免手续费",
-        "url": "https://mixin.one/users/31c7e0ce-88ae-45b4-8915-053d8adc556c",
+        "url": "mixin://users/31c7e0ce-88ae-45b4-8915-053d8adc556c",
         "effects": " github"
       }
     ]
@@ -193,12 +193,21 @@
     "title": "社群",
     "bots": [
       {
+        "name": "持仓群大合集",
+        "tags": "大群",
+        "identity_number": "7000101982",
+        "icon_url": "https://mixin-images.zeromesh.net/AuKlAvXRYK1XHfvCIDeq07ThLYfgzmYUYIHw8UO-na-BGv-prgczmqptvHVvufwJA2WUnQ1cSXgNF5A_NS6F-hzZn0BJxfLAJASf=s256",
+        "description": "BTC、XMR、ETH 等高质量持仓群等你加入",
+        "url": "mixin://users/7d08371c-a841-4693-b967-5cf1181b9e52",
+        "effects": ""
+      },
+      {
         "name": "李笑来·定投公开课",
         "tags": "大群",
         "identity_number": "7000101982",
         "icon_url": "https://mixin-images.zeromesh.net/LDtQNnjOOvKe-yjYYplRAq1nOw4qq_ATYe-Pm1h_gRcFVUU4GkMXIjei6BHyqrLM3DIH5_pFkrUWUHgiLfD4Ec-y=s256",
         "description": "听李老师讲课，免费、不需要邀请码，群成员 30,000+",
-        "url": "https://mixin.one/users/0642bca1-7ce3-4cf8-b48f-3f97771c8ce3",
+        "url": "mixin://users/0642bca1-7ce3-4cf8-b48f-3f97771c8ce3",
         "effects": ""
       },
       {
@@ -207,7 +216,7 @@
         "identity_number": "7000000016",
         "icon_url": "https://mixin-images.zeromesh.net/fCziMu5rXoVMDAA-aafJOHW27hlzuT73ZjXkEfHTz2hAGC4iaOtmg2Yy-tljaOjhitg_1YnhwWA6spJQOReT4eQ=s256",
         "description": "Exin 用户中文群，除了提供群聊服务，还提供 Mixin 网页钱包、OTC、定投、余币宝、一键跨交易所买币等功能入口，群成员 9000+",
-        "url": "https://mixin.one/users/47cdbc9e-e2b9-4d1f-b13e-42fec1d8853d",
+        "url": "mixin://users/47cdbc9e-e2b9-4d1f-b13e-42fec1d8853d",
         "effects": ""
       },
       {
@@ -216,7 +225,7 @@
         "identity_number": "7000100217",
         "icon_url": "https://mixin-images.zeromesh.net/LxAVYpOjyi1GiLKOS4VWncoydHoEHYK3A6kNHprJw_JGuAz_ifjE3kjB0nojDVzBn8wxbvn__XFeUdwNUFMak2g=s256",
         "description": "Fox.ONE 中文用户群，额外提供了 Mixin 网页钱包、 GBI 、评级、娱乐等功能入口，群成员 10,000+",
-        "url": "https://mixin.one/users/56e28252-1aef-48a6-a0c7-2213652570d7",
+        "url": "mixin://users/56e28252-1aef-48a6-a0c7-2213652570d7",
         "effects": ""
       },
       {
@@ -225,7 +234,7 @@
         "identity_number": "7000101910",
         "icon_url": "https://mixin-images.zeromesh.net/KSb3_xbVKTlapIWoNTtIKVotFV4DpZXdeYI03Hjmr6p_t8UWSBxf-t2ScugoVRIppcazHSggbZS2plwAcOykMeY=s256",
         "description": "BigONE 官方 Mixin 中文群，群成员 4000+",
-        "url": "https://mixin.one/users/72f9434b-9ccb-4882-b8bd-16f916ae5f30",
+        "url": "mixin://users/72f9434b-9ccb-4882-b8bd-16f916ae5f30",
         "effects": ""
       },
       {
@@ -234,7 +243,7 @@
         "identity_number": "7000103455",
         "icon_url": "https://mixin-images.zeromesh.net/V3N6OEfG8OzsG8EcUh-_5UCOwrHunKHfjtomOYSFpwIvnsPmMxlqg70qIKjm5QJg3oXFQEoK_tbBmk5Dx8oP2ZU=s256",
         "description": "安桥 Mixin 群，安桥专注于海外房产以及比特币投资，Mixin 节点运营方之一，群成员 600+",
-        "url": "https://mixin.one/users/df0967d1-cb4c-4ab4-ba0e-93e8a130189d",
+        "url": "mixin://users/df0967d1-cb4c-4ab4-ba0e-93e8a130189d",
         "effects": ""
       },
       {
@@ -243,7 +252,7 @@
         "identity_number": "7000102152",
         "icon_url": "https://mixin-images.zeromesh.net/OSrIzDKkS4s_wNHZd_G0Y0pUJ9I31wEPMXd3csaGDf3MYE24ulAZGcpdm1VS7SRAuz0Rke-L5S3oZypWVapM2J9R=s256",
         "description": "BigONE COO 程君的区块链知识小课堂（仅对持仓超过 100 万 ONE 的用户开放），群成员 140+",
-        "url": "https://mixin.one/users/c6c5248c-d8a5-4262-aa25-919e75930e0e",
+        "url": "mixin://users/c6c5248c-d8a5-4262-aa25-919e75930e0e",
         "effects": ""
       },
       {
@@ -252,7 +261,7 @@
         "identity_number": "7000101697",
         "icon_url": "https://mixin-images.zeromesh.net/CLzulPUkQs_10TfbNbCXSWOV9NPG_etOxs1GtAoROeI341CQmadUtxoT9YXh1pr_Oec9LcfI3f7w332c66BMU_w=s256",
         "description": "PRESS.one 在 Mixin 的官方中文群，由霍炬维护，入群费 10 PRS，群成员 700+",
-        "url": "https://mixin.one/users/5ecbaa59-305e-463b-bb1c-41bf98c25b44",
+        "url": "mixin://users/5ecbaa59-305e-463b-bb1c-41bf98c25b44",
         "effects": ""
       },
       {
@@ -261,7 +270,7 @@
         "identity_number": "7000102203",
         "icon_url": "https://mixin-images.zeromesh.net/qaxo1HNIqUypZNXwYWifxjal_mUMCB25I3oo5jNY2QeprN55jqvztX-F_5tcRjZNLawSEx-nb0l6qB8gyZI1nKE=s256",
         "description": "区块链驱动的创造者协作社区，让小组成员共同创造价值，共建信任并获益。",
-        "url": "https://mixin.one/users/4ef084f8-709c-490d-9a10-03f466496c5e",
+        "url": "mixin://users/4ef084f8-709c-490d-9a10-03f466496c5e",
         "effects": ""
       },
       {
@@ -270,7 +279,7 @@
         "identity_number": "7000102346",
         "icon_url": "https://mixin-images.zeromesh.net/8ytZYxkGaZxKoFNQa2BB8Dfch4MBAtFDo0SlnSB2npdYFETVWIfTf5mQfsn38KFPWU6kYWO34kTNqz6PztkmlUU=s256",
         "description": "来美信，质押 BTC、XIN 换取 USDT，群成员 1100+",
-        "url": "https://mixin.one/users/8181faba-9d46-4618-b30c-38f0d0dd028a",
+        "url": "mixin://users/8181faba-9d46-4618-b30c-38f0d0dd028a",
         "effects": ""
       },
       {
@@ -279,7 +288,7 @@
         "identity_number": "7000102098",
         "icon_url": "https://mixin-images.zeromesh.net/5T7S-EKpOo6Tc5pnAUbCOHn3YQsqGQvafjcrYdPk6_uMJV--o79EpFLRaDh9vMaUHzXOcMbUqRlCPcUCvz-C9W4=s256",
         "description": "BitShares 是基于石墨烯 2.0 技术的链上金融平台，群成员 500+",
-        "url": "https://mixin.one/users/316d8d74-bb4a-40a1-b49d-e8527ad5fc65",
+        "url": "mixin://users/316d8d74-bb4a-40a1-b49d-e8527ad5fc65",
         "effects": ""
       },
       {
@@ -288,7 +297,7 @@
         "identity_number": "7000101950",
         "icon_url": "https://mixin-images.zeromesh.net/eszzF8dll4mJunQs3z1YDFoQxoGDkJeSuhyr3vRNmRH1FcdSImjJdtdMP0V_a2eAcbRP9FBeIE8wuSWy5zm7u2hm=s256",
         "description": "MassGrid 中文用户群，致力于成为全球最大的分布式高性能云计算网络，群成员 1200+",
-        "url": "https://mixin.one/users/eb869f41-abff-4799-9f30-c787748e0ead",
+        "url": "mixin://users/eb869f41-abff-4799-9f30-c787748e0ead",
         "effects": ""
       },
       {
@@ -297,7 +306,7 @@
         "identity_number": "7000101998",
         "icon_url": "https://mixin-images.zeromesh.net/JZvujRTCR7dhxYsNnCxQdnuW90Z56qn-dRwS3aHPMIih7E3Ip9nWtT1FIF507gdfSEmGQPWCxnUOhSDqGmYOJw=s256",
         "description": "大猫城堡是大猫创办的大型社群，本平台为免费版，提供基础交流，让大家认识大猫城堡和 BCAT，群成员 800+",
-        "url": "https://mixin.one/users/27674db6-303f-42ff-bb77-c659d0c952ad",
+        "url": "mixin://users/27674db6-303f-42ff-bb77-c659d0c952ad",
         "effects": ""
       },
       {
@@ -306,7 +315,7 @@
         "identity_number": "7000101991",
         "icon_url": "https://mixin-images.zeromesh.net/E2TNFXBi9a3ZqZ_2Pch4ujL5b7JSaT2oyRdEv2rYZePplHLzB5BSBXyR5L-e9hpbrO8-fCU7hK7xy4-2uAh7g5c=s256",
         "description": "Dogecoin 中文用户群，群成员 300+",
-        "url": "https://mixin.one/users/a241f5bb-d09c-4925-b253-892f6da3a837",
+        "url": "mixin://users/a241f5bb-d09c-4925-b253-892f6da3a837",
         "effects": ""
       }
     ]
@@ -320,7 +329,7 @@
         "identity_number": "7000101914",
         "icon_url": "https://mixin-images.zeromesh.net/HrwBshWISquH7qWNq3b-WBokEpdEdOfIcogb0_rJHPnXh1VrbpMLFpjX7xRP56xP-vNnA4HJzfen_eSfwPT_U14=s256",
         "description": "由 Mixin 团队维护，发布最新、最快的 Mixin 相关产品动态、文章",
-        "url": "https://mixin.one/users/e49eeb58-64cd-4065-b4f8-bac86647448d",
+        "url": "mixin://users/e49eeb58-64cd-4065-b4f8-bac86647448d",
         "effects": ""
       },
       {
@@ -329,7 +338,7 @@
         "identity_number": "7000103009",
         "icon_url": "https://mixin-images.zeromesh.net/NqvOpmTmIZQodclXINyXbPiynH_jkqBGHBRDCs7AoWemaeICymFi-TmG0eUrKV9l3YPvjJKfnDM4hLu7ncmFXMgA=s256",
         "description": "FoxONE 团队官方频道，推送关于 Fox.ONE 旗下产品的更新和动态",
-        "url": "https://mixin.one/users/169c03ca-fac8-42d0-b6a1-d4540e78eae9",
+        "url": "mixin://users/169c03ca-fac8-42d0-b6a1-d4540e78eae9",
         "effects": ""
       },
       {
@@ -338,7 +347,7 @@
         "identity_number": "7000102325",
         "icon_url": "https://mixin-images.zeromesh.net/3jdc2LyPfwrntZOa1psoBCf8XhYqhxDoE9tV5EnUiirKkiD4XIRO7MkwEsE2PkxbWXmzVg1v2OaJwgV0BigYkC4=s256",
         "description": "Exin 团队官方频道，获取 ExinOne、ExinEarn、ExinPool 最新动态",
-        "url": "https://mixin.one/users/a074bd5b-626f-4d4b-9ded-20b6b3f7bc8f",
+        "url": "mixin://users/a074bd5b-626f-4d4b-9ded-20b6b3f7bc8f",
         "effects": ""
       },
       {
@@ -347,7 +356,7 @@
         "identity_number": "7000102201",
         "icon_url": "https://mixin-images.zeromesh.net/SCUSdxdwYMZzwWDsanAVAFaAgKGYsKHM5bH2QKpcGT4ui5KBgq5vJktos09SFIXIG3QtrMx0ouDfrF-p2_LmXj6g=s256",
         "description": "夜夜与你分享 Mixin、PRESSone、Exin、FoxOne 等各圈子里的小道消息",
-        "url": "https://mixin.one/users/53dabe3b-7473-4f54-8606-ca559b8671a4",
+        "url": "mixin://users/53dabe3b-7473-4f54-8606-ca559b8671a4",
         "effects": ""
       },
       {
@@ -356,7 +365,7 @@
         "identity_number": "7000102081",
         "icon_url": "https://mixin-images.zeromesh.net/b1ZB6StuCYJWrVA8kUvTaxGHAlmmJ1vPpgoTH5sGGlJX9bX9AXVFHY8X8nyxE5bWj4bF_OxPh2w1LUajePdMr6o=s256",
         "description": "推送回形针 PaperClip 和李永乐老师的视频",
-        "url": "https://mixin.one/users/3e8b646f-be64-4421-985a-04d2cc00a7c0",
+        "url": "mixin://users/3e8b646f-be64-4421-985a-04d2cc00a7c0",
         "effects": ""
       },
       {
@@ -365,7 +374,7 @@
         "identity_number": "7000100225",
         "icon_url": "https://mixin-images.zeromesh.net/SGzqJAc2SZHe6-ciHXKNAu_oGdDNBWNaQ7lYxrMYeLvO8u6aIzy8xvFM4JQdHkJB8GSLt2OheQxUIbeb5ojX3g=s256",
         "description": "柱子与您分享 Mixin 的八卦杂谈，穿插着有趣、好玩、有料的机器人介绍",
-        "url": "https://mixin.one/users/6d16d8ef-3557-423c-b915-052955cfd0bc",
+        "url": "mixin://users/6d16d8ef-3557-423c-b915-052955cfd0bc",
         "effects": ""
       },
       {
@@ -374,7 +383,7 @@
         "identity_number": "7000101394",
         "icon_url": "https://mixin-images.zeromesh.net/uzkc3RxlYl4OPOP3DdTfmmvXfpDxsniwxVD38-iFSOTogQAbl9P7j86ceetgM-7inQi5oQjwYmtC3jwL2f5u6Sg=s256",
         "description": "发布 Mixin 相关的直播信息，另有不定时红包雨",
-        "url": "https://mixin.one/users/44a771f1-8f7c-40e3-9742-c1ff57b8cd0c",
+        "url": "mixin://users/44a771f1-8f7c-40e3-9742-c1ff57b8cd0c",
         "effects": ""
       },
       {
@@ -383,7 +392,7 @@
         "identity_number": "7000100102",
         "icon_url": "https://mixin-images.zeromesh.net/2ehkzRwsLNFn8s0102U703aehwcPm9_iUmnpkfqzZPICd5Yo3iFpopCheXNOXl13TKsef8v7XV72jGfww663kX8=s256",
         "description": "币世界非官方 Bot，实时推送",
-        "url": "https://mixin.one/users/1fc37f38-28e2-442c-9187-79eaee9aaa3b",
+        "url": "mixin://users/1fc37f38-28e2-442c-9187-79eaee9aaa3b",
         "effects": ""
       },
       {
@@ -392,7 +401,7 @@
         "identity_number": "7000101501",
         "icon_url": "https://mixin-images.zeromesh.net/N7D4pLReFjZhzPNZg_tnujXVMK08WTO4VsP8o76rKMJGKwiXH9uXJOPhUvOu7hLfdKU2hiIa2kXgza8pH88FQiA=s256",
         "description": "Readhub 非官方机器人，主要推送热门话题和区块链快讯",
-        "url": "https://mixin.one/users/69fa380d-24cd-4e92-b981-c2168320f818",
+        "url": "mixin://users/69fa380d-24cd-4e92-b981-c2168320f818",
         "effects": ""
       },
       {
@@ -401,7 +410,7 @@
         "identity_number": "7000101952",
         "icon_url": "https://mixin-images.zeromesh.net/P1whpteJPXuLkWphVHZ54Cr4wwriTzY6xwWexithr5_z7uICp7MMvf5PUukFzi2ozBnIqPysa68f59jXmeBAxlcM=s256",
         "description": "区块链技术动态、行业资讯等汇总分享",
-        "url": "https://mixin.one/users/2440ab6d-0c27-4eaa-a3cb-e09ffa22bc19",
+        "url": "mixin://users/2440ab6d-0c27-4eaa-a3cb-e09ffa22bc19",
         "effects": ""
       },
       {
@@ -410,7 +419,7 @@
         "identity_number": "7000101290",
         "icon_url": "https://mixin-images.zeromesh.net/6itqfVRsT_EX9CG0oLY_1lw_zh6muk2ujyIi_7l8XCjkIxdvEPqeyUMKVPAY85M2CThjK-RVx28YkPk3o5DfCg=s256",
         "description": "EOS 快讯、收集全球 Dapp 信息、行情工具和 EOS 生态市场数据",
-        "url": "https://mixin.one/users/7ad1c20d-3143-4c5c-aab8-f9a544db0008",
+        "url": "mixin://users/7ad1c20d-3143-4c5c-aab8-f9a544db0008",
         "effects": ""
       },
       {
@@ -419,7 +428,7 @@
         "identity_number": "7000101549",
         "icon_url": "https://mixin-images.zeromesh.net/L0egX-GZxT0Yh-dd04WKeAqVNRzgzuj_Je_-yKf8aQTZo-xihd-LogbrIEr-WyG9WbJKGFvt2YYx-UIUa1qQMRla=s256",
         "description": "Digg from PressOne",
-        "url": "https://mixin.one/users/6d8fd25a-1eb1-4afb-b2a6-d34991959b76",
+        "url": "mixin://users/6d8fd25a-1eb1-4afb-b2a6-d34991959b76",
         "effects": ""
       }
     ]
@@ -433,7 +442,7 @@
         "identity_number": "7000100118",
         "icon_url": "https://mixin-images.zeromesh.net/R8fkegiiJW_b8tHGJPeOWTvgvRZSaSQ1DRA22E1qb8MN4d5NwfO5746o8uozpsuP0y3uIzoYOtP_qFybO5FMja8=s256",
         "description": "冯晓东的小迷圈，Mixin 团队的老大，入圈费 0.07 XIN",
-        "url": "https://mixin.one/users/58aea6a6-c4e1-4fd9-9671-d1a277dd5643",
+        "url": "mixin://users/58aea6a6-c4e1-4fd9-9671-d1a277dd5643",
         "effects": ""
       },
       {
@@ -442,7 +451,7 @@
         "identity_number": "7000103166",
         "icon_url": "https://mixin-images.zeromesh.net/4mMn8RFf0niJ04klqj4SPvZtPb74pnrFzoDzP1w3SbFmBiG-5FRM1_1b0nB7ENTb9GWNDIQLMvyuMJ6fRuhjGcU=s256",
         "description": "歌词经理和他的朋友们，还有一张沙发，需要邀请码或者 99 RMB 等值的 BTC 入群。",
-        "url": "https://mixin.one/users/1dc6bd8d-1325-4ca3-8a8c-9c880ef9f06b",
+        "url": "mixin://users/1dc6bd8d-1325-4ca3-8a8c-9c880ef9f06b",
         "effects": ""
       },
       {
@@ -451,7 +460,7 @@
         "identity_number": "7000103282",
         "icon_url": "https://mixin-images.zeromesh.net/3u3i9hvGshYKZYInwN-b0KsgTI3vRc0RJVFFvdmEcLlIowdMIJcY6o0alVMf0hpSDLZlXbx0giMQmCGCE4qTRycJ=s256",
         "description": "骚总的小迷圈，Exin 团队的老大",
-        "url": "https://mixin.one/users/0dc7e1e3-d14d-431e-ad86-fcd03e981d13",
+        "url": "mixin://users/0dc7e1e3-d14d-431e-ad86-fcd03e981d13",
         "effects": ""
       },
       {
@@ -460,7 +469,7 @@
         "identity_number": "7000103572",
         "icon_url": "https://mixin-images.zeromesh.net/EcUEAWQRUJO5dJKXzJT3OILUa4aQN6W908nfVo9yy_X90T2CNmig4pszEg-dupgWj-tWpfNvyFqxkz1PhEua4g=s256",
         "description": "本社群由 Exin 骚总创建，期望与 XIN 的持有者共同探讨 DeFi 在 Mixin 生态的应用并推进落地，社群会不定时邀请行业大佬过来做分享，入圈费 0.2 XIN，每增加 100 人价格涨 0.1 XIN",
-        "url": "https://mixin.one/users/6f70b925-1c83-4982-9347-34f2056287fb",
+        "url": "mixin://users/6f70b925-1c83-4982-9347-34f2056287fb",
         "effects": ""
       },
       {
@@ -469,7 +478,7 @@
         "identity_number": "7000102295",
         "icon_url": "https://mixin-images.zeromesh.net/vqFbE-rovgmJrY9uLdkyXKuqfmIHgDSc3B7DnoVsh76Xwjkv8R7nndV-kI4QTp81ROn_EXU46xa2rkKwYmRJOl-H=s256",
         "description": "发条学习分享沉淀的地方，一起成长，入圈费 3 BOX",
-        "url": "https://mixin.one/users/4a8b5ffa-f921-4a94-84f3-9079d569007f",
+        "url": "mixin://users/4a8b5ffa-f921-4a94-84f3-9079d569007f",
         "effects": ""
       },
       {
@@ -478,7 +487,7 @@
         "identity_number": "7000103328",
         "icon_url": "https://mixin-images.zeromesh.net/tDQa8Zv2TFmcnPtk5a2I4QMsuudFvdrUC5PY4chV4eHiwwyPX8qylGrvwJXeq6PAojjqv0eTQtUrmJRxZX8VHBQ=s256",
         "description": "Exin 团队 Robin，dbarobin.com 博主",
-        "url": "https://mixin.one/users/c7b98879-b2bb-462a-b623-6af1410c5f05",
+        "url": "mixin://users/c7b98879-b2bb-462a-b623-6af1410c5f05",
         "effects": ""
       }
     ]
@@ -492,7 +501,7 @@
         "identity_number": "7000103056",
         "icon_url": "https://mixin-images.zeromesh.net/Ga8pDQTDj6rp7YzussSW1_dNEr6gGxFw1z8vbHVH3HAJC5f61CvHh3pVSm5u4744mYSmUIvwRUaHhy_yhdk2kQ=s256",
         "description": "查看 Mixin 网络 Top 20 资产、公链同步状态、提现手续费等信息",
-        "url": "https://mixin.one/users/9ecca96f-3473-4f2a-8ad9-0ebb1a3b1fa7",
+        "url": "mixin://users/9ecca96f-3473-4f2a-8ad9-0ebb1a3b1fa7",
         "effects": ""
       },
       {
@@ -501,7 +510,7 @@
         "identity_number": "7000103214",
         "icon_url": "https://mixin-images.zeromesh.net/QfdwB9n42q1hXNQ4_gCDJmXwqME4Vj1DfI-9YGZy_nIgafNIS4HGC4l4KaqzS-jRIxr_RuvWddGL0sUwezooKbIx=s256",
         "description": "将该机器人添加为群组成员，然后返回会话从 + 展开菜单里点红包既可以发红包，支持设置仅发有价格的红包",
-        "url": "https://mixin.one/users/1ab1f241-b809-4790-bcfd-a1779bb1d313",
+        "url": "mixin://users/1ab1f241-b809-4790-bcfd-a1779bb1d313",
         "effects": ""
       },
       {
@@ -510,7 +519,7 @@
         "identity_number": "7000103058",
         "icon_url": "https://mixin-images.zeromesh.net/Tpftb9f_2e91bkKaa31wlQcwqT96L-gRyqlF6Q7d_tHE5qP2rsyMoyeXOgMMW-7Cc7bS9fCsGze0k8xgjtDmr44=s256",
         "description": "一键直达自己充值提现的区块浏览器，还有常用区块链浏览器导航。",
-        "url": "https://mixin.one/users/bb8f402b-0546-43f5-bcf9-f9439a4322c6",
+        "url": "mixin://users/bb8f402b-0546-43f5-bcf9-f9439a4322c6",
         "effects": ""
       },
       {
@@ -519,7 +528,7 @@
         "identity_number": "7000101417",
         "icon_url": "https://mixin-images.zeromesh.net/rOq9nv5Xj6ugCGLIpVK1LizJD4YMr0pQ1az-CxJKw24WsXCOpRUKeUaHU-3cJf775WhFo3VhZZkIeA3blZnCzNk=s256",
         "description": "Fox.ONE 旗下的小群助手，支持群收款、签到题库、筛子等实用功能",
-        "url": "https://mixin.one/users/244f2757-d170-4191-91eb-d73157df1461",
+        "url": "mixin://users/244f2757-d170-4191-91eb-d73157df1461",
         "effects": ""
       },
       {
@@ -528,7 +537,7 @@
         "identity_number": "7000101526",
         "icon_url": "https://mixin-images.zeromesh.net/ctBsMPE_oxpRxyUfeuQkdkHp3-REKdFLPNsm7UtbiqL5SDgcWUghDPknCPcu2P6F27Oeo1IGVSl4dw67tyqkRqM=s256",
         "description": "通过这个机器人可以开通自己的免费或付费小密圈，还有热门小密圈哦！",
-        "url": "https://mixin.one/users/9ccadd37-fdf4-4334-9bc4-99f699ab3a4e",
+        "url": "mixin://users/9ccadd37-fdf4-4334-9bc4-99f699ab3a4e",
         "effects": ""
       },
       {
@@ -537,7 +546,7 @@
         "identity_number": "7000100087",
         "icon_url": "https://mixin-images.zeromesh.net/SFQ_EA5qpSndAWPekcaDzzGwCJiu7UC_0R6obB7T5VTAmO0FduoUHRTuzBlWAEnbZTbBNCZHs0w2KMtqSxpQ1A=s256",
         "description": "将该机器人添加为群组成员并且设置为管理员，持仓助理就会定期检查并移除不满足持仓要求的成员",
-        "url": "https://mixin.one/users/fb458e06-0176-4fde-aaff-6e0e8b9c2c67",
+        "url": "mixin://users/fb458e06-0176-4fde-aaff-6e0e8b9c2c67",
         "effects": ""
       },
       {
@@ -546,7 +555,7 @@
         "identity_number": "7000102100",
         "icon_url": "https://mixin-images.zeromesh.net/2nHyksjB-Ldd6kYcuPRxnCdo8WaHGdQAE4cztcQARUpIpegOaBwnvSA9h4g55wRzriPeInVW2OBZG0jiiIjdXCfV=s256",
         "description": "把一直播的播放链接发给小助手，小助手就会自动解析生成一个直播消息还给你，这样就能在 Mixin 里看直播啦",
-        "url": "https://mixin.one/users/b523c28b-1946-4b98-a131-e1520780e8af",
+        "url": "mixin://users/b523c28b-1946-4b98-a131-e1520780e8af",
         "effects": ""
       },
       {
@@ -555,7 +564,7 @@
         "identity_number": "7000103014",
         "icon_url": "https://mixin-images.zeromesh.net/BEwcXZmMzvAZn6KiOFK4UFS_a0KSUBbrl_vmFwnE-_kiY4UGmTM6npc-fTnu7XyCQXHYo7427tX3mo2tYeLAEwL_=s256",
         "description": "发送 Markdown 格式的文字给小助手能获得文章卡片消息，发送图片生成图片链接可插入到文章里。",
-        "url": "https://mixin.one/users/c26ec48e-d626-4106-9f30-ff6a69783369",
+        "url": "mixin://users/c26ec48e-d626-4106-9f30-ff6a69783369",
         "effects": ""
       },
       {
@@ -564,7 +573,7 @@
         "identity_number": "7000101498",
         "icon_url": "https://mixin-images.zeromesh.net/XMVXQ5zDTzLLqcAirQR-hJv5ATjfmbbXYSOdyQSh_PjaM6Ko49hnKeJVYVzJNd8I44kNctKRFSD40DvyqK0plQ=s256",
         "description": "监控节点、公链、提现、新增用户等服务状态",
-        "url": "https://mixin.one/users/22687f1e-4593-495d-a93b-ad1e3d640aeb",
+        "url": "mixin://users/22687f1e-4593-495d-a93b-ad1e3d640aeb",
         "effects": ""
       },
       {
@@ -573,7 +582,7 @@
         "identity_number": "7000101485",
         "icon_url": "https://mixin-images.zeromesh.net/DWtpbN9L3vM3ZL8Opp5bo7KmNTR7eEZLNGkmXslNc6q-6CgxlWvaj_Zwfo5ZCsCji7Rcal5PV7aWDjLLfropeeM=s256",
         "description": "一次性定额收款功能，当你需要向某人收取定额币种时很有用，选好币种、填好数量和备注直接生成一个支付链接或者二维码发给对方即可。",
-        "url": "https://mixin.one/users/b080e9b1-e93e-49e6-9c52-a7b7eb91f604",
+        "url": "mixin://users/b080e9b1-e93e-49e6-9c52-a7b7eb91f604",
         "effects": ""
       },
       {
@@ -582,7 +591,7 @@
         "identity_number": "7000101740",
         "icon_url": "https://mixin-images.zeromesh.net/68rfMStxTR8qPAjfEqQyZ79bjXxAKQi0uIDhJZLx_bqt3KZax2_X_YiqItWuv53HZ6388kZEin6m2MZqTEDOaZ0=s256",
         "description": "付费自助发币工具，目前支持ERC20。",
-        "url": "https://mixin.one/users/be542c27-a0cc-4422-ae55-c734bfcc2797",
+        "url": "mixin://users/be542c27-a0cc-4422-ae55-c734bfcc2797",
         "effects": ""
       },
       {
@@ -591,7 +600,7 @@
         "identity_number": "7000101799",
         "icon_url": "https://mixin-images.zeromesh.net/qlDZRdQFQjbQB6fzr16yPn4-lZUgK4zmSrtWcX67ITXXMr1EFgFE1lFbTB9ELpVWJC-2ExV1wGpLffhE4d7J8zy8=s256",
         "description": "开源的 Shitcoin 垃圾桶帮你清理没有价格的代币",
-        "url": "https://mixin.one/users/cd05e2b8-8d51-45b2-9814-c7beecd9c059",
+        "url": "mixin://users/cd05e2b8-8d51-45b2-9814-c7beecd9c059",
         "effects": ""
       }
     ]
