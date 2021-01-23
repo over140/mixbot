@@ -8,7 +8,7 @@ const OfflinePlugin = require('offline-plugin');
 
 const webRoot = function (env) {
   if (env === 'production') {
-    return 'http://hot-bots.mixinbots.com';
+    return 'https://hot-bots.mixinbots.com';
   } else {
     return 'http://bots.mixin.local';
   }
