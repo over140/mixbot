@@ -232,9 +232,6 @@ Tool.prototype = {
           chain.threshold = chainAsset.threshold;
           chain.withdrawal_fee = chainAsset.withdrawal_fee;
           var withdrawalPendingCount = new BigNumber(chainAsset.withdrawal_pending_count);
-          if (chain.chain_id === "990c4c29-57e9-48f6-9819-7d986ea44985") {
-            withdrawalPendingCount = withdrawalPendingCount.minus(1);
-          }
           chain.withdrawal_pending_count = withdrawalPendingCount.toString();
           totalWithdrawals = totalWithdrawals.plus(withdrawalPendingCount);
           chain.deposit_block_height = depositBlockHeight.toFormat();
