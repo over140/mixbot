@@ -91,33 +91,6 @@
         "description": "领取各类价值币，了解各类价值消息，就在空投频道",
         "url": "mixin://users/608ab780-41f4-435a-824e-b068c9c60124",
         "effects": ""
-      },
-      {
-        "name": "热门电影",
-        "tags": "",
-        "identity_number": "7000100178",
-        "icon_url": "https://mixin-images.zeromesh.net/rTQQR9J_xdDYjpECPSM1_IrfJqUHu7aAegn4sZIduHN-KwZpG5ncBgunjukHO6FBkSm4TeKmf2DIs2TTTThKmw=s256",
-        "description": "给机器人发电影名称机器人帮你找资源，可以一边聊天一边看电影！",
-        "url": "mixin://users/2cb83f7a-71cc-4316-b411-0a92d0fb569e",
-        "effects": ""
-      },
-      {
-        "name": "低端电影",
-        "tags": "",
-        "identity_number": "7000103051",
-        "icon_url": "https://mixin-images.zeromesh.net/P_PXRrEBOptES9SSYJdd4M1aHHld0iRveU41k5BlxJXP3xXeuBKRW5TdqjgN-DyZ1_NbV-Ei8CLkQV0ieYk4jpQJ=s256",
-        "description": "提供便捷的超清画质的在线观看影视剧集体验，不使用删减版片源",
-        "url": "mixin://users/72d087be-59de-4a86-9478-0b03df35f724",
-        "effects": ""
-      },
-      {
-        "name": "善变影视@独播库",
-        "tags": "",
-        "identity_number": "7000103142",
-        "icon_url": "https://mixin-images.zeromesh.net/nrSNxGQIGJRYoKFagDEZTTjjCO9zhRuAcPqvevgyovWkUo0DIFkkj6gwMybJDTgBeduMZX4t2T93QjSK7yfM8GY=s256",
-        "description": "独播库:https://www.duboku.net",
-        "url": "mixin://users/0a655ba8-1b48-401d-b2d0-a215c634b24c",
-        "effects": ""
       }
     ]
   },
@@ -511,6 +484,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/QfdwB9n42q1hXNQ4_gCDJmXwqME4Vj1DfI-9YGZy_nIgafNIS4HGC4l4KaqzS-jRIxr_RuvWddGL0sUwezooKbIx=s256",
         "description": "将该机器人添加为群组成员，然后返回会话从 + 展开菜单里点红包既可以发红包，支持设置仅发有价格的红包",
         "url": "mixin://users/1ab1f241-b809-4790-bcfd-a1779bb1d313",
+        "effects": ""
+      },
+      {
+        "name": "BitHub",
+        "tags": "工具",
+        "identity_number": "7000103741",
+        "icon_url": "https://mixin-images.zeromesh.net/AqLFx3U7-odniXgsAMA8wBwrYAcs87I5MilXBREh9HXfCTklJhJDLLJaeP1YhsNn2CC7Auy2g21R-42h0vC3qqXR2ttVCMhxWwA-GQ=s256",
+        "description": "可以直接用 Mixin 支付的 VPN，速度超快！有问题可以跟机器人的开发者沟通。",
+        "url": "mixin://users/1ff28d6d-da3d-4e2e-89fb-8ba87219bbad",
         "effects": ""
       },
       {
