@@ -1,8 +1,10 @@
 import './index.scss';
+import URLUtils from '../utils/url.js';
 import $ from 'jquery';
 
-function Demo(router) {
+function Demo(router, api) {
   this.router = router;
+  this.api = api
   this.templateAssets = require('./index.html');
 }
 
@@ -43,6 +45,11 @@ Demo.prototype = {
       url += "&data=" + data
       window.open(url)
     });
+
+    const code = URLUtils.getUrlParameter("code");
+    if (code === "XVlBzg") {
+      self.api.notify('success', code);
+    }
   },
 
   getMixinContext: function () {

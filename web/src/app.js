@@ -64,7 +64,7 @@ router.on({
     new Auth(router, api).render();
   },
   '/demo': function () {
-    new Demo(router).render();
+    new Demo(router, api).render();
   },
   '/dev': function () {
     new Dev(router, api, PartialLoading).render();
