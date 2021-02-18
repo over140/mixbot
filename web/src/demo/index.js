@@ -46,6 +46,15 @@ Demo.prototype = {
       window.open(url)
     });
 
+    $('.open.playlist.action').on('click', function (event) {
+      const mixinContext = self.getMixinContext()
+      const audios = [
+        "https://dev-courses-storage.firesbox.com/7000101418/replay/8a564db8-e02b-4136-bd77-ec3526531616.mp3",
+        "https://dev-courses-storage.firesbox.com/7000101418/replay/874dbe3f-f342-4974-b3b7-8830cc9a4ff0.mp3",
+        ];
+      self.playlist(audios);
+    });
+
     const code = URLUtils.getUrlParameter("code");
     if (code === "XVlBzg") {
       self.api.notify('success', code);
@@ -62,6 +71,16 @@ Demo.prototype = {
       ctx.platform = ctx.platform || 'Android'
     }
     return ctx
+  },
+
+  playlist: function (audios) {
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.MixinContext && window.webkit.messageHandlers.playlist) {
+      window.webkit.messageHandlers.playlist.postMessage(audios);
+    } else if (window.MixinContext && (typeof window.MixinContext.playlist === 'function')) {
+      window.MixinContext.playlist(audios)
+    } else {
+      this.api.notify('success', "你的客户端还不支持 playlist");
+    }
   }
 
 };
