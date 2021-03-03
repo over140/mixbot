@@ -3,6 +3,15 @@
     "title": "热门",
     "bots": [
       {
+        "name": "MixSwap",
+        "tags": "交易所",
+        "identity_number": "7000103767",
+        "icon_url": "https://mixin-images.zeromesh.net/w73fbJcibxozqgv44ZqtsxNmD0e8-eMXITnTil4S-zvw2xv8zzYdA5lnBH4i_nJlckiGWPqp8N93rLQ5_E7traThKH1M2jolq-R5=s256",
+        "description": "MixSwap 采用的是类似 1inch 的聚合交易模式，通过智能算法拆分交易同样的钱买卖更多的币，目前已经集成 4swap 和 ExinSwap，后续还将支持 ExinOne 直接连接到 3 大交易所。",
+        "url": "mixin://users/6a4a121d-9673-4a7e-a93e-cb9ca4bb83a2",
+        "effects": ""
+      },
+      {
         "name": "ExinLocal",
         "tags": "交易所",
         "identity_number": "7000000015",
@@ -107,12 +116,12 @@
         "effects": ""
       },
       {
-        "name": "ExinSwap",
+        "name": "MixSwap",
         "tags": "交易所",
-        "identity_number": "7000102352",
-        "icon_url": "https://mixin-images.zeromesh.net/daVk5A4KnEJqHgjZ3rXSy7L9PbrPzFpB4d7TlycIGVigcAaIMNJWoWsKOtlxjLOukmFjIKRJ9KrMF4KqzZ_zHL8=s256",
-        "description": "Exin 旗下的自动化做市交易平台，目前专注 XIN/USDT ，资金池规模超过 100 万美元",
-        "url": "mixin://users/29f23576-4651-47ff-8c16-6c8a5d76985e",
+        "identity_number": "7000103767",
+        "icon_url": "https://mixin-images.zeromesh.net/w73fbJcibxozqgv44ZqtsxNmD0e8-eMXITnTil4S-zvw2xv8zzYdA5lnBH4i_nJlckiGWPqp8N93rLQ5_E7traThKH1M2jolq-R5=s256",
+        "description": "MixSwap 采用的是类似 1inch 的聚合交易模式，通过智能算法拆分交易同样的钱买卖更多的币，目前已经集成 4swap 和 ExinSwap，后续还将支持 ExinOne 直接连接到 3 大交易所。",
+        "url": "mixin://users/6a4a121d-9673-4a7e-a93e-cb9ca4bb83a2",
         "effects": ""
       },
       {
@@ -122,6 +131,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/puv4bKhpNP93xWLLsdUVZWs_N5weDeHvLOg_2JAhnVujbys82eYSFv9t_qGWomzJRvJD53WE-pst6HzOaJ377yfm=s256",
         "description": "Fox 旗下自动化做市交易平台，XIN/BTC 和 XIN/EOS 深度很好，资金池规模超过 100 万美元",
         "url": "mixin://users/a753e0eb-3010-4c4a-a7b2-a7bda4063f62",
+        "effects": ""
+      },
+      {
+        "name": "ExinSwap",
+        "tags": "交易所",
+        "identity_number": "7000102352",
+        "icon_url": "https://mixin-images.zeromesh.net/daVk5A4KnEJqHgjZ3rXSy7L9PbrPzFpB4d7TlycIGVigcAaIMNJWoWsKOtlxjLOukmFjIKRJ9KrMF4KqzZ_zHL8=s256",
+        "description": "Exin 旗下的自动化做市交易平台，目前专注 XIN/USDT ，资金池规模超过 100 万美元",
+        "url": "mixin://users/29f23576-4651-47ff-8c16-6c8a5d76985e",
         "effects": ""
       },
       {
