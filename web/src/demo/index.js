@@ -51,6 +51,11 @@ Demo.prototype = {
       const audios = [
         "https://dev-courses-storage.firesbox.com/7000101418/replay/8a564db8-e02b-4136-bd77-ec3526531616.mp3",
         "https://dev-courses-storage.firesbox.com/7000101418/replay/874dbe3f-f342-4974-b3b7-8830cc9a4ff0.mp3",
+        "https://taskwall.zeromesh.net/test1.mp3",
+        "https://taskwall.zeromesh.net/test2.mp3",
+        "https://taskwall.zeromesh.net/test3.mp3",
+        "https://taskwall.zeromesh.net/test4.mp3",
+        "https://a.b.c/d.mp3",
         ];
       self.playlist(audios);
     });

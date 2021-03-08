@@ -128,7 +128,7 @@
         "name": "4swap",
         "tags": "交易所",
         "identity_number": "7000103537",
-        "icon_url": "https://mixin-images.zeromesh.net/puv4bKhpNP93xWLLsdUVZWs_N5weDeHvLOg_2JAhnVujbys82eYSFv9t_qGWomzJRvJD53WE-pst6HzOaJ377yfm=s256",
+        "icon_url": "https://mixin-images.zeromesh.net/P6C_Bvd79cQFjj_hB6NugtuBhtLwg4UbYo2hD7pv7WMGmpqfzkK4A-SICA8dNNcXgUVVn6AYUjhtiLGvT4_gTXQ8oiyxJT9fEAo7=s256",
         "description": "Fox 旗下自动化做市交易平台，XIN/BTC 和 XIN/EOS 深度很好，资金池规模超过 100 万美元",
         "url": "mixin://users/a753e0eb-3010-4c4a-a7b2-a7bda4063f62",
         "effects": ""
@@ -351,6 +351,15 @@
         "effects": ""
       },
       {
+        "name": "PRSDigg",
+        "tags": "娱乐",
+        "identity_number": "7000101549",
+        "icon_url": "https://mixin-images.zeromesh.net/L0egX-GZxT0Yh-dd04WKeAqVNRzgzuj_Je_-yKf8aQTZo-xihd-LogbrIEr-WyG9WbJKGFvt2YYx-UIUa1qQMRla=s256",
+        "description": "Digg from PressOne",
+        "url": "mixin://users/6d8fd25a-1eb1-4afb-b2a6-d34991959b76",
+        "effects": ""
+      },
+      {
         "name": "DiV",
         "tags": "资讯",
         "identity_number": "7000102081",
@@ -411,15 +420,6 @@
         "icon_url": "https://mixin-images.zeromesh.net/6itqfVRsT_EX9CG0oLY_1lw_zh6muk2ujyIi_7l8XCjkIxdvEPqeyUMKVPAY85M2CThjK-RVx28YkPk3o5DfCg=s256",
         "description": "EOS 快讯、收集全球 Dapp 信息、行情工具和 EOS 生态市场数据",
         "url": "mixin://users/7ad1c20d-3143-4c5c-aab8-f9a544db0008",
-        "effects": ""
-      },
-      {
-        "name": "PRSDigg",
-        "tags": "娱乐",
-        "identity_number": "7000101549",
-        "icon_url": "https://mixin-images.zeromesh.net/L0egX-GZxT0Yh-dd04WKeAqVNRzgzuj_Je_-yKf8aQTZo-xihd-LogbrIEr-WyG9WbJKGFvt2YYx-UIUa1qQMRla=s256",
-        "description": "Digg from PressOne",
-        "url": "mixin://users/6d8fd25a-1eb1-4afb-b2a6-d34991959b76",
         "effects": ""
       }
     ]
