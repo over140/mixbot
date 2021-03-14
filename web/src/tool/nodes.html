@@ -1,0 +1,28 @@
+<div class="total nodes">
+  矿池剩余 {{pool}} XIN，全节点每日挖矿 {{day_mint}} XIN，总共有 {{total_nodes}} 个全节点。
+</div>
+<table class="nodes list">
+  <tbody>
+    {{#each nodes}}
+      <tr class="node item">
+        <td>
+          <img src="{{icon_url}}" /><br />
+          {{#if is_accpted}}
+            <!-- <span class="green">正常</span><br /> -->
+          {{else}}
+            <span class="green">申请中</span><br />
+          {{/if}}
+        </td>
+        <td>
+          <span>{{host}}</span><br />
+          <span class="description">
+            拓扑高度：{{topology}}<br/>
+            节点版本：{{version}}<br/>
+            工作量：{{works}}<br/>
+            挖矿收益：{{mint}} XIN {{#if is_accpted}}（预计）{{/if}}
+          </span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

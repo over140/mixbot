@@ -3,6 +3,7 @@ import './assets.scss';
 import './chains.scss';
 import './stats.scss';
 import './transactions.scss';
+import './nodes.scss';
 import $, { contains } from 'jquery';
 import {BigNumber} from 'bignumber.js';
 import TimeUtils from '../utils/time.js';
@@ -16,11 +17,22 @@ function Tool(router, api, loading) {
   this.templateChains = require('./chains.html');
   this.templateStats = require('./stats.html');
   this.templateTransactions = require('./transactions.html');
+  this.templateNodes = require('./nodes.html');
+  this.nodeFoxoneImage = require('./node-foxone.png');
+  this.nodeAnonymousImage = require('./node-anonymous.png');
   this.chains = require('../api/chains.json');
   var chainMap = {};
   this.chains.forEach(function(chain) {
     chainMap[chain.chain_id] = chain;
   });
+  var nodes = JSON.parse(window.localStorage.getItem('nodes'));
+  var nodeMap = {};
+  if (nodes) {
+    nodes.forEach(function(node) {
+      nodeMap[node.host] = node;
+    });
+  }
+  this.nodeMap = nodeMap;
   this.chainMap = chainMap;
 
   BigNumber.config({ 
@@ -46,10 +58,11 @@ Tool.prototype = {
     self.renderChains();
     self.renderStats();
     self.renderTransactions();
+    self.renderNodes();
 
     $('.tabs').on('click', '.tab', function (event) {
       const activeClassName = this.className.split(/\s+/)[0];
-      const tabs = ['chains', 'assets', 'transactions', 'stats'];
+      const tabs = ['chains', 'assets', 'transactions', 'nodes', 'stats'];
       for (var i = 0; i < tabs.length; i++) {
         const tab = tabs[i];
         if (tab === activeClassName) {
@@ -172,6 +185,298 @@ Tool.prototype = {
         }));
       });
     });
+  },
+
+  getNodeIcon: function(host) {
+    const lowerHost = host.toLowerCase();
+    if (lowerHost.indexOf(".b1.run") >= 0) {
+      return "https://mixin-images.zeromesh.net/VYpwrP_nI4zE6dcB2thEh3noEs5XR_o94ggwvCyZT3Lg7LU-odxp9HyG5WGcAUY6BCVkBRNmCW6HD6T2gO7mjw=s256";
+    } else if (lowerHost.indexOf(".exinpool.com") >= 0) {
+      return "https://mixin-images.zeromesh.net/--ccgu6VAw7MB9bALITSa_CdSAJ2DUfr7TdzumMOWV1tMYbadr4V8KtgfcgprQ9VUQMllealtsIq350BReNu34Y=s256";
+    } else if (lowerHost.startsWith("http://node-candy") && lowerHost.indexOf(".f1ex.io") >= 0) {
+      return "https://mixin-images.zeromesh.net/wrGUPXYeb4zw1cm9KL27ftmqEWdu2-ltzKQlRAlHe4ulneHj7IdTwgPdsX4csuxYBAuIi8_iBfMI7yX6xQmlQA=s128";
+    } else if (lowerHost.startsWith("http://node-box") && lowerHost.indexOf(".f1ex.io") >= 0) {
+      return "https://mixin-images.zeromesh.net/PUh63FawGz6kfizE1YtCqKi_KQ5l7UNIIu2eoNFYWw8u8BezVVxQu2noYXD5EFpVM06su6Ba92LTN2f7RBoM77o=s256";
+    } else if (lowerHost.indexOf(".f1ex.io") >= 0) {
+      return this.nodeFoxoneImage;
+    } else if (lowerHost.indexOf(".eoslaomao.com") >= 0) {
+      return "https://mixin-images.zeromesh.net/YNl_6u3y_3lrrjyyMN9O8EV2YK6gep1O2h7LyenGGkCpjBmqFHtYk2q8hi2HiBuIuRCUZimkomkK8J1WqWYzhQ=s256";
+    } else if (lowerHost.indexOf(".poolin.com") >= 0) {
+      return "https://mixin-images.zeromesh.net/Dh-e_i2yLp-eWJPVK2D5LSCbXOoiG5MyTuH5ZS-CHSHVaiVFyWiiugqlClsOWsnOvtLH4e7HNBzVVmS1goo_oW4=s256";
+    } else if (lowerHost.indexOf("34.66.213.188") >= 0) {
+      return "https://mixin-images.zeromesh.net/1HUpTRTLJg9PehbzTyMVOPSNmPiM0sr5006xTH2WQIUc3g7QwsePDvtr7YNo0ZDeK3rEx5TpqU45hTDWW2Bk1w=s256";
+    } else {
+      return this.nodeAnonymousImage;
+    }
+  },
+
+  cutNodeVersion: function(version) {
+    if (version.indexOf("-") >= 0) {
+      return version.substring(0, version.indexOf("-"));
+    } else {
+      return version
+    }
+  },
+
+  buildNode: function(node, workNode, host) {
+    return {
+      host: host,
+      state: workNode.state,
+      is_accpted: workNode.state == "ACCEPTED",
+      pool: node.mint.pool,
+      icon_url: this.getNodeIcon(host),
+      version: this.cutNodeVersion(node.version),
+      topology: new BigNumber(node.graph.topology).toFormat(),
+      node: node.node,
+      workLead: workNode.works[0],
+      workSign: workNode.works[1],
+      works: workNode.works[0] * 1.2 + workNode.works[1]
+    };
+  },
+
+  buildCacheNode: function(node) {
+    const nodeId = node.node;
+    var workNode = tempConsensus.filter(function(node){
+      return node.node == nodeId;
+    })[0];
+
+    if (!workNode) {
+      return;
+    }
+
+    node.workLead = workNode.works[0];
+    node.workSign = workNode.works[1];
+    node.works = workNode.works[0] * 1.2 + workNode.works[1];
+    return node;
+  },
+
+  fetchRemoteNodes: function(callback) {
+    console.info("==========fetchRemoteNodes===========");
+    const self = this;
+    const checkNodes = [
+      "http://node-box.f1ex.io:8239",
+      "http://mixin-node-01.b1.run:8239",
+      "http://mixin-node-02.b1.run:8239",
+      "http://mixin-node-03.b1.run:8239",
+      "http://mixin-node-04.b1.run:8239",
+      "http://mixin-node-05.b1.run:8239",
+      "http://mixin-node-07.b1.run:8239",
+      "http://34.82.92.203:8239",
+      "http://mixin-node0.exinpool.com:8239",
+      "http://mixin-node1.exinpool.com:8239",
+      "http://mixin-node2.exinpool.com:8239",
+      "http://node-candy.f1ex.io:8239",
+      "http://node-box-2.f1ex.io:8239",
+      "http://node-42.f1ex.io:8239",
+      "http://mixin-node0.eoslaomao.com:1443",
+      "http://mixin-node1.eoslaomao.com:1443",
+      "http://35.188.242.130:8239",
+      "http://35.245.207.174:8239",
+      "http://35.185.16.229:8239",
+      "http://35.227.72.6:8239",
+      "https://mixin-node.poolin.com",
+      "http://35.237.226.29:8239",
+      "http://34.83.129.200:8239",
+      "http://34.83.136.66:8239",
+      "http://34.83.199.95:8239",
+      "http://35.233.138.56:8239",
+      "http://34.66.213.188:8239",
+      "http://13.58.51.38:8239",
+      "http://18.224.233.177:8239",
+      "http://3.15.58.214:8239",
+      "http://3.213.97.106:8239",
+      "http://50.17.96.121:8239",
+      "http://18.144.3.42:8239",
+      "http://18.144.155.115:8239",
+      "http://44.233.85.154:8239",
+      "http://54.188.62.72:8239",
+      "http://34.67.2.0:8239",
+      "http://lehigh.hotot.org:8239"
+    ];
+    var nodes = [];
+    var totalNodes = checkNodes.length;
+    var tempConsensus;
+
+    for (var i = 0; i < checkNodes.length; i++) {
+      const host = checkNodes[i];
+      self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo?node=' + host, undefined, function(resp) {
+        if (resp.error) {
+          console.info(resp.error);
+          var node = self.nodeMap[host];
+          if (node && tempConsensus) {
+            const nodeId = node.node;
+            var workNode = tempConsensus.filter(function(node){
+              return node.node == nodeId;
+            })[0];
+
+            if (!workNode) {
+              return;
+            }
+
+            node.workLead = workNode.works[0];
+            node.workSign = workNode.works[1];
+            node.works = workNode.works[0] * 1.2 + workNode.works[1];
+            nodes.push(node);
+            if (nodes.length == totalNodes) {
+              callback(nodes);
+            }
+          }
+          return;
+        }
+        const nodeId = resp.data.node;
+        var workNode = resp.data.graph.consensus.filter(function(node){
+          return node.node == nodeId
+        })[0];
+
+        if (!workNode || workNode.state == "REMOVED") {
+          console.info(resp.data);
+          totalNodes--;
+          return;
+        }
+
+        if (!tempConsensus) {
+          tempConsensus = resp.data.graph.consensus;
+        }
+
+        nodes.push(self.buildNode(resp.data, workNode, host));
+        if (nodes.length == totalNodes) {
+          console.info("====remote..." + nodes.length)
+          window.localStorage.setItem('nodes', JSON.stringify(nodes));
+          callback(nodes);
+        }
+      });
+    }
+  },
+
+  renderWorkNodes: function(nodes, self) {
+    nodes.sort(function (a, b) {
+      if (!a.is_accpted && b.is_accpted) {
+        return -1;
+      } else if (a.is_accpted && !b.is_accpted) {
+        return 1;
+      } else {
+        const value = new BigNumber(a.works).minus(b.works);
+        if (value.isZero()) {
+          return 0;
+        } else if (value.isNegative()) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+    });
+
+    var maxWorks = 0, minWorks = 0, totalWorks = 0, totalValidNode = 0;//ACCEPTED
+    nodes.forEach(function(node){
+      if (node.works > maxWorks) {
+        maxWorks = node.works;
+      }
+
+      if (node.workSign > 0) {
+        if (node.works < minWorks || minWorks == 0) {
+          minWorks = node.works;
+        }
+        
+        totalValidNode++;
+        totalWorks += node.works;
+      }
+
+    });
+    console.info("totalWorks:" + totalWorks + " maxWorks:" + maxWorks + " minWorks:" + minWorks + " totalValidNode:" + totalValidNode);
+    var avg = (totalWorks - maxWorks - minWorks) / (totalValidNode - 2);
+
+    var dayMint = new BigNumber(40500 * 0.9).div(365);
+    var totalMintWork = new BigNumber(0);
+
+    nodes.forEach(function(node){
+      // a = average work
+      // for w > 7a, s = 2a
+      // for 7a > w > a, s = 1/6w + 5/6a
+      // for a > w > 1/7a, s = w
+      // for a < 1/7a, s = 1/7a
+
+      if (node.workSign > 0) {
+        if (node.works >= 7 * avg) {
+          node.mintWork = 2 * avg;
+        } else if (node.works >= avg) {
+          node.mintWork = node.works / 6 + avg * 5 / 6;
+        } else if (node.works >= avg / 7) {
+          node.mintWork = node.works;
+        } else {
+          node.mintWork = avg / 7;
+        }
+        totalMintWork = totalMintWork.plus(node.mintWork);
+      }
+    });
+
+    var avgMint = dayMint.div(totalMintWork);
+    console.info("avg:" + avg + " totalMintWork:" + totalMintWork + " avgMint:" + avgMint.toFixed(8));
+
+    nodes.forEach(function(node){
+      if (node.workSign > 0) {
+        node.mint = avgMint.multipliedBy(node.mintWork).toFixed(8);
+      } else {
+        node.mint = "0";
+      }
+    });
+
+    console.info("==========renderWorkNodes===========");
+
+    $('#nodes-content').html(self.templateNodes({
+      day_mint: dayMint.toFixed(8),
+      pool: new BigNumber(nodes[0].pool).toFormat(),
+      total_nodes: nodes.length,
+      nodes: nodes
+    }));
+  },
+
+  renderNodes: function() {
+    const self = this;
+    $('#nodes-content').html(self.loading());
+
+    const nodeIds = Object.keys(self.nodeMap);
+    if (self.nodeMap && nodeIds.length > 7) {
+      console.info("==========fetchLocalNodes===========");
+      self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo', undefined, function(resp) {
+        if (resp.error) {
+          console.info(resp.error);
+          self.fetchRemoteNodes(renderWorkNodes);
+          return
+        }
+
+        var nodeIdMap = {};
+        nodeIds.forEach(function(nodeId){
+          const node = self.nodeMap[nodeId];
+          nodeIdMap[node.node] = node;
+        });
+
+        var nodes = [];
+        const consensus = resp.data.graph.consensus;
+        for (var i = 0; i < consensus.length; i++) {
+          const newNode = consensus[i];
+          var node = nodeIdMap[newNode.node];
+          if (node) {
+            node.workLead = newNode.works[0];
+            node.workSign = newNode.works[1];
+            node.works = newNode.works[0] * 1.2 + newNode.works[1];
+            nodes.push(node);
+          } else {
+            console.info(newNode.node);
+          }
+
+          if (i == consensus.length - 1) {
+            self.renderWorkNodes(nodes, self);
+            self.fetchRemoteNodes(function(nodes){
+              self.renderWorkNodes(nodes, self);
+            });
+          }
+        }
+      });
+    } else {
+      self.fetchRemoteNodes(function(nodes){
+        self.renderWorkNodes(nodes, self);
+      });
+    }
   },
 
   renderStats: function () {
