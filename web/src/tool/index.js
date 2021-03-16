@@ -365,55 +365,17 @@ Tool.prototype = {
       }
     });
 
-    var maxWorks = 0, minWorks = 0, totalWorks = 0, totalValidNode = 0;//ACCEPTED
+    var totalWorks = 0;
     nodes.forEach(function(node){
-      if (node.works > maxWorks) {
-        maxWorks = node.works;
-      }
-
-      if (node.workSign > 0) {
-        if (node.works < minWorks || minWorks == 0) {
-          minWorks = node.works;
-        }
-        
-        totalValidNode++;
-        totalWorks += node.works;
-      }
-
+      totalWorks += node.works;
     });
-    console.info("totalWorks:" + totalWorks + " maxWorks:" + maxWorks + " minWorks:" + minWorks + " totalValidNode:" + totalValidNode);
-    var avg = (totalWorks - maxWorks - minWorks) / (totalValidNode - 2);
-
-    var dayMint = new BigNumber(40500 * 0.9).div(365);
-    var totalMintWork = new BigNumber(0);
-
-    nodes.forEach(function(node){
-      // a = average work
-      // for w > 7a, s = 2a
-      // for 7a > w > a, s = 1/6w + 5/6a
-      // for a > w > 1/7a, s = w
-      // for a < 1/7a, s = 1/7a
-
-      if (node.workSign > 0) {
-        if (node.works >= 7 * avg) {
-          node.mintWork = 2 * avg;
-        } else if (node.works >= avg) {
-          node.mintWork = node.works / 6 + avg * 5 / 6;
-        } else if (node.works >= avg / 7) {
-          node.mintWork = node.works;
-        } else {
-          node.mintWork = avg / 7;
-        }
-        totalMintWork = totalMintWork.plus(node.mintWork);
-      }
-    });
-
-    var avgMint = dayMint.div(totalMintWork);
-    console.info("avg:" + avg + " totalMintWork:" + totalMintWork + " avgMint:" + avgMint.toFixed(8));
+    var dayMint = new BigNumber(40500 * 0.9).div(365)
+    var avgMint = dayMint.div(totalWorks);
+    console.info("totalWorks:" + totalWorks + " avgMint:" + avgMint.toFixed(8));
 
     nodes.forEach(function(node){
       if (node.workSign > 0) {
-        node.mint = avgMint.multipliedBy(node.mintWork).toFixed(8);
+        node.mint = avgMint.multipliedBy(node.works).toFixed(8);
       } else {
         node.mint = "0";
       }
@@ -514,13 +476,13 @@ Tool.prototype = {
     var chains = this.chains.concat();
     $('#chains-content').html(self.loading());
     
-    self.api.request('GET', '/network', undefined, function(resp) {
+    self.api.request('GET', '/network/chains', undefined, function(resp) {
       if (resp.error) {
         return;
       }
 
       var chainMap = {};
-      resp.data.chains.forEach(function(chain) {
+      resp.data.forEach(function(chain) {
         chainMap[chain.chain_id] = chain;
       });
 
