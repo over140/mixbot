@@ -301,7 +301,6 @@ Tool.prototype = {
       const host = checkNodes[i];
       self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo?node=' + host, undefined, function(resp) {
         if (resp.error) {
-          console.info(resp.error);
           var node = self.nodeMap[host];
           if (node && tempConsensus) {
             const nodeId = node.node;
@@ -310,7 +309,7 @@ Tool.prototype = {
             })[0];
 
             if (!workNode) {
-              return;
+              return true;
             }
 
             node.workLead = workNode.works[0];
@@ -321,7 +320,7 @@ Tool.prototype = {
               callback(nodes);
             }
           }
-          return;
+          return true;
         }
         const nodeId = resp.data.node;
         var workNode = resp.data.graph.consensus.filter(function(node){
@@ -439,9 +438,9 @@ Tool.prototype = {
       console.info("==========fetchLocalNodes===========");
       self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo', undefined, function(resp) {
         if (resp.error) {
-          console.info(resp.error);
+          self.api.notifyError('error', resp.error);
           self.fetchRemoteNodes(renderWorkNodes);
-          return
+          return true;
         }
 
         var nodeIdMap = {};
@@ -492,7 +491,7 @@ Tool.prototype = {
       self.api.requestURL('GET', 'https://api.blockchair.com/mixin/stats', undefined, function(resp) {
         if (resp.error) {
           self.api.notifyError('error', resp.error);
-          return; 
+          return true;
         }
         const stats = resp.data;
         $('#stats-content').html(self.templateStats({
