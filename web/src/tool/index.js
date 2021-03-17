@@ -226,74 +226,6 @@ Tool.prototype = {
     };
   },
 
-  renderWorkNodes: function(nodes, self) {
-
-  },
-
-  fetchNodes: function(callback) {
-    const self = this;
-    self.api.requestURL('GET', 'https://api.mixin.space/nodes', undefined, function(resp) {
-      if (resp.error) {
-        const nodeIds = Object.keys(self.nodeMap);
-        if (self.nodeMap && nodeIds.length > 7) {
-          console.info("==========fetchLocalNodes===========");
-          self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo', undefined, function(resp) {
-            if (resp.error) {
-              self.api.notifyError('error', resp.error);
-              self.fetchRemoteNodes(renderWorkNodes);
-              return true;
-            }
-
-            var nodeIdMap = {};
-            nodeIds.forEach(function(nodeId){
-              const node = self.nodeMap[nodeId];
-              nodeIdMap[node.node] = node;
-            });
-    
-            var nodes = [];
-            const consensus = resp.data.graph.consensus;
-            for (var i = 0; i < consensus.length; i++) {
-              const newNode = consensus[i];
-              var node = nodeIdMap[newNode.node];
-              if (node) {
-                node.workLead = newNode.works[0];
-                node.workSign = newNode.works[1];
-                node.works = newNode.works[0] * 1.2 + newNode.works[1];
-                nodes.push(node);
-              } else {
-                console.info(newNode.node);
-              }
-    
-              if (i == consensus.length - 1) {
-                self.renderWorkNodes(nodes, self);
-                self.fetchRemoteNodes(function(nodes){
-                  self.renderWorkNodes(nodes, self);
-                });
-              }
-            }
-          });
-        } else {
-          self.fetchRemoteNodes(function(nodes){
-            self.renderWorkNodes(nodes, self);
-          });
-        }
-        return true;
-      }
-
-      var nodes = resp.data;
-      nodes.forEach(function(node){
-        node.is_accpted = node.state == "ACCEPTED";
-        node.icon_url = this.getNodeIcon(node.host);
-        const works = node.works;
-        node.workLead = works[0];
-        node.workSign = works[1];
-        node.works = works[0] * 1.2 + works[1];
-      });
-
-      callback(nodes);
-    });
-  },
-
   renderNodes: function() {
     const self = this;
     $('#nodes-content').html(self.loading());
@@ -307,6 +239,7 @@ Tool.prototype = {
       var nodes = resp.data;
 
       nodes.forEach(function(node){
+        node.version = self.cutNodeVersion(node.version);
         node.is_accpted = node.state == "ACCEPTED";
         node.icon_url = self.getNodeIcon(node.host);
         const works = node.works;
@@ -342,6 +275,9 @@ Tool.prototype = {
         } else {
           node.mint = "0";
         }
+        node.staking = new BigNumber(node.staking).toFormat();
+        node.works = new BigNumber(node.works).toFormat();
+        node.topology = new BigNumber(node.topology).toFormat();
       });
   
       $('#nodes-content').html(self.templateNodes({
