@@ -25,14 +25,6 @@ function Tool(router, api, loading) {
   this.chains.forEach(function(chain) {
     chainMap[chain.chain_id] = chain;
   });
-  var nodes = JSON.parse(window.localStorage.getItem('nodes'));
-  var nodeMap = {};
-  if (nodes) {
-    nodes.forEach(function(node) {
-      nodeMap[node.host] = node;
-    });
-  }
-  this.nodeMap = nodeMap;
   this.chainMap = chainMap;
 
   BigNumber.config({ 
@@ -227,217 +219,138 @@ Tool.prototype = {
       icon_url: this.getNodeIcon(host),
       version: this.cutNodeVersion(node.version),
       topology: new BigNumber(node.graph.topology).toFormat(),
-      node: node.node,
+      node_id: node.node,
       workLead: workNode.works[0],
       workSign: workNode.works[1],
       works: workNode.works[0] * 1.2 + workNode.works[1]
     };
   },
 
-  buildCacheNode: function(node) {
-    const nodeId = node.node;
-    var workNode = tempConsensus.filter(function(node){
-      return node.node == nodeId;
-    })[0];
+  renderWorkNodes: function(nodes, self) {
 
-    if (!workNode) {
-      return;
-    }
-
-    node.workLead = workNode.works[0];
-    node.workSign = workNode.works[1];
-    node.works = workNode.works[0] * 1.2 + workNode.works[1];
-    return node;
   },
 
-  fetchRemoteNodes: function(callback) {
-    console.info("==========fetchRemoteNodes===========");
+  fetchNodes: function(callback) {
     const self = this;
-    const checkNodes = [
-      "http://node-box.f1ex.io:8239",
-      "http://mixin-node-01.b1.run:8239",
-      "http://mixin-node-02.b1.run:8239",
-      "http://mixin-node-03.b1.run:8239",
-      "http://mixin-node-04.b1.run:8239",
-      "http://mixin-node-05.b1.run:8239",
-      "http://mixin-node-07.b1.run:8239",
-      "http://34.82.92.203:8239",
-      "http://mixin-node0.exinpool.com:8239",
-      "http://mixin-node1.exinpool.com:8239",
-      "http://mixin-node2.exinpool.com:8239",
-      "http://node-candy.f1ex.io:8239",
-      "http://node-box-2.f1ex.io:8239",
-      "http://node-42.f1ex.io:8239",
-      "http://mixin-node0.eoslaomao.com:1443",
-      "http://mixin-node1.eoslaomao.com:1443",
-      "http://35.188.242.130:8239",
-      "http://35.245.207.174:8239",
-      "http://35.185.16.229:8239",
-      "http://35.227.72.6:8239",
-      "https://mixin-node.poolin.com",
-      "http://35.237.226.29:8239",
-      "http://34.83.129.200:8239",
-      "http://34.83.136.66:8239",
-      "http://34.83.199.95:8239",
-      "http://35.233.138.56:8239",
-      "http://34.66.213.188:8239",
-      "http://13.58.51.38:8239",
-      "http://18.224.233.177:8239",
-      "http://3.15.58.214:8239",
-      "http://3.213.97.106:8239",
-      "http://50.17.96.121:8239",
-      "http://18.144.3.42:8239",
-      "http://18.144.155.115:8239",
-      "http://44.233.85.154:8239",
-      "http://54.188.62.72:8239",
-      "http://34.67.2.0:8239",
-      "http://lehigh.hotot.org:8239"
-    ];
-    var nodes = [];
-    var totalNodes = checkNodes.length;
-    var tempConsensus;
-
-    for (var i = 0; i < checkNodes.length; i++) {
-      const host = checkNodes[i];
-      self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo?node=' + host, undefined, function(resp) {
-        if (resp.error) {
-          var node = self.nodeMap[host];
-          if (node && tempConsensus) {
-            const nodeId = node.node;
-            var workNode = tempConsensus.filter(function(node){
-              return node.node == nodeId;
-            })[0];
-
-            if (!workNode) {
+    self.api.requestURL('GET', 'https://api.mixin.space/nodes', undefined, function(resp) {
+      if (resp.error) {
+        const nodeIds = Object.keys(self.nodeMap);
+        if (self.nodeMap && nodeIds.length > 7) {
+          console.info("==========fetchLocalNodes===========");
+          self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo', undefined, function(resp) {
+            if (resp.error) {
+              self.api.notifyError('error', resp.error);
+              self.fetchRemoteNodes(renderWorkNodes);
               return true;
             }
 
-            node.workLead = workNode.works[0];
-            node.workSign = workNode.works[1];
-            node.works = workNode.works[0] * 1.2 + workNode.works[1];
-            nodes.push(node);
-            if (nodes.length == totalNodes) {
-              callback(nodes);
+            var nodeIdMap = {};
+            nodeIds.forEach(function(nodeId){
+              const node = self.nodeMap[nodeId];
+              nodeIdMap[node.node] = node;
+            });
+    
+            var nodes = [];
+            const consensus = resp.data.graph.consensus;
+            for (var i = 0; i < consensus.length; i++) {
+              const newNode = consensus[i];
+              var node = nodeIdMap[newNode.node];
+              if (node) {
+                node.workLead = newNode.works[0];
+                node.workSign = newNode.works[1];
+                node.works = newNode.works[0] * 1.2 + newNode.works[1];
+                nodes.push(node);
+              } else {
+                console.info(newNode.node);
+              }
+    
+              if (i == consensus.length - 1) {
+                self.renderWorkNodes(nodes, self);
+                self.fetchRemoteNodes(function(nodes){
+                  self.renderWorkNodes(nodes, self);
+                });
+              }
             }
-          }
-          return true;
-        }
-        const nodeId = resp.data.node;
-        var workNode = resp.data.graph.consensus.filter(function(node){
-          return node.node == nodeId
-        })[0];
-
-        if (!workNode || workNode.state == "REMOVED") {
-          console.info(resp.data);
-          totalNodes--;
-          return;
-        }
-
-        if (!tempConsensus) {
-          tempConsensus = resp.data.graph.consensus;
-        }
-
-        nodes.push(self.buildNode(resp.data, workNode, host));
-        if (nodes.length == totalNodes) {
-          console.info("====remote..." + nodes.length)
-          window.localStorage.setItem('nodes', JSON.stringify(nodes));
-          callback(nodes);
-        }
-      });
-    }
-  },
-
-  renderWorkNodes: function(nodes, self) {
-    nodes.sort(function (a, b) {
-      if (!a.is_accpted && b.is_accpted) {
-        return -1;
-      } else if (a.is_accpted && !b.is_accpted) {
-        return 1;
-      } else {
-        const value = new BigNumber(a.works).minus(b.works);
-        if (value.isZero()) {
-          return 0;
-        } else if (value.isNegative()) {
-          return 1;
+          });
         } else {
-          return -1;
+          self.fetchRemoteNodes(function(nodes){
+            self.renderWorkNodes(nodes, self);
+          });
         }
+        return true;
       }
+
+      var nodes = resp.data;
+      nodes.forEach(function(node){
+        node.is_accpted = node.state == "ACCEPTED";
+        node.icon_url = this.getNodeIcon(node.host);
+        const works = node.works;
+        node.workLead = works[0];
+        node.workSign = works[1];
+        node.works = works[0] * 1.2 + works[1];
+      });
+
+      callback(nodes);
     });
-
-    var totalWorks = 0;
-    nodes.forEach(function(node){
-      totalWorks += node.works;
-    });
-    var dayMint = new BigNumber(40500 * 0.9).div(365)
-    var avgMint = dayMint.div(totalWorks);
-    console.info("totalWorks:" + totalWorks + " avgMint:" + avgMint.toFixed(8));
-
-    nodes.forEach(function(node){
-      if (node.workSign > 0) {
-        node.mint = avgMint.multipliedBy(node.works).toFixed(8);
-      } else {
-        node.mint = "0";
-      }
-    });
-
-    console.info("==========renderWorkNodes===========");
-
-    $('#nodes-content').html(self.templateNodes({
-      day_mint: dayMint.toFixed(8),
-      pool: new BigNumber(nodes[0].pool).toFormat(),
-      total_nodes: nodes.length,
-      nodes: nodes
-    }));
   },
 
   renderNodes: function() {
     const self = this;
     $('#nodes-content').html(self.loading());
 
-    const nodeIds = Object.keys(self.nodeMap);
-    if (self.nodeMap && nodeIds.length > 7) {
-      console.info("==========fetchLocalNodes===========");
-      self.api.requestURL('GET', 'https://api.mixinwallet.com/getinfo', undefined, function(resp) {
-        if (resp.error) {
-          self.api.notifyError('error', resp.error);
-          self.fetchRemoteNodes(renderWorkNodes);
-          return true;
-        }
+    self.api.requestURL('GET', 'https://api.mixin.space/nodes', undefined, function(resp) {
+      if (resp.error) {
+        return;
+      }
 
-        var nodeIdMap = {};
-        nodeIds.forEach(function(nodeId){
-          const node = self.nodeMap[nodeId];
-          nodeIdMap[node.node] = node;
-        });
+      var totalWorks = 0;
+      var nodes = resp.data;
 
-        var nodes = [];
-        const consensus = resp.data.graph.consensus;
-        for (var i = 0; i < consensus.length; i++) {
-          const newNode = consensus[i];
-          var node = nodeIdMap[newNode.node];
-          if (node) {
-            node.workLead = newNode.works[0];
-            node.workSign = newNode.works[1];
-            node.works = newNode.works[0] * 1.2 + newNode.works[1];
-            nodes.push(node);
+      nodes.forEach(function(node){
+        node.is_accpted = node.state == "ACCEPTED";
+        node.icon_url = self.getNodeIcon(node.host);
+        const works = node.works;
+        node.workLead = works[0];
+        node.workSign = works[1];
+        node.works = works[0] * 1.2 + works[1];
+        totalWorks += node.works;
+      });
+
+      nodes.sort(function (a, b) {
+        if (!a.is_accpted && b.is_accpted) {
+          return -1;
+        } else if (a.is_accpted && !b.is_accpted) {
+          return 1;
+        } else {
+          const value = new BigNumber(a.works).minus(b.works);
+          if (value.isZero()) {
+            return 0;
+          } else if (value.isNegative()) {
+            return 1;
           } else {
-            console.info(newNode.node);
-          }
-
-          if (i == consensus.length - 1) {
-            self.renderWorkNodes(nodes, self);
-            self.fetchRemoteNodes(function(nodes){
-              self.renderWorkNodes(nodes, self);
-            });
+            return -1;
           }
         }
       });
-    } else {
-      self.fetchRemoteNodes(function(nodes){
-        self.renderWorkNodes(nodes, self);
+  
+      const dayMint = new BigNumber(40500 * 0.9).div(365)
+      const avgMint = dayMint.div(totalWorks);
+  
+      nodes.forEach(function(node){
+        if (node.workSign > 0) {
+          node.mint = avgMint.multipliedBy(node.works).toFixed(8);
+        } else {
+          node.mint = "0";
+        }
       });
-    }
+  
+      $('#nodes-content').html(self.templateNodes({
+        day_mint: dayMint.toFixed(8),
+        avg_mint: dayMint.div(nodes.length).toFixed(8),
+        total_nodes: nodes.length,
+        nodes: nodes
+      }));
+    });
   },
 
   renderStats: function () {
