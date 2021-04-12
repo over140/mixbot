@@ -54,6 +54,15 @@
     "average_block_time": 6
   },
   {
+    "chain_id": "9d29e4f6-d67c-4c4b-9525-604b04afbe9f",
+    "asset_id": "9d29e4f6-d67c-4c4b-9525-604b04afbe9f",
+    "icon_url": "https://mixin-images.zeromesh.net/PfvTs8aqyffhTwGwQhmJ6QbGgZwWsdvP3j4B-y_6b1ANjjtdzymM6HjK2g2RDRmikuF6pMSgL0t2ItBqrsW64QfJ=s128",
+    "name": "Kusama",
+    "symbol": "KSM",
+    "explore": "https://kusama.subscan.cn/extrinsic/",
+    "average_block_time": 6
+  },
+  {
     "chain_id": "fd11b6e3-0b87-41f1-a41f-f0e9b49e5bf0",
     "asset_id": "fd11b6e3-0b87-41f1-a41f-f0e9b49e5bf0",
     "icon_url": "https://mixin-images.zeromesh.net/tqt14x8iwkiCR_vIKIw6gAAVO8XpZH7ku7ZJYB5ArMRA6grN9M1oCI7kKt2QqBODJwr17sZxDCDTjXHOgIixzv6X=s128",
@@ -87,7 +96,7 @@
     "name": "TRON",
     "symbol": "TRX",
     "explore": "https://tronscan.org/#/transaction/",
-    "average_block_time": 15
+    "average_block_time": 3
   },
   {
     "chain_id": "56e63c06-b506-4ec5-885a-4a5ac17b83c1",
