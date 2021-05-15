@@ -314,6 +314,7 @@ Tool.prototype = {
           accepted_nodes: stats.accepted_nodes,
           market_price_usd: stats.market_price_usd,
           minting_reward: new BigNumber(40500 * 0.9).div(365).div(stats.accepted_nodes).toFixed(8),
+          staking_xin: new BigNumber(new BigNumber(11900).multipliedBy(stats.accepted_nodes).plus(50000).toFixed(0)).toFormat(),
           circulation_xin: new BigNumber(new BigNumber(stats.circulation_xin).toFixed(0)).toFormat()
         }));
       });
@@ -351,8 +352,9 @@ Tool.prototype = {
           totalWithdrawals = totalWithdrawals.plus(withdrawalPendingCount);
           chain.deposit_block_height = depositBlockHeight.toFormat();
           chain.is_error = !chainAsset.is_synchronized;
-          chain.is_slow = depositBlockHeight < managedBlockHeight;
-          chain.difference_block_height = managedBlockHeight.minus(depositBlockHeight).abs().toFormat();
+          const differenceBlockHeight = managedBlockHeight.minus(chainAsset.threshold).minus(depositBlockHeight);
+          chain.difference_block_height = differenceBlockHeight.abs().toFormat();
+          chain.is_slow = differenceBlockHeight.isGreaterThan(2);
           if (chainAsset.is_synchronized && chain.average_block_time) {
             const blockTime = parseInt(chain.average_block_time) * parseInt(chain.threshold)
             if (blockTime < 60) {

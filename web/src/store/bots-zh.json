@@ -111,7 +111,7 @@
         "tags": "法币 币币 定投",
         "identity_number": "7000101276",
         "icon_url": "https://mixin-images.zeromesh.net/y10b63pl9TQy5Tr8-hguLVDZWl-Xt1ug3f-LgPSl6s6ZxKsYzdy9sWZFTarULKxWdnJQyDs_tr1q73ctdI6MKA=s256",
-        "description": "基于 Mixin Network，支持法币入金，币币交易对接币安、火币和 BigONE 深度，定投免手续费且不托管资产，支持余币宝。",
+        "description": "基于 Mixin Network，支持法币入金，币币交易对接币安、火币和 BigONE 深度，定投免手续费且不托管资产。",
         "url": "mixin://users/61103d28-3ac2-44a2-ae34-bd956070dab1",
         "effects": ""
       },
