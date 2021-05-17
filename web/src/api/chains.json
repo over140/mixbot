@@ -63,6 +63,15 @@
     "average_block_time": 6
   },
   {
+    "chain_id": "882eb041-64ea-465f-a4da-817bd3020f52",
+    "asset_id": "882eb041-64ea-465f-a4da-817bd3020f52",
+    "icon_url": "https://mixin-images.zeromesh.net/MDStWtCYDjGvGeEZp70xJduXK2cAEkQD9HkY-qi7m7yM4OOjjQqr3dVDcmvo55QBz96FqgygDj4aAz7leP5fISk=s128",
+    "name": "Arweave",
+    "symbol": "AR",
+    "explore": "https://viewblock.io/arweave/tx/",
+    "average_block_time": 200
+  },
+  {
     "chain_id": "9d29e4f6-d67c-4c4b-9525-604b04afbe9f",
     "asset_id": "9d29e4f6-d67c-4c4b-9525-604b04afbe9f",
     "icon_url": "https://mixin-images.zeromesh.net/PfvTs8aqyffhTwGwQhmJ6QbGgZwWsdvP3j4B-y_6b1ANjjtdzymM6HjK2g2RDRmikuF6pMSgL0t2ItBqrsW64QfJ=s128",
