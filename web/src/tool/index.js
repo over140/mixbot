@@ -187,7 +187,7 @@ Tool.prototype = {
       return "https://mixin-images.zeromesh.net/--ccgu6VAw7MB9bALITSa_CdSAJ2DUfr7TdzumMOWV1tMYbadr4V8KtgfcgprQ9VUQMllealtsIq350BReNu34Y=s256";
     } else if (lowerHost.startsWith("http://node-candy") && lowerHost.indexOf(".f1ex.io") >= 0) {
       return "https://mixin-images.zeromesh.net/wrGUPXYeb4zw1cm9KL27ftmqEWdu2-ltzKQlRAlHe4ulneHj7IdTwgPdsX4csuxYBAuIi8_iBfMI7yX6xQmlQA=s128";
-    } else if (lowerHost.startsWith("http://node-box") && lowerHost.indexOf(".f1ex.io") >= 0) {
+    } else if (lowerHost.startsWith("http://mixin-node") && lowerHost.indexOf(".b.watch") >= 0) {
       return "https://mixin-images.zeromesh.net/PUh63FawGz6kfizE1YtCqKi_KQ5l7UNIIu2eoNFYWw8u8BezVVxQu2noYXD5EFpVM06su6Ba92LTN2f7RBoM77o=s256";
     } else if (lowerHost.indexOf(".f1ex.io") >= 0) {
       return this.nodeFoxoneImage;
