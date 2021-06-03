@@ -123,8 +123,8 @@ Dev.prototype = {
           snapshots: snapshots
         }));
 
-        $('#snapshots-content').on("change paste keyup", ".searchTerm", function(event) {
-          const keywords = $(this).val().toLowerCase();
+        $('#snapshots-content').on("input", ".searchTerm", function(event) {
+          const keywords = $(this).val().trim().toLowerCase();
           const rows = $('.snapshots.list tr');
           if (keywords.length == 0) {
             rows.show();
@@ -191,8 +191,8 @@ Dev.prototype = {
         assets: assets
       }));
 
-      $('#assets-content').on("change paste keyup", ".searchTerm", function(event) {
-        const keywords = $(this).val().toLowerCase();
+      $('#assets-content').on("input", ".searchTerm", function(event) {
+        const keywords = $(this).val().trim().toLowerCase();
         const rows = $('.assets.list tr');
         if (keywords.length == 0) {
           rows.show();
@@ -236,8 +236,8 @@ Dev.prototype = {
         contacts: contacts
       }));
 
-      $('#contacts-content').on("change paste keyup", ".searchTerm", function(event) {
-        const keywords = $(this).val().toLowerCase();
+      $('#contacts-content').on("input", ".searchTerm", function(event) {
+        const keywords = $(this).val().trim().toLowerCase();
         const rows = $('.contacts.list tr');
         if (keywords.length == 0) {
           rows.show();
