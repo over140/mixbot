@@ -227,7 +227,8 @@ Dev.prototype = {
           full_name: contact.full_name,
           user_id: contact.user_id,
           identity_number: contact.identity_number,
-          avatar_url: contact.avatar_url
+          avatar_url: contact.avatar_url,
+          biography: contact.biography
         };
         contact.copy_info = JSON.stringify(copy_info);
       });
