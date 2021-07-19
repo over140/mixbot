@@ -175,12 +175,75 @@
     "title": "社群",
     "bots": [
       {
-        "name": "持仓群大合集",
+        "name": "TopDAO 中文群",
         "tags": "大群",
-        "identity_number": "7000101982",
-        "icon_url": "https://mixin-images.zeromesh.net/AuKlAvXRYK1XHfvCIDeq07ThLYfgzmYUYIHw8UO-na-BGv-prgczmqptvHVvufwJA2WUnQ1cSXgNF5A_NS6F-hzZn0BJxfLAJASf=s256",
-        "description": "BTC、XMR、ETH 等高质量持仓群等你加入",
-        "url": "mixin://users/7d08371c-a841-4693-b967-5cf1181b9e52",
+        "identity_number": "7000104042",
+        "icon_url": "https://mixin-images.zeromesh.net/1DWxZqBSxz9qChifhVN2A768rnTxa5vwqbeoKBMqpMJ4mfFGv634LRdUgPAnbN1jXFMNk6tLfNIv-ms9i-05KiqxAIl6-UjB7PY=s256",
+        "description": "TopDao是一个由区块链精英和热爱者组成的社群内容平台，邀请业内知名团队、意见领袖来进行分享交流，产出观点犀利的见解和研究报告。",
+        "url": "mixin://users/419c37ff-cce0-4073-9c26-6736ff3394e3",
+        "effects": ""
+      },
+      {
+        "name": "MobileCoin 中文群",
+        "tags": "大群",
+        "identity_number": "7000103987",
+        "icon_url": "https://mixin-images.zeromesh.net/1p2Isv8oTxznnJ_-FWhRxj3PylzZT-XnWsIZdIWqfZUx6vv0C1dZ7z79doKVQEJDHqKLIrskO-B47xCmdY21N1vLZfiaJGRuak8tKw=s256",
+        "description": "MobileCoin 是一个隐私支付协议，专注于为移动通讯应用程序提供安全、隐私、极简的加密货币钱包服务，现已接入月活超过 4000 万的 Signal，入群了解更多。",
+        "url": "mixin://users/47b0b809-2bb5-4c94-becd-35fb93f5c6fe",
+        "effects": ""
+      },
+      {
+        "name": "Horizen 中文群",
+        "tags": "大群",
+        "identity_number": "7000104002",
+        "icon_url": "https://mixin-images.zeromesh.net/SKjVHys5GeRd-99Up5pCE3n2MPZ8BsFCLsr9eZn2uXXNmfdLm7NyedZ2Hs4E288ITReauVjRqrZk_bUUauwSjdEXMzVlQfK4zd7y=s256",
+        "description": "欢迎加入Horizen(ZEN)中文社区，获取项目最新进展，讨论技术发展，定投、交易等话题，入群了解更多！",
+        "url": "mixin://users/ae90deb6-2737-4e09-b82a-ff41d565dc35",
+        "effects": ""
+      },
+      {
+        "name": "RUM 中文群",
+        "tags": "大群",
+        "identity_number": "7000100109",
+        "icon_url": "https://mixin-images.zeromesh.net/IDg7kgZlOO2brhe77X88EqnWZZEpy6EwK6Au45ra9zKaz5YAHMMuX9A8n0HCHaoI53URkD1kdjOIaUKHIwkSWKUhQDQ-JWQ9DCE=s256",
+        "description": "欢迎加入 RUM 官方中文群，获取项目最新进展，讨论产品技术和应用模式等话题。",
+        "url": "mixin://users/56304004-8095-4960-8dd1-edf6e583a2a9",
+        "effects": ""
+      },
+      {
+        "name": "Bitcoin 中文群",
+        "tags": "大群",
+        "identity_number": "7000103999",
+        "icon_url": "https://mixin-images.zeromesh.net/Poa-lPBE-PbcG9uzHG0lju8z9EKSjlFO6h8FPocb_xTiv2HJxwitjIiImHDiZXtC-iMAI5E2-LdLELUq5Oj2piuhBQclPEURSMe-=s256",
+        "description": "欢迎加入 Bitcoin 中文群，分享最新动态，讨论定投、交易等话题，入群了解更多！",
+        "url": "mixin://users/d0828d93-c4e2-4b5f-a801-d2aabbd80424",
+        "effects": ""
+      },
+      {
+        "name": "Ethereum 中文群",
+        "tags": "大群",
+        "identity_number": "7000104000",
+        "icon_url": "https://mixin-images.zeromesh.net/1lUk8UlT00CJYHI9gIxwuAqeu1ep4QKCjqxFVNej9O0nbfsCKpKyXpK7RXqI1CYdkHtJiwAy1z2y7fQRYJc2Pz43Z9iMCFLtqD5l=s256",
+        "description": "欢迎加入 Ethereum 中文群，获取项目最新进展，讨论定投、交易等话题，入群了解更多！",
+        "url": "mixin://users/2bc4c914-bab8-4e77-9d3c-50635827deec",
+        "effects": ""
+      },
+      {
+        "name": "EOS 中文群",
+        "tags": "大群",
+        "identity_number": "7000103998",
+        "icon_url": "https://mixin-images.zeromesh.net/lnc-7Il4TmBBIz97t-LrgVqBUVuwyAi5vp7XJvlmVPgqEJW706lkD30-hvHh0g_DKutY_pbOeJIJkwW7wEhpvm-zc9ZMB8O2nejICg=s256",
+        "description": "欢迎加入 EOS 中文群，获取项目最新进展，讨论定投、交易等话题，入群了解更多！",
+        "url": "mixin://users/c7d5a9a8-916f-4583-86e6-56014b1ab673",
+        "effects": ""
+      },
+      {
+        "name": "Exin 核心用户群（收费群）",
+        "tags": "大群",
+        "identity_number": "7000103325",
+        "icon_url": "https://mixin-images.zeromesh.net/OVjsZWbixJpAhgJWZjW1CpxHaT5eTElunqJ7etH4HmYkfGddhKlVXtYA775p4szE2P7wjIbhPHe7Dd5qGmqZp1B89aUXMWke6xJAVA=s256",
+        "description": "帮助用户更好的使用 Exin 旗下产品",
+        "url": "mixin://users/4ccb65c0-f127-4733-ac78-99f0529c89aa",
         "effects": ""
       },
       {
@@ -227,78 +290,6 @@
         "description": "安桥 Mixin 群，安桥专注于海外房产以及比特币投资，Mixin 节点运营方之一，群成员 600+",
         "url": "mixin://users/df0967d1-cb4c-4ab4-ba0e-93e8a130189d",
         "effects": ""
-      },
-      {
-        "name": "君说区块链【持仓群】",
-        "tags": "大群",
-        "identity_number": "7000102152",
-        "icon_url": "https://mixin-images.zeromesh.net/OSrIzDKkS4s_wNHZd_G0Y0pUJ9I31wEPMXd3csaGDf3MYE24ulAZGcpdm1VS7SRAuz0Rke-L5S3oZypWVapM2J9R=s256",
-        "description": "BigONE COO 程君的区块链知识小课堂（仅对持仓超过 100 万 ONE 的用户开放），群成员 140+",
-        "url": "mixin://users/c6c5248c-d8a5-4262-aa25-919e75930e0e",
-        "effects": ""
-      },
-      {
-        "name": "PRESS.one 中文群【收费群】",
-        "tags": "大群",
-        "identity_number": "7000101697",
-        "icon_url": "https://mixin-images.zeromesh.net/CLzulPUkQs_10TfbNbCXSWOV9NPG_etOxs1GtAoROeI341CQmadUtxoT9YXh1pr_Oec9LcfI3f7w332c66BMU_w=s256",
-        "description": "PRESS.one 在 Mixin 的官方中文群，由霍炬维护，入群费 10 PRS，群成员 700+",
-        "url": "mixin://users/5ecbaa59-305e-463b-bb1c-41bf98c25b44",
-        "effects": ""
-      },
-      {
-        "name": "W3协作组",
-        "tags": "工具",
-        "identity_number": "7000102203",
-        "icon_url": "https://mixin-images.zeromesh.net/qaxo1HNIqUypZNXwYWifxjal_mUMCB25I3oo5jNY2QeprN55jqvztX-F_5tcRjZNLawSEx-nb0l6qB8gyZI1nKE=s256",
-        "description": "区块链驱动的创造者协作社区，让小组成员共同创造价值，共建信任并获益。",
-        "url": "mixin://users/4ef084f8-709c-490d-9a10-03f466496c5e",
-        "effects": ""
-      },
-      {
-        "name": "Maxin 美信中文群",
-        "tags": "大群",
-        "identity_number": "7000102346",
-        "icon_url": "https://mixin-images.zeromesh.net/8ytZYxkGaZxKoFNQa2BB8Dfch4MBAtFDo0SlnSB2npdYFETVWIfTf5mQfsn38KFPWU6kYWO34kTNqz6PztkmlUU=s256",
-        "description": "来美信，质押 BTC、XIN 换取 USDT，群成员 1100+",
-        "url": "mixin://users/8181faba-9d46-4618-b30c-38f0d0dd028a",
-        "effects": ""
-      },
-      {
-        "name": "BitShares 中文群",
-        "tags": "大群",
-        "identity_number": "7000102098",
-        "icon_url": "https://mixin-images.zeromesh.net/5T7S-EKpOo6Tc5pnAUbCOHn3YQsqGQvafjcrYdPk6_uMJV--o79EpFLRaDh9vMaUHzXOcMbUqRlCPcUCvz-C9W4=s256",
-        "description": "BitShares 是基于石墨烯 2.0 技术的链上金融平台，群成员 500+",
-        "url": "mixin://users/316d8d74-bb4a-40a1-b49d-e8527ad5fc65",
-        "effects": ""
-      },
-      {
-        "name": "MassGrid 中文群",
-        "tags": "大群",
-        "identity_number": "7000101950",
-        "icon_url": "https://mixin-images.zeromesh.net/eszzF8dll4mJunQs3z1YDFoQxoGDkJeSuhyr3vRNmRH1FcdSImjJdtdMP0V_a2eAcbRP9FBeIE8wuSWy5zm7u2hm=s256",
-        "description": "MassGrid 中文用户群，致力于成为全球最大的分布式高性能云计算网络，群成员 1200+",
-        "url": "mixin://users/eb869f41-abff-4799-9f30-c787748e0ead",
-        "effects": ""
-      },
-      {
-        "name": "大猫城堡开放社区",
-        "tags": "大群",
-        "identity_number": "7000101998",
-        "icon_url": "https://mixin-images.zeromesh.net/JZvujRTCR7dhxYsNnCxQdnuW90Z56qn-dRwS3aHPMIih7E3Ip9nWtT1FIF507gdfSEmGQPWCxnUOhSDqGmYOJw=s256",
-        "description": "大猫城堡是大猫创办的大型社群，本平台为免费版，提供基础交流，让大家认识大猫城堡和 BCAT，群成员 800+",
-        "url": "mixin://users/27674db6-303f-42ff-bb77-c659d0c952ad",
-        "effects": ""
-      },
-      {
-        "name": "Dogecoin 中文群",
-        "tags": "大群",
-        "identity_number": "7000101991",
-        "icon_url": "https://mixin-images.zeromesh.net/E2TNFXBi9a3ZqZ_2Pch4ujL5b7JSaT2oyRdEv2rYZePplHLzB5BSBXyR5L-e9hpbrO8-fCU7hK7xy4-2uAh7g5c=s256",
-        "description": "Dogecoin 中文用户群，群成员 300+",
-        "url": "mixin://users/a241f5bb-d09c-4925-b253-892f6da3a837",
-        "effects": ""
       }
     ]
   },
@@ -312,6 +303,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/HrwBshWISquH7qWNq3b-WBokEpdEdOfIcogb0_rJHPnXh1VrbpMLFpjX7xRP56xP-vNnA4HJzfen_eSfwPT_U14=s256",
         "description": "由 Mixin 团队维护，发布最新、最快的 Mixin 相关产品动态、文章",
         "url": "mixin://users/e49eeb58-64cd-4065-b4f8-bac86647448d",
+        "effects": ""
+      },
+      {
+        "name": "猫头鹰递信",
+        "tags": "资讯",
+        "identity_number": "7000102034",
+        "icon_url": "https://mixin-images.zeromesh.net/D3ZznlqeyhmptBQ41t6xM2HKbyRwtPqZxM5tdYNEic991AMO1jyUp5AxAQtn_bc5QlsVCSfc11i3YVocY3WY-x5yFGYux55Esk8=s256",
+        "description": "可以帮你订阅各种 RSS/ATOM 信息源，例如微博、Twitter。",
+        "url": "mixin://users/60d30faa-3825-48da-ac1c-6aca1f573dd5",
         "effects": ""
       },
       {
@@ -434,6 +434,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/4mMn8RFf0niJ04klqj4SPvZtPb74pnrFzoDzP1w3SbFmBiG-5FRM1_1b0nB7ENTb9GWNDIQLMvyuMJ6fRuhjGcU=s256",
         "description": "歌词经理和他的朋友们，还有一张沙发，需要邀请码或者 99 RMB 等值的 BTC 入群。",
         "url": "mixin://users/1dc6bd8d-1325-4ca3-8a8c-9c880ef9f06b",
+        "effects": ""
+      },
+      {
+        "name": "韩如初",
+        "tags": "资讯",
+        "identity_number": "7000104071",
+        "icon_url": "https://mixin-images.zeromesh.net/eyB1fXisUju7qOQBP9151I_wdq65ALd5hVlcgEzjjhv4lRnwHATme9ItRK4wW7Jeup_QlsJ7fpJUacRv-2Xfbolb1EPb2nqq70MCIQ=s256",
+        "description": "智商进化学习，知识就是力量，感谢关注青年养生艺术家。",
+        "url": "mixin://users/88296b10-c346-41f9-a75d-43b4f3c65250",
         "effects": ""
       },
       {
