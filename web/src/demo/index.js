@@ -32,9 +32,14 @@ Demo.prototype = {
     });
 
     $('#share-content').on('click', '.action', function (event) {
-      const messageCategory = this.className.split(/\s+/)[0];
+      var messageCategory = this.className.split(/\s+/)[0];
       const conversationType = this.className.split(/\s+/)[1];
       const data = $(this).parent().attr('data');
+      if (messageCategory === "app_card_shareable") {
+        messageCategory = "app_card";
+      } else if (messageCategory === "live_shareable") {
+        messageCategory = "live";
+      }
       var url = "mixin://send?category=" + messageCategory;
       if (conversationType === "specified") {
         const conversationId = self.getMixinContext().conversation_id;
