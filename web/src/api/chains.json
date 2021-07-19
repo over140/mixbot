@@ -72,6 +72,15 @@
     "average_block_time": 200
   },
   {
+    "chain_id": "706b6f84-3333-4e55-8e89-275e71ce9803",
+    "asset_id": "706b6f84-3333-4e55-8e89-275e71ce9803",
+    "icon_url": "https://mixin-images.zeromesh.net/-oE4Jsi3aMIkxUPUsvDozyL8D0ccmPkggIdIDu1z8THDQyJcCIsbNwC4amFBiRlkQiLNNjiuMBsNw8sAnehTuI0=s128",
+    "name": "Algorand",
+    "symbol": "ALGO",
+    "explore": "https://algoexplorer.io/tx/",
+    "average_block_time": 5
+  },
+  {
     "chain_id": "9d29e4f6-d67c-4c4b-9525-604b04afbe9f",
     "asset_id": "9d29e4f6-d67c-4c4b-9525-604b04afbe9f",
     "icon_url": "https://mixin-images.zeromesh.net/PfvTs8aqyffhTwGwQhmJ6QbGgZwWsdvP3j4B-y_6b1ANjjtdzymM6HjK2g2RDRmikuF6pMSgL0t2ItBqrsW64QfJ=s128",
