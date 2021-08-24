@@ -12,6 +12,15 @@
         "effects": ""
       },
       {
+        "name": "Pando Leaf",
+        "tags": "Exchange",
+        "identity_number": "7000103924",
+        "icon_url": "https://mixin-images.zeromesh.net/Ah9qRSkaopqVykPynZsOWu2tpT8M5hNnLuzWLuI-Rkh3m7nzuMESlOFPzUnnEz8rfpY3QTccoz8yylfJyDloijuk9WMUBzHo-42i=s256",
+        "description": "去中心化的抵押铸币机器人，可以抵押 BTC、ETH、MOB 等多种资产铸 pUSD，年利息低至 5%，抵押资产已接近 5000 万美元",
+        "url": "mixin://users/75f18fe8-b056-46d6-9c48-0214425e58ce",
+        "effects": ""
+      },
+      {
         "name": "ExinLocal",
         "tags": "交易所",
         "identity_number": "7000000015",
@@ -21,12 +30,12 @@
         "effects": ""
       },
       {
-        "name": "小钱包",
+        "name": "Mixin Wallet",
         "tags": "工具",
-        "identity_number": "7000101425",
-        "icon_url": "https://mixin-images.zeromesh.net/GACcimWp8rxKjGKdXnjFHQHER2G69pPkgu92rgJ0r_Bh-TXht12-8h0MK5JaBYo5whL3eSfxs2jMLIqjZXAcwws=s256",
-        "description": "由 Fox.ONE 提供，媲美原生钱包，通过 API 安全管理用户资产，提供资产管理、定投、理财、币币、借贷等一站式服务。",
-        "url": "mixin://users/f49c073a-f92c-4268-ab81-25805d8a108f",
+        "identity_number": "7000101500",
+        "icon_url": "https://mixin-images.zeromesh.net/XkuXA0FmL1PtcGfuRP8KB6_rdPGR-ieqVxuH_Dgj4trebclOkwHhGs0Zy5lEvmCXUxJ85MS3H_tV5rrKgVYLSG5KoL1ORMG7lZI68A=s256",
+        "description": "安全、开源的钱包机器人，后续将支持 TIP 方案的链上钱包，如果你用「新生大讲堂」或「JustChat」客户端强烈推荐使用。",
+        "url": "mixin://users/d0a44d9d-bb19-403c-afc5-ea26ea88123b",
         "effects": ""
       },
       {
@@ -34,7 +43,7 @@
         "tags": "购物",
         "identity_number": "7000103274",
         "icon_url": "https://mixin-images.zeromesh.net/eUgv3NdPvxXdeSekobAvT4_pOfYBe_CzBbSTZdamXdfVvomsGzOW2t5ldIHPLAI6jkXLpVbckIBNkT4sytG2jMkv=s256",
-        "description": "Mixin T 恤火爆预售，限量 200 单，买一送一",
+        "description": "Mixin T恤上新，联名款、创意款，多种颜色可选，用加密货币支付货款。",
         "url": "mixin://users/6cd39b0c-c61d-4c95-94ec-722903577970",
         "effects": ""
       },
@@ -175,6 +184,15 @@
     "title": "社群",
     "bots": [
       {
+        "name": "MobileCoin 中文群",
+        "tags": "大群",
+        "identity_number": "7000103987",
+        "icon_url": "https://mixin-images.zeromesh.net/1p2Isv8oTxznnJ_-FWhRxj3PylzZT-XnWsIZdIWqfZUx6vv0C1dZ7z79doKVQEJDHqKLIrskO-B47xCmdY21N1vLZfiaJGRuak8tKw=s256",
+        "description": "MobileCoin 是一个隐私支付协议，专注于为移动通讯应用程序提供安全、隐私、极简的加密货币钱包服务，现已接入月活超过 4000 万的 Signal，入群了解更多。",
+        "url": "mixin://users/47b0b809-2bb5-4c94-becd-35fb93f5c6fe",
+        "effects": ""
+      },
+      {
         "name": "TopDAO 中文群",
         "tags": "大群",
         "identity_number": "7000104042",
@@ -184,12 +202,12 @@
         "effects": ""
       },
       {
-        "name": "MobileCoin 中文群",
+        "name": "Polygon 中文群",
         "tags": "大群",
-        "identity_number": "7000103987",
-        "icon_url": "https://mixin-images.zeromesh.net/1p2Isv8oTxznnJ_-FWhRxj3PylzZT-XnWsIZdIWqfZUx6vv0C1dZ7z79doKVQEJDHqKLIrskO-B47xCmdY21N1vLZfiaJGRuak8tKw=s256",
-        "description": "MobileCoin 是一个隐私支付协议，专注于为移动通讯应用程序提供安全、隐私、极简的加密货币钱包服务，现已接入月活超过 4000 万的 Signal，入群了解更多。",
-        "url": "mixin://users/47b0b809-2bb5-4c94-becd-35fb93f5c6fe",
+        "identity_number": "7000104090",
+        "icon_url": "https://mixin-images.zeromesh.net/3AELUcAOw5vCS-s9DfxsR14DpEvGdvUKoBnhZBB3lPHFd0o4qwSt9xLeWSAjr_-LQeSCNEYefpK1euVLJh44TMLizmn6MmByiNKh=s256",
+        "description": "以太坊链上首个 Layer 2 解决方案聚合器，为以太坊建设一个模块化、通用、灵活的扩容框架。",
+        "url": "mixin://users/7246c906-417c-4fda-8b9a-215671f3259f",
         "effects": ""
       },
       {
