@@ -72,6 +72,15 @@
     "average_block_time": 200
   },
   {
+    "chain_id": "9c612618-ca59-4583-af34-be9482f5002d",
+    "asset_id": "9c612618-ca59-4583-af34-be9482f5002d",
+    "icon_url": "https://mixin-images.zeromesh.net/96l-LTbahgBXnKfLRHtiQybyk9kpA-eVIMYnzs4twATFtIq3Ayvw5zRfhGrt5IOGqUxxJuFXINJMTNkRlWpnFVbsA4Ep6FAn0pWP=s128",
+    "name": "Akash",
+    "symbol": "AKT",
+    "explore": "https://www.mintscan.io/akash/txs/",
+    "average_block_time": 8
+  },
+  {
     "chain_id": "706b6f84-3333-4e55-8e89-275e71ce9803",
     "asset_id": "706b6f84-3333-4e55-8e89-275e71ce9803",
     "icon_url": "https://mixin-images.zeromesh.net/-oE4Jsi3aMIkxUPUsvDozyL8D0ccmPkggIdIDu1z8THDQyJcCIsbNwC4amFBiRlkQiLNNjiuMBsNw8sAnehTuI0=s128",
@@ -144,9 +153,9 @@
     "average_block_time": 30
   },
   {
-    "chain_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
-    "asset_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
-    "icon_url": "https://mixin-images.zeromesh.net/pZQ0HL075WytmDYtyVdNXfn_zvAkCMtwcv9665oXtm8h86W_5mf1ROqidtq2ByY7xBM2xxxxbHP3oKScCjnQK5GR=s128",
+    "chain_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
+    "asset_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
+    "icon_url": "https://mixin-images.zeromesh.net/XX0uDzi6b76ZP2oend6OgCWBUc9QPp1rfoFOIRN40aogbpdT0jp_dV1jgzaCnShK5DD6ETL8xSIQMYOEXrJrvqElwfG-UZ65s35sdg=s128",
     "name": "Bytom",
     "symbol": "BTM",
     "explore": "https://blockmeta.com/tx/",
