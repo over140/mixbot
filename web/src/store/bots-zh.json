@@ -15,7 +15,7 @@
         "name": "Pando Leaf",
         "tags": "Exchange",
         "identity_number": "7000103924",
-        "icon_url": "https://mixin-images.zeromesh.net/Ah9qRSkaopqVykPynZsOWu2tpT8M5hNnLuzWLuI-Rkh3m7nzuMESlOFPzUnnEz8rfpY3QTccoz8yylfJyDloijuk9WMUBzHo-42i=s256",
+        "icon_url": "https://mixin-images.zeromesh.net/v3dbbcxylnVlMR1Y1asCeTG1L0RFE2CnZ5BeiByRBn308cxefOPjeAWjhDuDrR9DDJ8mMb8QSUWpHPWnXiMaWsQ7084V0naUZ4dm=s256",
         "description": "去中心化的抵押铸币机器人，可以抵押 BTC、ETH、MOB 等多种资产铸 pUSD，年利息低至 5%，抵押资产已接近 5000 万美元",
         "url": "mixin://users/75f18fe8-b056-46d6-9c48-0214425e58ce",
         "effects": ""

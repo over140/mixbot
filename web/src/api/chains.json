@@ -63,6 +63,15 @@
     "average_block_time": 6
   },
   {
+    "chain_id": "cbc77539-0a20-4666-8c8a-4ded62b36f0a",
+    "asset_id": "cbc77539-0a20-4666-8c8a-4ded62b36f0a",
+    "icon_url": "https://mixin-images.zeromesh.net/0XWvbsGDaeVcrILNgH0fYj55oa_4H4bTx_k1Nm35qSbx0VzuAPyoJm3ZFXD7jHH-OFyJDGPOWJo1dJ1B-YMt3823vVBsCgmctvo=s128",
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "explore": "https://avascan.info/blockchain/x/tx/",
+    "average_block_time": 3
+  },
+  {
     "chain_id": "882eb041-64ea-465f-a4da-817bd3020f52",
     "asset_id": "882eb041-64ea-465f-a4da-817bd3020f52",
     "icon_url": "https://mixin-images.zeromesh.net/MDStWtCYDjGvGeEZp70xJduXK2cAEkQD9HkY-qi7m7yM4OOjjQqr3dVDcmvo55QBz96FqgygDj4aAz7leP5fISk=s128",
