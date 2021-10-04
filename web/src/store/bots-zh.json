@@ -3,12 +3,30 @@
     "title": "热门",
     "bots": [
       {
+        "name": "Mixin Wallet",
+        "tags": "工具",
+        "identity_number": "7000101500",
+        "icon_url": "https://mixin-images.zeromesh.net/XkuXA0FmL1PtcGfuRP8KB6_rdPGR-ieqVxuH_Dgj4trebclOkwHhGs0Zy5lEvmCXUxJ85MS3H_tV5rrKgVYLSG5KoL1ORMG7lZI68A=s256",
+        "description": "安全、开源的钱包机器人，后续将支持 TIP 方案的链上钱包，如果你用「新生大讲堂」或「JustChat」客户端强烈推荐使用。",
+        "url": "mixin://users/d0a44d9d-bb19-403c-afc5-ea26ea88123b",
+        "effects": ""
+      },
+      {
         "name": "MixSwap",
         "tags": "交易所",
         "identity_number": "7000103767",
         "icon_url": "https://mixin-images.zeromesh.net/w73fbJcibxozqgv44ZqtsxNmD0e8-eMXITnTil4S-zvw2xv8zzYdA5lnBH4i_nJlckiGWPqp8N93rLQ5_E7traThKH1M2jolq-R5=s256",
         "description": "MixSwap 采用的是类似 1inch 的聚合交易模式，通过智能算法拆分交易同样的钱买卖更多的币，目前已经集成 4swap 和 ExinSwap，后续还将支持 ExinOne 直接连接到 3 大交易所。",
         "url": "mixin://users/6a4a121d-9673-4a7e-a93e-cb9ca4bb83a2",
+        "effects": ""
+      },
+      {
+        "name": "ExinPool",
+        "tags": "交易所",
+        "identity_number": "7000101761",
+        "icon_url": "https://mixin-images.zeromesh.net/--ccgu6VAw7MB9bALITSa_CdSAJ2DUfr7TdzumMOWV1tMYbadr4V8KtgfcgprQ9VUQMllealtsIq350BReNu34Y=s256",
+        "description": "ExinPool 是 Mixin 生态最受欢迎的开发商 Exin 旗下 Staking 平台，Mixin Network 创世节点之一。",
+        "url": "mixin://users/c48136b1-c5ab-437a-a079-9df1dc748f1b",
         "effects": ""
       },
       {
@@ -21,21 +39,21 @@
         "effects": ""
       },
       {
+        "name": "Pando Rings",
+        "tags": "Exchange",
+        "identity_number": "7000104159",
+        "icon_url": "https://mixin-images.zeromesh.net/H58RZwH1D8SUaoe9DprOsp3N8YU_t5ra4GdDdUScH2vaFsZzdNAUG6WhOyWq_kIriODHTBA8BZDuSl68vjqeiOY4xa2MjqUBbju1=s256",
+        "description": "去中心化的抵押借贷机器人，可以抵押 BTC、ETH、MOB 等多种资产借 U 临时周转，也可以借其他币做空.",
+        "url": "mixin://users/5278fff7-a084-4019-b963-a7a88559d5c4",
+        "effects": ""
+      },
+      {
         "name": "ExinLocal",
         "tags": "交易所",
         "identity_number": "7000000015",
         "icon_url": "https://mixin-images.zeromesh.net/TPVSyWaAVSJ4j2CqHSHRmzrRBeRg3fDMEqUUl8GITBQeNpGu4dvES7E8ZU9MBrR4RADbLfGbfI3PKULJODkGmik=s256",
         "description": "全球点对点加密货币的交易市场，类似 LocalCryptos 但更安全更简单，应用多签、加密聊天等保障交易隐私和安全",
         "url": "mixin://users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
-        "effects": ""
-      },
-      {
-        "name": "Mixin Wallet",
-        "tags": "工具",
-        "identity_number": "7000101500",
-        "icon_url": "https://mixin-images.zeromesh.net/XkuXA0FmL1PtcGfuRP8KB6_rdPGR-ieqVxuH_Dgj4trebclOkwHhGs0Zy5lEvmCXUxJ85MS3H_tV5rrKgVYLSG5KoL1ORMG7lZI68A=s256",
-        "description": "安全、开源的钱包机器人，后续将支持 TIP 方案的链上钱包，如果你用「新生大讲堂」或「JustChat」客户端强烈推荐使用。",
-        "url": "mixin://users/d0a44d9d-bb19-403c-afc5-ea26ea88123b",
         "effects": ""
       },
       {
@@ -184,6 +202,24 @@
     "title": "社群",
     "bots": [
       {
+        "name": "Avalanche 中文社群",
+        "tags": "大群",
+        "identity_number": "7000104150",
+        "icon_url": "https://mixin-images.zeromesh.net/Cw5g2oRflPQ2GD5D-2OGFItOY-YWWQaCDxgkY3PQB3-1clBovC3gF9QrQ9s5xuYCkz3ALuZuHWKRUue4qa5Es4NLuNRQ5u-YMzOW=s256",
+        "description": "Avalanche 雪崩协议是对开发者最为友好的、可定制化高性能公链，具有极速、低费用和绿色环保的特点，入群了解更多。",
+        "url": "mixin://users/e5a5f8bf-8130-4668-989d-4cda3cace59e",
+        "effects": ""
+      },
+      {
+        "name": "Solana 中文群",
+        "tags": "大群",
+        "identity_number": "7000104118",
+        "icon_url": "https://mixin-images.zeromesh.net/7Gur7eMlQd3L0bumwCeVOZPaciu5sj1qOYpxHb0-vuFsVgsnla9d3gF8q1-8bERjz6f7bcXIT5dSCNZOpnzfvd7vBCr-wLs44tc=s256",
+        "description": "Solana 是为速度、安全和效率而建立的区块链网络，结合了 PoS 和创新的历史证明系统(PoH)，欢迎入群了解更多。",
+        "url": "mixin://users/14ce8c6d-1f08-47fc-9afd-8aa4228c26fe",
+        "effects": ""
+      },
+      {
         "name": "MobileCoin 中文群",
         "tags": "大群",
         "identity_number": "7000103987",
@@ -226,6 +262,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/IDg7kgZlOO2brhe77X88EqnWZZEpy6EwK6Au45ra9zKaz5YAHMMuX9A8n0HCHaoI53URkD1kdjOIaUKHIwkSWKUhQDQ-JWQ9DCE=s256",
         "description": "欢迎加入 RUM 官方中文群，获取项目最新进展，讨论产品技术和应用模式等话题。",
         "url": "mixin://users/56304004-8095-4960-8dd1-edf6e583a2a9",
+        "effects": ""
+      },
+      {
+        "name": "宇晨和他的朋友们（TRON 中文群）",
+        "tags": "大群",
+        "identity_number": "7000101941",
+        "icon_url": "https://mixin-images.zeromesh.net/t8wO33Q3kxOXkW-jaBmtE1XKLxFFH9p4BVkMpd4F_g9V5f9KAyn1Tp2YUj7wy9K3hcQYMqTxJt7thCS5eBGGsc_v=s256",
+        "description": "https://tron.network",
+        "url": "mixin://users/e293a1c2-3636-41ff-9e68-f904c38f6b95",
         "effects": ""
       },
       {
@@ -321,6 +366,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/HrwBshWISquH7qWNq3b-WBokEpdEdOfIcogb0_rJHPnXh1VrbpMLFpjX7xRP56xP-vNnA4HJzfen_eSfwPT_U14=s256",
         "description": "由 Mixin 团队维护，发布最新、最快的 Mixin 相关产品动态、文章",
         "url": "mixin://users/e49eeb58-64cd-4065-b4f8-bac86647448d",
+        "effects": ""
+      },
+      {
+        "name": "链闻 ChainNews",
+        "tags": "资讯",
+        "identity_number": "7000101503",
+        "icon_url": "https://mixin-images.zeromesh.net/6efok6tUjG1YqVPz4jYXTv8pmzrthmD05guCSz5bpl0nkCoy-GMYMsNyqL47Jbz17ZC9ULxLe89_EyR7aMa4OieENluArZ-RlJuJSA=s256",
+        "description": "区块链新闻快讯资讯信息服务平台，凭借遍布全球的丰富报道资源与数据挖掘能力，旨在为 FinTech 金融科技菁英与决策者们提供每日不可或缺的区块链资讯与深度分析。",
+        "url": "mixin://users/5fa13575-f078-4c92-b913-fdfd1611f573",
         "effects": ""
       },
       {
