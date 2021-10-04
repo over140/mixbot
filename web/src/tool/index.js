@@ -126,10 +126,10 @@ Tool.prototype = {
           var transaction = transactions[i];
           var asset = assetMap[transaction.asset_id];
           var chainAsset = self.chainMap[transaction.chain_id];
-          if (transaction.asset_id === transaction.chain_id && !asset) {
-            asset = chainAsset;
-            asset.price_usd = 0;
-          }
+          // if (transaction.asset_id === transaction.chain_id && !asset) {
+          //   asset = chainAsset;
+          //   asset.price_usd = 0;
+          // }
           if (asset && chainAsset) {
             var trasactionGroup = trasactionGroups[transaction.asset_id];
             if (trasactionGroup) {
