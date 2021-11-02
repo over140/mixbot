@@ -65,6 +65,11 @@ Demo.prototype = {
       self.playlist(audios);
     });
 
+    $('.close.window.action').on('click', function (event) {
+      const mixinContext = self.getMixinContext()
+      self.close();
+    });
+
     const code = URLUtils.getUrlParameter("code");
     if (code === "XVlBzg") {
       self.api.notify('success', code);
@@ -90,6 +95,16 @@ Demo.prototype = {
       window.MixinContext.playlist(audios)
     } else {
       this.api.notify('success', "你的客户端还不支持 playlist");
+    }
+  },
+
+  close: function () {
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.MixinContext && window.webkit.messageHandlers.close) {
+      window.webkit.messageHandlers.close.postMessage('');
+    } else if (window.MixinContext && (typeof window.MixinContext.close === 'function')) {
+      window.MixinContext.close()
+    } else {
+      this.api.notify('success', "你的客户端还不支持 close");
     }
   }
 
