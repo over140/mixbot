@@ -63,6 +63,15 @@
     "average_block_time": 6
   },
   {
+    "chain_id": "d6ac94f7-c932-4e11-97dd-617867f0669e",
+    "asset_id": "d6ac94f7-c932-4e11-97dd-617867f0669e",
+    "icon_url": "https://mixin-images.zeromesh.net/0nSi93kH8io-seyMPFcDrmqH1P-tcGfW7DPdGBJ-GCPPrb-pHFO6bguU-wU1N62FkrWXJYL8hS47L5agAS0zJVpv1wf89-f-EBs=s128",
+    "name": "NEAR",
+    "symbol": "NEAR",
+    "explore": "https://explorer.near.org/transactions/",
+    "average_block_time": 2
+  },
+  {
     "chain_id": "cbc77539-0a20-4666-8c8a-4ded62b36f0a",
     "asset_id": "cbc77539-0a20-4666-8c8a-4ded62b36f0a",
     "icon_url": "https://mixin-images.zeromesh.net/0XWvbsGDaeVcrILNgH0fYj55oa_4H4bTx_k1Nm35qSbx0VzuAPyoJm3ZFXD7jHH-OFyJDGPOWJo1dJ1B-YMt3823vVBsCgmctvo=s128",
@@ -160,15 +169,6 @@
     "symbol": "FIL",
     "explore": "https://filfox.info/zh/block/",
     "average_block_time": 30
-  },
-  {
-    "chain_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
-    "asset_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
-    "icon_url": "https://mixin-images.zeromesh.net/XX0uDzi6b76ZP2oend6OgCWBUc9QPp1rfoFOIRN40aogbpdT0jp_dV1jgzaCnShK5DD6ETL8xSIQMYOEXrJrvqElwfG-UZ65s35sdg=s128",
-    "name": "Bytom",
-    "symbol": "BTM",
-    "explore": "https://blockmeta.com/tx/",
-    "average_block_time": 160
   },
   {
     "chain_id": "17f78d7c-ed96-40ff-980c-5dc62fecbc85",
@@ -340,6 +340,24 @@
     "symbol": "NMC",
     "explore": "https://www.namebrow.se/tx/",
     "average_block_time": 600
+  },
+  {
+    "chain_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
+    "asset_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
+    "icon_url": "https://mixin-images.zeromesh.net/XX0uDzi6b76ZP2oend6OgCWBUc9QPp1rfoFOIRN40aogbpdT0jp_dV1jgzaCnShK5DD6ETL8xSIQMYOEXrJrvqElwfG-UZ65s35sdg=s128",
+    "name": "Bytom 2.0（PoS）",
+    "symbol": "BTM",
+    "explore": "https://blockmeta.com/tx/",
+    "average_block_time": 160
+  },
+  {
+    "chain_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
+    "asset_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
+    "icon_url": "https://mixin-images.zeromesh.net/jXZONI755H6X9-q4bwuAwalc8wqFNIsob5wgqE9lbKNk3c3kkfKnftlD5HYO8lVVYnza1s7sHoduM7RxUTvqHrFiU0U32ABy45XE=s128",
+    "name": "Bytom 1.0（PoW）",
+    "symbol": "BTM",
+    "explore": "https://blockmeta.com/tx/",
+    "average_block_time": 160
   },
   {
     "chain_id": "b207bce9-c248-4b8e-b6e3-e357146f3f4c",
