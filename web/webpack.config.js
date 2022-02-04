@@ -33,16 +33,23 @@ module.exports = {
   },
 
   module: {
-    rules: [{
-      test: /\.html$/, loader: "handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"
-    }, {
-      test: /\.(sa|sc|c)ss$/,
-      use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-    }, {
-      test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
-      use: [
-        'file-loader'
-      ]
+    rules: [
+      {
+      test: /\.html$/, 
+      use: [{
+        loader: 'handlebars-loader',
+        options: {
+          helperDirs: path.resolve(__dirname, "./src/helpers")
+        }
+      }]
+      }, {
+        test: /\.(sa|sc|c)ss$/,
+        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      }, {
+        test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
     }]
   },
 
