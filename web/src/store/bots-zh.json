@@ -12,21 +12,21 @@
         "effects": ""
       },
       {
+        "name": "Pando Rings",
+        "tags": "Exchange",
+        "identity_number": "7000104159",
+        "icon_url": "https://mixin-images.zeromesh.net/H58RZwH1D8SUaoe9DprOsp3N8YU_t5ra4GdDdUScH2vaFsZzdNAUG6WhOyWq_kIriODHTBA8BZDuSl68vjqeiOY4xa2MjqUBbju1=s256",
+        "description": "去中心化的抵押借贷机器人，可以抵押 BTC、ETH、MOB 等多种资产借 U 临时周转，也可以借其他币做空.",
+        "url": "mixin://users/5278fff7-a084-4019-b963-a7a88559d5c4",
+        "effects": ""
+      },
+      {
         "name": "MixSwap",
         "tags": "交易所",
         "identity_number": "7000103767",
         "icon_url": "https://mixin-images.zeromesh.net/w73fbJcibxozqgv44ZqtsxNmD0e8-eMXITnTil4S-zvw2xv8zzYdA5lnBH4i_nJlckiGWPqp8N93rLQ5_E7traThKH1M2jolq-R5=s256",
         "description": "MixSwap 采用的是类似 1inch 的聚合交易模式，通过智能算法拆分交易同样的钱买卖更多的币，目前已经集成 4swap 和 ExinSwap，后续还将支持 ExinOne 直接连接到 3 大交易所。",
         "url": "mixin://users/6a4a121d-9673-4a7e-a93e-cb9ca4bb83a2",
-        "effects": ""
-      },
-      {
-        "name": "ExinPool",
-        "tags": "交易所",
-        "identity_number": "7000101761",
-        "icon_url": "https://mixin-images.zeromesh.net/--ccgu6VAw7MB9bALITSa_CdSAJ2DUfr7TdzumMOWV1tMYbadr4V8KtgfcgprQ9VUQMllealtsIq350BReNu34Y=s256",
-        "description": "ExinPool 是 Mixin 生态最受欢迎的开发商 Exin 旗下 Staking 平台，Mixin Network 创世节点之一。",
-        "url": "mixin://users/c48136b1-c5ab-437a-a079-9df1dc748f1b",
         "effects": ""
       },
       {
@@ -39,12 +39,21 @@
         "effects": ""
       },
       {
-        "name": "Pando Rings",
+        "name": "OptionDance",
+        "tags": "期权",
+        "identity_number": "7000103915",
+        "icon_url": "https://mixin-images.zeromesh.net/3H9XZLLfHeIW4ARQXN99nIgIQQuhEzqsv0iG7_gec3T82UylqQPyOoJEFIVvYHWSo8Z4AN7RSF03qMOZqbOwCJy7srXwhpvPMnU=s256",
+        "description": "Mixin 生态非常火爆的期权交易平台，这是一个被重新设计期权交易工具，解决了传统期权交易过于复杂化的问题，普通用户可以轻松上手，交易量已超过币安等期权交易平台。",
+        "url": "mixin://users/1b9195c8-e03b-448c-a931-69526f879332",
+        "effects": ""
+      },
+      {
+        "name": "HODL 大牢宝",
         "tags": "Exchange",
-        "identity_number": "7000104159",
-        "icon_url": "https://mixin-images.zeromesh.net/H58RZwH1D8SUaoe9DprOsp3N8YU_t5ra4GdDdUScH2vaFsZzdNAUG6WhOyWq_kIriODHTBA8BZDuSl68vjqeiOY4xa2MjqUBbju1=s256",
-        "description": "去中心化的抵押借贷机器人，可以抵押 BTC、ETH、MOB 等多种资产借 U 临时周转，也可以借其他币做空.",
-        "url": "mixin://users/5278fff7-a084-4019-b963-a7a88559d5c4",
+        "identity_number": "7000104160",
+        "icon_url": "https://mixin-images.zeromesh.net/3N3iG6c2fExPPw4TszPYGCw4IciZzFL7prrr_m8ydyCtZLMpzde1SJlFFkHWAdj2R0g_1eosg586DaPhQBPUONPSNlVvCkmgKGaCuQ=s256",
+        "description": "暴涨、暴跌管不住手买了/卖了过后拍断大腿？大牢宝非常适合你！拿住就能跑赢 90% 的炒币用户！",
+        "url": "mixin://users/d402f2c6-1ba0-4d82-a75c-5674fae1acca",
         "effects": ""
       },
       {
@@ -108,15 +117,6 @@
         "icon_url": "https://mixin-images.zeromesh.net/Xjzqo2FaM8rN4Fsikffz7exDVFoC7XD1C8bg1xa7zwzOyMYfD3PLMsFEiNnjgWlor_aHtlccjnNeM1-SKT9ABjA=s256",
         "description": "Mixin 跳蚤市场、杂货铺，卖各种产品和服务，李安‘导演’亲情奉献！",
         "url": "mixin://users/076ecd36-4c8e-4a12-9aa2-d541bdbba58d",
-        "effects": ""
-      },
-      {
-        "name": "空投频道",
-        "tags": "",
-        "identity_number": "7000102275",
-        "icon_url": "https://mixin-images.zeromesh.net/jmS95VZ4XzOpoTDncDTwmQiViG9pHx2x5OVbT8CEOA46s2IbEnBJAuey9ySGr5aUSsrsQuUYZLahyT6EeK2mXw=s256",
-        "description": "领取各类价值币，了解各类价值消息，就在空投频道",
-        "url": "mixin://users/608ab780-41f4-435a-824e-b068c9c60124",
         "effects": ""
       }
     ]
@@ -199,6 +199,66 @@
     ]
   },
   {
+    "title": "理财",
+    "description": "注意理财有风险，投资前请详细了解并认真评估，Mixin 团队不为任何项目方的产品做信用背书。",
+    "bots": [
+      {
+        "name": "Pando Rings",
+        "tags": "Exchange",
+        "identity_number": "7000104159",
+        "icon_url": "https://mixin-images.zeromesh.net/H58RZwH1D8SUaoe9DprOsp3N8YU_t5ra4GdDdUScH2vaFsZzdNAUG6WhOyWq_kIriODHTBA8BZDuSl68vjqeiOY4xa2MjqUBbju1=s256",
+        "description": "去中心化的抵押借贷机器人，可以放贷赚利息，也可以抵押 BTC、ETH、MOB 等多种资产借 U 临时周转，或者借其他币做空.",
+        "url": "mixin://users/5278fff7-a084-4019-b963-a7a88559d5c4",
+        "effects": ""
+      },
+      {
+        "name": "ExinPool",
+        "tags": "交易所",
+        "identity_number": "7000101761",
+        "icon_url": "https://mixin-images.zeromesh.net/--ccgu6VAw7MB9bALITSa_CdSAJ2DUfr7TdzumMOWV1tMYbadr4V8KtgfcgprQ9VUQMllealtsIq350BReNu34Y=s256",
+        "description": "Mixin 生态 Staking 平台，支持 Mixin、Horizen、Avalanche、Axie Infinity、Solana、NEAR Protocol、Filecoin、Cosmos、Tron、Nem、Dash 抵押赚币",
+        "url": "mixin://users/c48136b1-c5ab-437a-a079-9df1dc748f1b",
+        "effects": ""
+      },
+      {
+        "name": "Filet",
+        "tags": "交易所",
+        "identity_number": "7000104417",
+        "icon_url": "https://mixin-images.zeromesh.net/jdXgIzThSb8VAXqfVO72ZKQTyQmg_de4xmN2dmD87cNOIZfvUBjKAfNPDL5UBpoF4CfC1_g0vBklM4kiHxg6L_WT-fSvr7kdpfA=s256",
+        "description": "Stake FIL to earn FIL earn about 35% APY",
+        "url": "mixin://users/b3aeb378-56a0-44b0-a2f5-797dfdfc0cf7",
+        "effects": ""
+      },
+      {
+        "name": "4swap",
+        "tags": "交易所",
+        "identity_number": "7000103537",
+        "icon_url": "https://mixin-images.zeromesh.net/P6C_Bvd79cQFjj_hB6NugtuBhtLwg4UbYo2hD7pv7WMGmpqfzkK4A-SICA8dNNcXgUVVn6AYUjhtiLGvT4_gTXQ8oiyxJT9fEAo7=s256",
+        "description": "Mixin 生态最大的去中心化自动化做市交易平台，资金池规模超过 1.5 亿美金，可以参与流动性赚手续费，有些项目方还会提供流动性挖矿奖励，注意可能有无常损失。",
+        "url": "mixin://users/a753e0eb-3010-4c4a-a7b2-a7bda4063f62",
+        "effects": ""
+      },
+      {
+        "name": "ExinOne",
+        "tags": "法币 币币 定投",
+        "identity_number": "7000101276",
+        "icon_url": "https://mixin-images.zeromesh.net/y10b63pl9TQy5Tr8-hguLVDZWl-Xt1ug3f-LgPSl6s6ZxKsYzdy9sWZFTarULKxWdnJQyDs_tr1q73ctdI6MKA=s256",
+        "description": "ExinOne 不但提供跨交易所代购服务，存币到活期宝和流动池有 EPC 奖励，EPC 可以用来抵扣手续费。",
+        "url": "mixin://users/61103d28-3ac2-44a2-ae34-bd956070dab1",
+        "effects": ""
+      },
+      {
+        "name": "OptionDance",
+        "tags": "期权",
+        "identity_number": "7000103915",
+        "icon_url": "https://mixin-images.zeromesh.net/3H9XZLLfHeIW4ARQXN99nIgIQQuhEzqsv0iG7_gec3T82UylqQPyOoJEFIVvYHWSo8Z4AN7RSF03qMOZqbOwCJy7srXwhpvPMnU=s256",
+        "description": "Mixin 生态非常火爆的期权交易平台，这是一个被重新设计期权交易工具，普通用户可以轻松上手，要么低价买入 BTC 要么赚取高额手续费，非常适合长期持有者。",
+        "url": "mixin://users/1b9195c8-e03b-448c-a931-69526f879332",
+        "effects": ""
+      }
+    ]
+  },
+  {
     "title": "社群",
     "bots": [
       {
@@ -262,6 +322,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/IDg7kgZlOO2brhe77X88EqnWZZEpy6EwK6Au45ra9zKaz5YAHMMuX9A8n0HCHaoI53URkD1kdjOIaUKHIwkSWKUhQDQ-JWQ9DCE=s256",
         "description": "欢迎加入 RUM 官方中文群，获取项目最新进展，讨论产品技术和应用模式等话题。",
         "url": "mixin://users/56304004-8095-4960-8dd1-edf6e583a2a9",
+        "effects": ""
+      },
+      {
+        "name": "Human Protocol 中文群",
+        "tags": "大群",
+        "identity_number": "7000104183",
+        "icon_url": "https://mixin-images.zeromesh.net/OYNTzKuE-XeF3QJthAuwVFIo7MSStHDzdT31Tfhz_6GpLR5kenAT3lXMebAi3ahnD4VTkc20J5kPaf8Nbbzm2RCei3XkpeS9FB4x=s256",
+        "description": "HUMAN 协议基于区块链技术，通过无缝的管理与结算过程，打造了一套经过严格审计的开源框架，用于构建去中心化劳动力市场，将信息搜索者与知识市场连接起来。",
+        "url": "mixin://users/5a33fc52-f445-4170-a06a-47f8be94a8f3",
         "effects": ""
       },
       {
@@ -369,12 +438,21 @@
         "effects": ""
       },
       {
-        "name": "链闻 ChainNews",
+        "name": "币世界 Bot",
         "tags": "资讯",
-        "identity_number": "7000101503",
-        "icon_url": "https://mixin-images.zeromesh.net/6efok6tUjG1YqVPz4jYXTv8pmzrthmD05guCSz5bpl0nkCoy-GMYMsNyqL47Jbz17ZC9ULxLe89_EyR7aMa4OieENluArZ-RlJuJSA=s256",
-        "description": "区块链新闻快讯资讯信息服务平台，凭借遍布全球的丰富报道资源与数据挖掘能力，旨在为 FinTech 金融科技菁英与决策者们提供每日不可或缺的区块链资讯与深度分析。",
-        "url": "mixin://users/5fa13575-f078-4c92-b913-fdfd1611f573",
+        "identity_number": "7000100102",
+        "icon_url": "https://mixin-images.zeromesh.net/2ehkzRwsLNFn8s0102U703aehwcPm9_iUmnpkfqzZPICd5Yo3iFpopCheXNOXl13TKsef8v7XV72jGfww663kX8=s256",
+        "description": "币世界非官方 Bot，实时推送",
+        "url": "mixin://users/1fc37f38-28e2-442c-9187-79eaee9aaa3b",
+        "effects": ""
+      },
+      {
+        "name": "Mixin 直播频道" ,
+        "tags": "资讯",
+        "identity_number": "7000101394",
+        "icon_url": "https://mixin-images.zeromesh.net/uzkc3RxlYl4OPOP3DdTfmmvXfpDxsniwxVD38-iFSOTogQAbl9P7j86ceetgM-7inQi5oQjwYmtC3jwL2f5u6Sg=s256",
+        "description": "发布 Mixin 相关的直播信息，另有不定时红包雨",
+        "url": "mixin://users/44a771f1-8f7c-40e3-9742-c1ff57b8cd0c",
         "effects": ""
       },
       {
@@ -384,6 +462,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/D3ZznlqeyhmptBQ41t6xM2HKbyRwtPqZxM5tdYNEic991AMO1jyUp5AxAQtn_bc5QlsVCSfc11i3YVocY3WY-x5yFGYux55Esk8=s256",
         "description": "可以帮你订阅各种 RSS/ATOM 信息源，例如微博、Twitter。",
         "url": "mixin://users/60d30faa-3825-48da-ac1c-6aca1f573dd5",
+        "effects": ""
+      },
+      {
+        "name": "韩如初@Rbc Office",
+        "tags": "资讯",
+        "identity_number": "7000104071",
+        "icon_url": "https://mixin-images.zeromesh.net/eyB1fXisUju7qOQBP9151I_wdq65ALd5hVlcgEzjjhv4lRnwHATme9ItRK4wW7Jeup_QlsJ7fpJUacRv-2Xfbolb1EPb2nqq70MCIQ=s256",
+        "description": "智商进化学习，知识就是力量，感谢关注青年养生艺术家。",
+        "url": "mixin://users/88296b10-c346-41f9-a75d-43b4f3c65250",
         "effects": ""
       },
       {
@@ -432,33 +519,6 @@
         "effects": ""
       },
       {
-        "name": "Mixin 链接未来世界",
-        "tags": "资讯",
-        "identity_number": "7000100225",
-        "icon_url": "https://mixin-images.zeromesh.net/SGzqJAc2SZHe6-ciHXKNAu_oGdDNBWNaQ7lYxrMYeLvO8u6aIzy8xvFM4JQdHkJB8GSLt2OheQxUIbeb5ojX3g=s256",
-        "description": "柱子与您分享 Mixin 的八卦杂谈，穿插着有趣、好玩、有料的机器人介绍",
-        "url": "mixin://users/6d16d8ef-3557-423c-b915-052955cfd0bc",
-        "effects": ""
-      },
-      {
-        "name": "Mixin 直播频道" ,
-        "tags": "资讯",
-        "identity_number": "7000101394",
-        "icon_url": "https://mixin-images.zeromesh.net/uzkc3RxlYl4OPOP3DdTfmmvXfpDxsniwxVD38-iFSOTogQAbl9P7j86ceetgM-7inQi5oQjwYmtC3jwL2f5u6Sg=s256",
-        "description": "发布 Mixin 相关的直播信息，另有不定时红包雨",
-        "url": "mixin://users/44a771f1-8f7c-40e3-9742-c1ff57b8cd0c",
-        "effects": ""
-      },
-      {
-        "name": "币世界 Bot",
-        "tags": "资讯",
-        "identity_number": "7000100102",
-        "icon_url": "https://mixin-images.zeromesh.net/2ehkzRwsLNFn8s0102U703aehwcPm9_iUmnpkfqzZPICd5Yo3iFpopCheXNOXl13TKsef8v7XV72jGfww663kX8=s256",
-        "description": "币世界非官方 Bot，实时推送",
-        "url": "mixin://users/1fc37f38-28e2-442c-9187-79eaee9aaa3b",
-        "effects": ""
-      },
-      {
         "name": "Readhub 要闻",
         "tags": "资讯",
         "identity_number": "7000101501",
@@ -488,74 +548,6 @@
     ]
   },
   {
-    "title": "圈子",
-    "bots": [
-      {
-        "name": "冯晓东的小迷圈",
-        "tags": "资讯",
-        "identity_number": "7000100118",
-        "icon_url": "https://mixin-images.zeromesh.net/R8fkegiiJW_b8tHGJPeOWTvgvRZSaSQ1DRA22E1qb8MN4d5NwfO5746o8uozpsuP0y3uIzoYOtP_qFybO5FMja8=s256",
-        "description": "冯晓东的小迷圈，Mixin 团队的老大，入圈费 0.07 XIN",
-        "url": "mixin://users/58aea6a6-c4e1-4fd9-9671-d1a277dd5643",
-        "effects": ""
-      },
-      {
-        "name": "歌词经理和他的朋友们",
-        "tags": "资讯",
-        "identity_number": "7000103166",
-        "icon_url": "https://mixin-images.zeromesh.net/4mMn8RFf0niJ04klqj4SPvZtPb74pnrFzoDzP1w3SbFmBiG-5FRM1_1b0nB7ENTb9GWNDIQLMvyuMJ6fRuhjGcU=s256",
-        "description": "歌词经理和他的朋友们，还有一张沙发，需要邀请码或者 99 RMB 等值的 BTC 入群。",
-        "url": "mixin://users/1dc6bd8d-1325-4ca3-8a8c-9c880ef9f06b",
-        "effects": ""
-      },
-      {
-        "name": "韩如初",
-        "tags": "资讯",
-        "identity_number": "7000104071",
-        "icon_url": "https://mixin-images.zeromesh.net/eyB1fXisUju7qOQBP9151I_wdq65ALd5hVlcgEzjjhv4lRnwHATme9ItRK4wW7Jeup_QlsJ7fpJUacRv-2Xfbolb1EPb2nqq70MCIQ=s256",
-        "description": "智商进化学习，知识就是力量，感谢关注青年养生艺术家。",
-        "url": "mixin://users/88296b10-c346-41f9-a75d-43b4f3c65250",
-        "effects": ""
-      },
-      {
-        "name": "Thorb 的小迷圈",
-        "tags": "资讯",
-        "identity_number": "7000103282",
-        "icon_url": "https://mixin-images.zeromesh.net/3u3i9hvGshYKZYInwN-b0KsgTI3vRc0RJVFFvdmEcLlIowdMIJcY6o0alVMf0hpSDLZlXbx0giMQmCGCE4qTRycJ=s256",
-        "description": "骚总的小迷圈，Exin 团队的老大",
-        "url": "mixin://users/0dc7e1e3-d14d-431e-ad86-fcd03e981d13",
-        "effects": ""
-      },
-      {
-        "name": "MiFi 大本营",
-        "tags": "资讯",
-        "identity_number": "7000103572",
-        "icon_url": "https://mixin-images.zeromesh.net/EcUEAWQRUJO5dJKXzJT3OILUa4aQN6W908nfVo9yy_X90T2CNmig4pszEg-dupgWj-tWpfNvyFqxkz1PhEua4g=s256",
-        "description": "本社群由 Exin 骚总创建，期望与 XIN 的持有者共同探讨 DeFi 在 Mixin 生态的应用并推进落地，社群会不定时邀请行业大佬过来做分享，入圈费 0.2 XIN，每增加 100 人价格涨 0.1 XIN",
-        "url": "mixin://users/6f70b925-1c83-4982-9347-34f2056287fb",
-        "effects": ""
-      },
-      {
-        "name": "发条的小迷圈",
-        "tags": "资讯",
-        "identity_number": "7000102295",
-        "icon_url": "https://mixin-images.zeromesh.net/vqFbE-rovgmJrY9uLdkyXKuqfmIHgDSc3B7DnoVsh76Xwjkv8R7nndV-kI4QTp81ROn_EXU46xa2rkKwYmRJOl-H=s256",
-        "description": "发条学习分享沉淀的地方，一起成长，入圈费 3 BOX",
-        "url": "mixin://users/4a8b5ffa-f921-4a94-84f3-9079d569007f",
-        "effects": ""
-      },
-      {
-        "name": "Robin 的小迷圈",
-        "tags": "小迷圈",
-        "identity_number": "7000103328",
-        "icon_url": "https://mixin-images.zeromesh.net/tDQa8Zv2TFmcnPtk5a2I4QMsuudFvdrUC5PY4chV4eHiwwyPX8qylGrvwJXeq6PAojjqv0eTQtUrmJRxZX8VHBQ=s256",
-        "description": "Exin 团队 Robin，dbarobin.com 博主",
-        "url": "mixin://users/c7b98879-b2bb-462a-b623-6af1410c5f05",
-        "effects": ""
-      }
-    ]
-  },
-  {
     "title": "工具",
     "bots": [
       {
@@ -574,6 +566,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/QfdwB9n42q1hXNQ4_gCDJmXwqME4Vj1DfI-9YGZy_nIgafNIS4HGC4l4KaqzS-jRIxr_RuvWddGL0sUwezooKbIx=s256",
         "description": "将该机器人添加为群组成员，然后返回会话从 + 展开菜单里点红包既可以发红包，支持设置仅发有价格的红包",
         "url": "mixin://users/1ab1f241-b809-4790-bcfd-a1779bb1d313",
+        "effects": ""
+      },
+      {
+        "name": "IFTTB",
+        "tags": "工具",
+        "identity_number": "7000103075",
+        "icon_url": "https://mixin-images.zeromesh.net/TtxAY957XikXCdjdpJpeicsqtTo1BLscCgrrrocGoIcfZdVNFoNiQFN2ZyXxnQtSANzKR5kqybFGI024VEDr9sISofYfdRk7rCK_=s256",
+        "description": "设置好条件后自动交易，可实现定投、定抛、换仓套利等策略，支持价格提醒",
+        "url": "mixin://users/c1412f68-6152-40ad-a193-f7fadf9328a1",
         "effects": ""
       },
       {

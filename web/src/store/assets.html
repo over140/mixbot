@@ -11,6 +11,11 @@
   </div>
   <section class="content">
       {{#each data}}
+      {{#if this.description}}
+      <div class="total capitalization">
+        {{this.description}}
+      </div>
+      {{/if}}
       <table class="{{@key}} bots list {{#if @first}}show{{/if}}">
         <tbody>
           {{#each bots}}
