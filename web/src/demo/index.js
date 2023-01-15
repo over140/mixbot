@@ -70,6 +70,10 @@ Demo.prototype = {
       self.close();
     });
 
+    $('.authorization.action').on('click', function (event) {
+      window.location.replace('https://mixin.one/oauth/authorize?client_id=14ba6299-5daf-4d07-9e2c-f84d413d2482&scope=PROFILE:READ+ASSETS:READ+PHONE:READ+CONTACTS:READ+MESSAGES:REPRESENT+SNAPSHOTS:READ+CIRCLES:READ+CIRCLES:WRITE+COLLECTIBLES:READ+STICKER:READ&response_type=code&return_to=');
+    });
+
     const code = URLUtils.getUrlParameter("code");
     if (code === "XVlBzg") {
       self.api.notify('success', code);
