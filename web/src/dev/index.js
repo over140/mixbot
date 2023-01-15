@@ -1,6 +1,7 @@
 import './index.scss';
 import './assets.scss';
 import './contacts.scss';
+import './bots.scss';
 import './snapshots.scss';
 import $ from 'jquery';
 import {BigNumber} from 'bignumber.js';
@@ -14,6 +15,7 @@ function Dev(router, api, loading) {
   this.templateDev = require('./index.html');
   this.templateAssets = require('./assets.html');
   this.templateContacts = require('./contacts.html');
+  this.templateBots = require('./bots.html');
   this.templateSnapshots = require('./snapshots.html');
   this.chains = require('../api/chains.json');
   var chainMap = {};
@@ -34,12 +36,13 @@ Dev.prototype = {
     self.fetchAssets();
     if (self.api.account.loggedIn()) {
       self.fetchContacts();
+      self.fetchBots();
       self.fetchSnapshots();
     }
 
     $('.tabs').on('click', '.tab', function (event) {
       const activeClassName = this.className.split(/\s+/)[0];
-      const tabs = ['assets', 'contacts', 'snapshots'];
+      const tabs = ['assets', 'contacts', 'bots', 'snapshots'];
       for (var i = 0; i < tabs.length; i++) {
         const tab = tabs[i];
         if (tab === activeClassName) {
@@ -230,7 +233,14 @@ Dev.prototype = {
           avatar_url: contact.avatar_url,
           biography: contact.biography
         };
+        if (contact.app) {
+          copy_info.home_uri = contact.app.home_uri;
+        }
         contact.copy_info = JSON.stringify(copy_info);
+      });
+
+      contacts = contacts.filter(function(contact) {
+        return contact.app == null;
       });
 
       $('#contacts-content').html(self.templateContacts({
@@ -240,6 +250,61 @@ Dev.prototype = {
       $('#contacts-content').on("input", ".searchTerm", function(event) {
         const keywords = $(this).val().trim().toLowerCase();
         const rows = $('.contacts.list tr');
+        if (keywords.length == 0) {
+          rows.show();
+        } else {
+          const showRows = rows.filter(function(index, row){
+            return $(this).attr('keywords').toLowerCase().indexOf(keywords) >= 0
+          })
+          showRows.show();
+          rows.not(showRows).hide();
+        }
+      });
+    });
+  },
+
+  fetchBots: function() {
+    const self = this;
+    $('#bots-content').html(self.loading());
+
+    self.api.requestMixin('GET', '/friends', undefined, function(resp) {
+      if (resp.error) {
+        if (resp.error.code == 403) {
+          self.api.account.clear();
+          window.location.reload();
+        }
+        return;
+      }
+
+      var contacts = resp.data;
+
+      contacts.forEach(function(contact){
+        var copy_info = {
+          full_name: contact.full_name,
+          user_id: contact.user_id,
+          identity_number: contact.identity_number,
+          avatar_url: contact.avatar_url,
+          biography: contact.biography,
+          code_url: contact.code_url
+        };
+        if (contact.app) {
+          copy_info.home_uri = contact.app.home_uri;
+          copy_info.app_code_url = contact.app.code_url;
+        }
+        contact.copy_info = JSON.stringify(copy_info);
+      });
+
+      var bots = contacts.filter(function(contact) {
+        return contact.app != null;
+      });
+
+      $('#bots-content').html(self.templateBots({
+        bots: bots
+      }));
+
+      $('#bots-content').on("input", ".searchTerm", function(event) {
+        const keywords = $(this).val().trim().toLowerCase();
+        const rows = $('.bots.list tr');
         if (keywords.length == 0) {
           rows.show();
         } else {

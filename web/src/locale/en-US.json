@@ -30,6 +30,7 @@
   "dev": {
     "tab.assets": "Assets",
     "tab.contacts": "Contacts",
+    "tab.bots": "Bots",
     "tab.snapshots": "Snapshots",
     "button.copy": "Copy",
     "toast.copied": "Copied"

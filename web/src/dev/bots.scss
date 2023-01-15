@@ -1,0 +1,77 @@
+@import '../constant.scss';
+
+.dev.layout {
+
+  .bots.list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    tbody {
+      display: table-row-group;
+      vertical-align: top;
+    }
+
+    tr {
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    td {
+      text-align: left;
+      line-height: 20px;
+
+      &:first-child {
+        text-align: left;
+        width: 50px;
+        position: relative;
+        padding: 16px 0 16px 20px;
+
+        .contact-icon {
+          border-radius: 20px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &:nth-child(2) {
+        padding: 16px 0 16px 4px;
+        font-weight: 500;
+      }
+
+      &:last-child {
+        text-align: right;
+        white-space: nowrap;
+        padding: 16px 20px 16px 0;
+      }
+
+      .symbol {
+        font-size: 14px;
+      }
+
+      .description {
+        font-size: 13px;
+        font-weight: 400;
+        color: #9B9B9B;
+      }
+
+      .action {
+        flex: 1;
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.1);
+        color: $color-main-foreground-light;
+        border-radius: 4px;
+        display: inline-block;
+        text-align: center;
+        padding: 6px 12px;
+        font-size: 14px;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
