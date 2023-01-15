@@ -451,7 +451,7 @@ Tool.prototype = {
       });
 
       $('#assets-content').html(self.templateAssets({
-        assets: topAssets,
+        assets: topAssets.slice(0, 100),
         totalCapitalization: new BigNumber(new BigNumber(totalCapitalization).toFixed(0)).toFormat()
       }));
     });
