@@ -266,7 +266,7 @@ Tool.prototype = {
         }
       });
   
-      const dayMint = new BigNumber(40500 * 0.9).div(365)
+      const dayMint = new BigNumber(89.87671224);
       const avgMint = dayMint.div(totalWorks);
   
       nodes.forEach(function(node){
@@ -313,8 +313,8 @@ Tool.prototype = {
           best_snapshot_height: new BigNumber(stats.best_snapshot_height).toFormat(),
           accepted_nodes: stats.accepted_nodes,
           market_price_usd: stats.market_price_usd,
-          minting_reward: new BigNumber(40500 * 0.9).div(365).div(stats.accepted_nodes).toFixed(8),
-          staking_xin: new BigNumber(new BigNumber(11900).multipliedBy(stats.accepted_nodes).plus(50000).toFixed(0)).toFormat(),
+          minting_reward: new BigNumber(89.87671224).div(stats.accepted_nodes).toFixed(8),
+          staking_xin: new BigNumber(new BigNumber(12710).multipliedBy(stats.accepted_nodes).plus(50000).toFixed(0)).toFormat(),
           circulation_xin: new BigNumber(new BigNumber(stats.circulation_xin).toFixed(0)).toFormat()
         }));
       });
@@ -351,7 +351,12 @@ Tool.prototype = {
           chain.withdrawal_pending_count = withdrawalPendingCount.toString();
           totalWithdrawals = totalWithdrawals.plus(withdrawalPendingCount);
           chain.deposit_block_height = depositBlockHeight.toFormat();
-          chain.is_error = !chainAsset.is_synchronized;
+          if (chainAsset.chain_id == 'b207bce9-c248-4b8e-b6e3-e357146f3f4c' 
+              || chainAsset.chain_id == '574388fd-b93f-4034-a682-01c2bc095d17') {
+            chain.is_error = false;
+          } else {
+            chain.is_error = !chainAsset.is_synchronized;
+          }
           const differenceBlockHeight = managedBlockHeight.minus(chainAsset.threshold).minus(depositBlockHeight);
           chain.difference_block_height = differenceBlockHeight.abs().toFormat();
           chain.is_slow = differenceBlockHeight.isGreaterThan(2);
