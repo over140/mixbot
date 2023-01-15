@@ -57,15 +57,6 @@
         "effects": ""
       },
       {
-        "name": "ExinLocal",
-        "tags": "交易所",
-        "identity_number": "7000000015",
-        "icon_url": "https://mixin-images.zeromesh.net/TPVSyWaAVSJ4j2CqHSHRmzrRBeRg3fDMEqUUl8GITBQeNpGu4dvES7E8ZU9MBrR4RADbLfGbfI3PKULJODkGmik=s256",
-        "description": "全球点对点加密货币的交易市场，类似 LocalCryptos 但更安全更简单，应用多签、加密聊天等保障交易隐私和安全",
-        "url": "mixin://users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
-        "effects": ""
-      },
-      {
         "name": "Mixin 商店🔥",
         "tags": "购物",
         "identity_number": "7000103274",
@@ -134,6 +125,15 @@
         "effects": ""
       },
       {
+        "name": "BigONE Trading Bot",
+        "tags": "法币 币币 定投",
+        "identity_number": "7000104779",
+        "icon_url": "https://mixin-images.zeromesh.net/ylBv6JHGoxLfr3kUPoVanOQt8eBW7nEfRfyqXCzJw8lSamMHU1Hfqv-RLqQK9rOtU5PeXi9ZcF3Y6dPDfpRWQZJ-Rvxhpt7qDfuB=s256",
+        "description": "交易机器人为 Mixin 用户提供更便捷的现货交易、更个性的收益统计和更丰富的订单类型，支持多种挂单方式，无需注册即可交易 BigONE 上的币种。",
+        "url": "mixin://users/55c9d8c6-a0f5-41bf-8e7f-55810d6f743e",
+        "effects": ""
+      },
+      {
         "name": "MixSwap",
         "tags": "交易所",
         "identity_number": "7000103767",
@@ -167,15 +167,6 @@
         "icon_url": "https://mixin-images.zeromesh.net/VYpwrP_nI4zE6dcB2thEh3noEs5XR_o94ggwvCyZT3Lg7LU-odxp9HyG5WGcAUY6BCVkBRNmCW6HD6T2gO7mjw=s256",
         "description": "币格 BigONE 官方机器人，支持现货交易、杠杆交易、合约交易、理财、借贷、PoS矿池等，支持与 Mixin 钱包之间免费转账实时到账。",
         "url": "mixin://users/91916ac9-3d66-4ca3-a063-14e24a688e54",
-        "effects": ""
-      },
-      {
-        "name": "ExinLocal",
-        "tags": "交易所",
-        "identity_number": "7000000015",
-        "icon_url": "https://mixin-images.zeromesh.net/TPVSyWaAVSJ4j2CqHSHRmzrRBeRg3fDMEqUUl8GITBQeNpGu4dvES7E8ZU9MBrR4RADbLfGbfI3PKULJODkGmik=s256",
-        "description": "全球点对点加密货币的交易市场，类似 LocalCryptos 但更安全更简单，应用多签、加密聊天等保障交易隐私和安全",
-        "url": "mixin://users/f2397b7a-ddfc-4bd9-925a-e14a9a553ba5",
         "effects": ""
       },
       {
@@ -221,12 +212,12 @@
         "effects": ""
       },
       {
-        "name": "Filet",
+        "name": "BigONE Earn",
         "tags": "交易所",
-        "identity_number": "7000104417",
-        "icon_url": "https://mixin-images.zeromesh.net/jdXgIzThSb8VAXqfVO72ZKQTyQmg_de4xmN2dmD87cNOIZfvUBjKAfNPDL5UBpoF4CfC1_g0vBklM4kiHxg6L_WT-fSvr7kdpfA=s256",
-        "description": "Stake FIL to earn FIL earn about 35% APY",
-        "url": "mixin://users/b3aeb378-56a0-44b0-a2f5-797dfdfc0cf7",
+        "identity_number": "7000104386",
+        "icon_url": "https://mixin-images.zeromesh.net/u4YUVvcbWjpmMmCl65dgbKKDx07_U9-7OGQdZ2USLQD4fDrjZmOrMq-Vv0IeDDVZm1VQaPKDRnBZn_DlfGcZ0-2Q3iZjhU-ek-8rYg=s256",
+        "description": "BigONE Earn 是一款由 BigONE 赚币体系提供支持的机器人，用户可以通过机器人一键参与 BTC、ETH、USDT 等多币种的赚币产品，存取自由，方便快捷，让闲置资金“赚”起来！",
+        "url": "mixin://users/14c2a3a2-b021-408e-9d28-990531dbceb0",
         "effects": ""
       },
       {
@@ -255,12 +246,30 @@
         "description": "Mixin 生态非常火爆的期权交易平台，这是一个被重新设计期权交易工具，普通用户可以轻松上手，要么低价买入 BTC 要么赚取高额手续费，非常适合长期持有者。",
         "url": "mixin://users/1b9195c8-e03b-448c-a931-69526f879332",
         "effects": ""
+      },
+      {
+        "name": "Filet",
+        "tags": "交易所",
+        "identity_number": "7000104417",
+        "icon_url": "https://mixin-images.zeromesh.net/jdXgIzThSb8VAXqfVO72ZKQTyQmg_de4xmN2dmD87cNOIZfvUBjKAfNPDL5UBpoF4CfC1_g0vBklM4kiHxg6L_WT-fSvr7kdpfA=s256",
+        "description": "Stake FIL to earn FIL earn about 35% APY",
+        "url": "mixin://users/b3aeb378-56a0-44b0-a2f5-797dfdfc0cf7",
+        "effects": ""
       }
     ]
   },
   {
     "title": "社群",
     "bots": [
+      {
+        "name": "Coinverse 中文群",
+        "tags": "大群",
+        "identity_number": "7000104557",
+        "icon_url": "https://mixin-images.zeromesh.net/RCgMlJy_U7TNmzLb6BdrfK3XRM26PtrgGEIqHDmu3O9Zyje88ltgS_gD9AZNovRLQBjnG91_HRzvPpyZXDK8ewVs920W4-y-ieXegQ=s256",
+        "description": "Coinverse 是全球首个区块链价值发现社区，以客观角度分析区块链热点项目，为社区用户提供专业意见。",
+        "url": "mixin://users/8b76b8f2-03e8-408f-867c-1cfa0f4604e0",
+        "effects": ""
+      },
       {
         "name": "Avalanche 中文社群",
         "tags": "大群",
@@ -575,6 +584,15 @@
         "icon_url": "https://mixin-images.zeromesh.net/TtxAY957XikXCdjdpJpeicsqtTo1BLscCgrrrocGoIcfZdVNFoNiQFN2ZyXxnQtSANzKR5kqybFGI024VEDr9sISofYfdRk7rCK_=s256",
         "description": "设置好条件后自动交易，可实现定投、定抛、换仓套利等策略，支持价格提醒",
         "url": "mixin://users/c1412f68-6152-40ad-a193-f7fadf9328a1",
+        "effects": ""
+      },
+      {
+        "name": "机器猫 · 译站",
+        "tags": "工具",
+        "identity_number": "7000104144",
+        "icon_url": "https://mixin-images.zeromesh.net/ckBiTdSYQz9Vc2f5LQkrdRuaAdrRHSdGGbRyk68a4anm5JoCDWWRJwzM9UQvRFQnBwfMatYWXOHH9WpMCJnAKeaP-Uykyb_S8AcH=s256",
+        "description": "分钟翻译你的外文书，中英对照，格式任选，支持 MixPay 支付",
+        "url": "mixin://users/74d1ec88-20b1-4569-b198-3f555529276f",
         "effects": ""
       },
       {
