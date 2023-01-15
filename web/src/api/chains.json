@@ -18,6 +18,33 @@
     "average_block_time": 15
   },
   {
+    "chain_id": "b7938396-3f94-4e0a-9179-d3440718156f",
+    "asset_id": "b7938396-3f94-4e0a-9179-d3440718156f",
+    "icon_url": "https://mixin-images.zeromesh.net/cecENlRbWmEVAXGPwWwyk9zc0FS6kariFvfVr5yJ-QZe0C-c9ZW5KX2YluyKr5f80KJMl6N5HiQILC0Vik3LntE7QyPjiEzPJ4_t=s128",
+    "name": "Polygon",
+    "symbol": "MATIC",
+    "explore": "https://polygonscan.com/tx/",
+    "average_block_time": 1
+  },
+  {
+    "chain_id": "ef660437-d915-4e27-ad3f-632bfb6ba0ee",
+    "asset_id": "ef660437-d915-4e27-ad3f-632bfb6ba0ee",
+    "icon_url": "https://mixin-images.zeromesh.net/T0pGzs4lg7sIKIEIb1diV_8kbrG5R96dOQD7ukTwBmSxE_xwYayRihxQ2but5Ed3zOor9zcQ5Qq4bpyzVaj6FPxymRSc7fjC_l_E=s128",
+    "name": "TON",
+    "symbol": "TON",
+    "explore": "https://ton.cx/tx/",
+    "average_block_time": 1
+  },
+  {
+    "chain_id": "d2c1c7e1-a1a9-4f88-b282-d93b0a08b42b",
+    "asset_id": "d2c1c7e1-a1a9-4f88-b282-d93b0a08b42b",
+    "icon_url": "https://mixin-images.zeromesh.net/vL_RBptRmAqV9iEPkARWUhQP0WqI9jPBMLNyJezvspZ4hPD9hq5SBluUKMwd_iG8Hpn3cS6nJML2Ji50D0zCBRVXXzUeM5gXnimt4w=s128",
+    "name": "Aptos",
+    "symbol": "APT",
+    "explore": "https://explorer.aptoslabs.com/txn/",
+    "average_block_time": 1
+  },
+  {
     "chain_id": "64692c23-8971-4cf4-84a7-4dd1271dd887",
     "asset_id": "64692c23-8971-4cf4-84a7-4dd1271dd887",
     "icon_url": "https://mixin-images.zeromesh.net/eTzm8_cWke8NqJ3zbQcx7RkvbcTytD_NgBpdwIAgKJRpOoo0S0AQ3IQ-YeBJgUKmpsMPUHcZFzfuWowv3801cF5HXfya5MQ9fTA9HQ=s128",
@@ -79,6 +106,15 @@
     "symbol": "AVAX",
     "explore": "https://avascan.info/blockchain/x/tx/",
     "average_block_time": 3
+  },
+  {
+    "chain_id": "b12bb04a-1cea-401c-a086-0be61f544889",
+    "asset_id": "b12bb04a-1cea-401c-a086-0be61f544889",
+    "icon_url": "https://mixin-images.zeromesh.net/M_P4l_lJtQj39Nq0sSprAv69Qt9EsXNyMHMSfb58RMiEVLX77DAe2UtZPjLQr5b-dugJUf_lK8rtPjnBHUp_zCU2Z5CeOgNz0A69=s128",
+    "name": "XDC Network",
+    "symbol": "XDC",
+    "explore": "https://explorer.xinfin.network/txs/",
+    "average_block_time": 2
   },
   {
     "chain_id": "882eb041-64ea-465f-a4da-817bd3020f52",
@@ -177,6 +213,15 @@
     "name": "Binance",
     "symbol": "BNB",
     "explore": "https://binance.mintscan.io/txs/",
+    "average_block_time": 1
+  },
+  {
+    "chain_id": "1949e683-6a08-49e2-b087-d6b72398588f",
+    "asset_id": "1949e683-6a08-49e2-b087-d6b72398588f",
+    "icon_url": "https://mixin-images.zeromesh.net/HCjLu6VM0XA7ouRcZJGDTOzE7zoXaA8LgESw075VW5teZ27AGUgyGrc4jnzuK5LtgT5HJQDSNSOImnU3IcUsBLoF=s128",
+    "name": "Binance Smart Chain",
+    "symbol": "BNB",
+    "explore": "https://bscscan.com/tx/",
     "average_block_time": 1
   },
   {
@@ -315,6 +360,15 @@
     "average_block_time": 180
   },
   {
+    "chain_id": "c99a3779-93df-404d-945d-eddc440aa0b2",
+    "asset_id": "c99a3779-93df-404d-945d-eddc440aa0b2",
+    "icon_url": "https://mixin-images.zeromesh.net/JQLe3hGUmnLVoxYjd0Cs3qz8v16pbZxJ-agzzxhBAmhYcPk24p9WJ4OIXpdaVyTE4IPQW8YYJoszORwJx5E2HK4Oa3qtiXyiOiM=s128",
+    "name": "Starcoin",
+    "symbol": "STC",
+    "explore": "https://stcscan.io/main/transactions/detail/",
+    "average_block_time": 5
+  },
+  {
     "chain_id": "6877d485-6b64-4225-8d7e-7333393cb243",
     "asset_id": "6877d485-6b64-4225-8d7e-7333393cb243",
     "icon_url": "https://mixin-images.zeromesh.net/qC2t9WkMv8f3O4LolVvaXKP9cuHXklYW-3bSu4Cl3WSRHkAkIGdQlBH4qqluZxqy7lnyuP9ffIVGXMNKTFF2AFQY=s128",
@@ -345,7 +399,7 @@
     "chain_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
     "asset_id": "71a0e8b5-a289-4845-b661-2b70ff9968aa",
     "icon_url": "https://mixin-images.zeromesh.net/XX0uDzi6b76ZP2oend6OgCWBUc9QPp1rfoFOIRN40aogbpdT0jp_dV1jgzaCnShK5DD6ETL8xSIQMYOEXrJrvqElwfG-UZ65s35sdg=s128",
-    "name": "Bytom 2.0（PoS）",
+    "name": "Bytom",
     "symbol": "BTM",
     "explore": "https://blockmeta.com/tx/",
     "average_block_time": 160
@@ -354,7 +408,7 @@
     "chain_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
     "asset_id": "443e1ef5-bc9b-47d3-be77-07f328876c50",
     "icon_url": "https://mixin-images.zeromesh.net/jXZONI755H6X9-q4bwuAwalc8wqFNIsob5wgqE9lbKNk3c3kkfKnftlD5HYO8lVVYnza1s7sHoduM7RxUTvqHrFiU0U32ABy45XE=s128",
-    "name": "Bytom 1.0（PoW）",
+    "name": "Bytom Classic",
     "symbol": "BTM",
     "explore": "https://blockmeta.com/tx/",
     "average_block_time": 160
