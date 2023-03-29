@@ -90,6 +90,15 @@
     "average_block_time": 6
   },
   {
+    "chain_id": "a0ffd769-5850-4b48-9651-d2ae44a3e64d",
+    "asset_id": "43d61dcd-e413-450d-80b8-101d5e903357",
+    "icon_url": "https://images.mixin.one/VCFf3_JslcMwo1SZx0LCGwHDn7drFYto29i4YAY6OOguAMedESjGOZUIloMiZhme5berYdVXqcKNw9rRzcNRRFt1BP4pREfDTXacDQ=s128",
+    "name": "Mixin Virtual Machine",
+    "symbol": "ETH",
+    "explore": "https://scan.mvm.dev/tx/",
+    "average_block_time": 1
+  },
+  {
     "chain_id": "d6ac94f7-c932-4e11-97dd-617867f0669e",
     "asset_id": "d6ac94f7-c932-4e11-97dd-617867f0669e",
     "icon_url": "https://mixin-images.zeromesh.net/0nSi93kH8io-seyMPFcDrmqH1P-tcGfW7DPdGBJ-GCPPrb-pHFO6bguU-wU1N62FkrWXJYL8hS47L5agAS0zJVpv1wf89-f-EBs=s128",

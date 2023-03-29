@@ -266,7 +266,7 @@ Tool.prototype = {
         }
       });
   
-      const dayMint = new BigNumber(89.87671224);
+      const dayMint = new BigNumber(80.88904107);
       const avgMint = dayMint.div(totalWorks);
   
       nodes.forEach(function(node){
@@ -313,8 +313,8 @@ Tool.prototype = {
           best_snapshot_height: new BigNumber(stats.best_snapshot_height).toFormat(),
           accepted_nodes: stats.accepted_nodes,
           market_price_usd: stats.market_price_usd,
-          minting_reward: new BigNumber(89.87671224).div(stats.accepted_nodes).toFixed(8),
-          staking_xin: new BigNumber(new BigNumber(12710).multipliedBy(stats.accepted_nodes).plus(50000).toFixed(0)).toFormat(),
+          minting_reward: new BigNumber(80.88904107).div(stats.accepted_nodes).toFixed(8),
+          staking_xin: new BigNumber(new BigNumber(13439).multipliedBy(stats.accepted_nodes).plus(50000).toFixed(0)).toFormat(),
           circulation_xin: new BigNumber(new BigNumber(stats.circulation_xin).toFixed(0)).toFormat()
         }));
       });
