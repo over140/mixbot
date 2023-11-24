@@ -51,6 +51,14 @@ Demo.prototype = {
       window.open(url)
     });
 
+    window.tipAddressCallbackFunction = function(address) {
+      self.api.notify('success', address);
+    };
+
+    window.tipSignCallbackFunction = function(signature) {
+      self.api.notify('success', signature);
+    };
+
     $('.open.playlist.action').on('click', function (event) {
       const mixinContext = self.getMixinContext()
       const audios = [
@@ -63,6 +71,16 @@ Demo.prototype = {
         "https://a.b.c/d.mp3",
         ];
       self.playlist(audios);
+    });
+
+    $('.get.address.action').on('click', function (event) {
+      const mixinContext = self.getMixinContext()
+      self.getTipAddress('43d61dcd-e413-450d-80b8-101d5e903357');
+    });
+
+    $('.tip.sign.action').on('click', function (event) {
+      const mixinContext = self.getMixinContext()
+      self.tipSign('43d61dcd-e413-450d-80b8-101d5e903357', 'hello world!');
     });
 
     $('.close.window.action').on('click', function (event) {
@@ -99,6 +117,26 @@ Demo.prototype = {
       window.MixinContext.playlist(audios)
     } else {
       this.api.notify('success', "你的客户端还不支持 playlist");
+    }
+  },
+
+  getTipAddress: function (chainId) {
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.MixinContext && window.webkit.messageHandlers.getTipAddress) {
+      window.webkit.messageHandlers.getTipAddress.postMessage([chainId, 'tipAddressCallbackFunction']);
+    } else if (window.MixinContext && (typeof window.MixinContext.getTipAddress === 'function')) {
+      window.MixinContext.getTipAddress(chainId, 'tipAddressCallbackFunction')
+    } else {
+      this.api.notify('success', "你的客户端还不支持 getTipAddress");
+    }
+  },
+
+  tipSign: function (chainId, msg) {
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.MixinContext && window.webkit.messageHandlers.tipSign) {
+      window.webkit.messageHandlers.tipSign.postMessage([chainId, msg, 'tipSignCallbackFunction']);
+    } else if (window.MixinContext && (typeof window.MixinContext.tipSign === 'function')) {
+      window.MixinContext.tipSign(chainId, msg, 'tipSignCallbackFunction')
+    } else {
+      this.api.notify('success', "你的客户端还不支持 tipSign");
     }
   },
 
