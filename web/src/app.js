@@ -16,7 +16,7 @@ const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
 const router = new Navigo(WEB_ROOT);
 const api = new API(router);
-const OfflinePlugin = require('offline-plugin/runtime');
+// const OfflinePlugin = require('offline-plugin/runtime');
 
 window.i18n = new Locale(navigator.language);
 
@@ -38,17 +38,17 @@ router.hooks({
   }
 });
 
-OfflinePlugin.install({
-  onInstalled: function() { },
+// OfflinePlugin.install({
+//   onInstalled: function() { },
 
-  onUpdating: function() { },
+//   onUpdating: function() { },
 
-  onUpdateReady: function() {
-    OfflinePlugin.applyUpdate();
-  },
+//   onUpdateReady: function() {
+//     OfflinePlugin.applyUpdate();
+//   },
   
-  onUpdated: function() { }
-});
+//   onUpdated: function() { }
+// });
 
 router.on({
   '/': function () {

@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 
 const webRoot = function (env) {
   if (env === 'production') {
@@ -75,7 +74,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name]-[hash].css',
       chunkFilename: '[id]-[hash].css'
-    }),
-    // new OfflinePlugin()
+    })
   ]
 };
