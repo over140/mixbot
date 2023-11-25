@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 
 const webRoot = function (env) {
   if (env === 'production') {
@@ -22,7 +21,7 @@ module.exports = {
   output: {
     publicPath: '/assets/',
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-[chunkHash].js'
+    filename: '[name]-[contenthash:8].js'
   },
 
   resolve: {
@@ -35,22 +34,24 @@ module.exports = {
   module: {
     rules: [
       {
-      test: /\.html$/, 
-      use: [{
-        loader: 'handlebars-loader',
-        options: {
-          helperDirs: path.resolve(__dirname, "./src/helpers")
-        }
-      }]
+        test: /\.html$/, 
+        use: ["handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"]
       }, {
         test: /\.(sa|sc|c)ss$/,
-        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }, {
-        test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
-        use: [
-          'file-loader'
+        use:  [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true
+            },
+          }, 
+          'css-loader', 
+          'sass-loader'
         ]
-    }]
+      }, {
+        test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif|webp)$/,
+        type: 'asset/resource',
+      }]
   },
 
   plugins: [
@@ -64,7 +65,7 @@ module.exports = {
     }),
     new FaviconsWebpackPlugin({
       logo: './src/launcher.png',
-      prefix: 'icons-[hash]-',
+      prefix: 'icons/',
       background: '#FFFFFF'
     }),
     new ScriptExtHtmlWebpackPlugin({
@@ -73,7 +74,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name]-[hash].css',
       chunkFilename: '[id]-[hash].css'
-    }),
-    new OfflinePlugin()
+    })
   ]
 };
