@@ -14,9 +14,8 @@ import Dev from './dev'
 
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
-const router = new Navigo(WEB_ROOT);
+const router = new Navigo('/');
 const api = new API(router);
-// const OfflinePlugin = require('offline-plugin/runtime');
 
 window.i18n = new Locale(navigator.language);
 
@@ -37,18 +36,6 @@ router.hooks({
     router.updatePageLinks();
   }
 });
-
-// OfflinePlugin.install({
-//   onInstalled: function() { },
-
-//   onUpdating: function() { },
-
-//   onUpdateReady: function() {
-//     OfflinePlugin.applyUpdate();
-//   },
-  
-//   onUpdated: function() { }
-// });
 
 router.on({
   '/': function () {
