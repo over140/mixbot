@@ -3,6 +3,7 @@
   <div class="tabs">
     <a class="share tab active">通用分享</a>
     <a class="schema tab">Schema 唤起</a>
+    <a class="js tab">JS 唤起</a>
   </div>
 
   <div class="share demo list active" id="share-content">
@@ -115,6 +116,78 @@
       <tbody>
         <tr>
           <td>
+            【新】主网转账 MIX 单人<br /><span class="description">https://mixin.one/pay/MIX{}?amount=&asset=&memo=</span>
+          </td>
+          <td>
+            <a href="https://mixin.one/pay/MIX3QEgBMATh7aD1YL3x3T5tzt9FSTMZru?amount=0.1&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&memo=7ye3da" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【新】主网转账 MIX 多签<br /><span class="description">https://mixin.one/pay/MIX{}?amount=&asset=&memo=</span>
+          </td>
+          <td>
+            <a href="https://mixin.one/pay/MIXDLSoouhdcvedoiSzNHNRR4FNqVNwwgHUXkFoApTsz35fBHSNGyZEqGCzWuwDYrrWDwCXiaNcPec4C5cW8tCiE7BUHvs6A9YZ4B6FiFAEYY5Nd1etLA7aE7?amount=0.1&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&memo=abcde" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【新】主网转账 MIX 多签不带 Amount<br /><span class="description">https://mixin.one/pay/MIX{}?amount=&asset=&memo=</span>
+          </td>
+          <td>
+            <a href="https://mixin.one/pay/MIXDLSoouhdcvedoiSzNHNRR4FNqVNwwgHUXkFoApTsz35fBHSNGyZEqGCzWuwDYrrWDwCXiaNcPec4C5cW8tCiE7BUHvs6A9YZ4B6FiFAEYY5Nd1etLA7aE7" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【新】主网转账 XIN 开头<br /><span class="description">https://mixin.one/pay/XIN{}</span>
+          </td>
+          <td>
+            <a href="https://mixin.one/pay/XINSFtShWmATt1e5E96kCcKX7BmPaPP4mTEgh9fjGrtBgFqTYghw55Tc4G9FsbX11fJYup9MZQiPXZ1hyv8KN8VoBM2ERotx" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【新】扫码转账<br /><span class="description">https://mixin.one/pay/{userid}</span>
+          </td>
+          <td>
+            <a href="https://mixin.one/pay/d3bee23a-81d4-462e-902a-22dae9ef89ff" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【新】支付链接<br /><span class="description">https://mixin.one/pay/{userid}?amount=&asset=&memo</span>
+          </td>
+          <td>
+            <a href="https://mixin.one/pay/d3bee23a-81d4-462e-902a-22dae9ef89ff?amount=0.1&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&memo=abc" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【新】支付链接带 ReturnTo<br /><span class="description">https://mixin.one/pay/{userid}?amount=&asset=&memo&return_to=</span>
+          </td>
+          <td>
+            <a href="https://mixin.one/pay/d3bee23a-81d4-462e-902a-22dae9ef89ff?amount=0.1&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&memo=Test%3F%26Test&return_to=https%3A%2F%2Fwww.baidu.com" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【旧】支付链接<br /><span class="description">mixin://pay?recipient=&asset=&amount=&memo=&trace=</span>
+          </td>
+          <td>
+            <a href="mixin://pay?recipient=eb490018-da31-4fba-94a3-b949cb3948e5&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&amount=0.01&trace=881861ce-d3a9-4fb0-b811-38bd8b67c707" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            【旧】支付链接 ReturnTo <br /><span class="description">mixin://pay?recipient=&asset=&amount=&memo=&trace=</span>
+          </td>
+          <td>
+            <a href="mixin://pay?recipient=eb490018-da31-4fba-94a3-b949cb3948e5&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&amount=0.01&trace=881861ce-d3a9-4fb0-b811-38bd8b67c710&return_to=www.google.com" class="action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
             用户弹窗<br /><span class="description">mixin://users/:userid</span>
           </td>
           <td>
@@ -127,54 +200,6 @@
           </td>
           <td>
             <a href="mixin://apps/9ecca96f-3473-4f2a-8ad9-0ebb1a3b1fa7?action=open" class="action">唤起</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            支付链接<br /><span class="description">mixin://pay?recipient=&asset=&amount=&memo=&trace=</span>
-          </td>
-          <td>
-            <a href="mixin://pay?recipient=eb490018-da31-4fba-94a3-b949cb3948e5&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&amount=0.01&trace=881861ce-d3a9-4fb0-b811-38bd8b67c707" class="action">唤起</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            支付链接 ReturnTo <br /><span class="description">mixin://pay?recipient=&asset=&amount=&memo=&trace=</span>
-          </td>
-          <td>
-            <a href="mixin://pay?recipient=eb490018-da31-4fba-94a3-b949cb3948e5&asset=965e5c6e-434c-3fa9-b780-c50f43cd955c&amount=0.01&trace=881861ce-d3a9-4fb0-b811-38bd8b67c710&return_to=www.google.com" class="action">唤起</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            播放列表<br /><span class="description">[https://dev-courses-storage.firesbox.com/7000101418/replay/8a564db8-e02b-4136-bd77-ec3526531616.mp3]</span>
-          </td>
-          <td>
-            <span class="open playlist action">唤起</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            获取 TIP 地址<br /><span class="description">ChainId: 43d61dcd-e413-450d-80b8-101d5e903357</span>
-          </td>
-          <td>
-            <span class="get address action">唤起</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            唤起 TIP 签名<br /><span class="description">ChainId: 43d61dcd-e413-450d-80b8-101d5e903357</span>
-          </td>
-          <td>
-            <span class="tip sign action">唤起</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            关闭窗口<br /><span class="description">close</span>
-          </td>
-          <td>
-            <span class="close window action">唤起</span>
           </td>
         </tr>
         <tr>
@@ -207,6 +232,60 @@
           </td>
           <td>
             <span class="authorization action">唤起</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="js demo list" id="js-content">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            播放列表<br /><span class="description">[https://dev-courses-storage.firesbox.com/7000101418/replay/8a564db8-e02b-4136-bd77-ec3526531616.mp3]</span>
+          </td>
+          <td>
+            <span class="open playlist action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            所有资产<br /><span class="description">getAssets</span>
+          </td>
+          <td>
+            <span class="open allassets action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            部分资产<br /><span class="description">getAssets</span>
+          </td>
+          <td>
+            <span class="open assets action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            关闭窗口<br /><span class="description">close</span>
+          </td>
+          <td>
+            <span class="close window action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            获取 TIP 地址<br /><span class="description">ChainId: 43d61dcd-e413-450d-80b8-101d5e903357</span>
+          </td>
+          <td>
+            <span class="get address action">唤起</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            唤起 TIP 签名<br /><span class="description">ChainId: 43d61dcd-e413-450d-80b8-101d5e903357</span>
+          </td>
+          <td>
+            <span class="tip sign action">唤起</span>
           </td>
         </tr>
         <tr>

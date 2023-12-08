@@ -17,7 +17,7 @@ Demo.prototype = {
 
     $('.tabs').on('click', '.tab', function (event) {
       const activeClassName = this.className.split(/\s+/)[0];
-      const tabs = ['share', 'schema'];
+      const tabs = ['share', 'schema', 'js'];
       for (var i = 0; i < tabs.length; i++) {
         const tab = tabs[i];
         if (tab === activeClassName) {
@@ -59,6 +59,10 @@ Demo.prototype = {
       self.api.notify('success', signature);
     };
 
+    window.assetsCallbackFunction = function(assets) {
+      self.api.notify('success', JSON.stringify(assets));
+    };
+
     $('.open.playlist.action').on('click', function (event) {
       const mixinContext = self.getMixinContext()
       const audios = [
@@ -71,6 +75,20 @@ Demo.prototype = {
         "https://a.b.c/d.mp3",
         ];
       self.playlist(audios);
+    });
+
+    $('.open.allassets.action').on('click', function (event) {
+      const mixinContext = self.getMixinContext()
+      const assets = [];
+      self.getAssets(assets);
+    });
+
+    $('.open.assets.action').on('click', function (event) {
+      const mixinContext = self.getMixinContext()
+      const assets = [
+        "b91e18ff-a9ae-3dc7-8679-e935d9a4b34b"
+      ];
+      self.getAssets(assets);
     });
 
     $('.get.address.action').on('click', function (event) {
@@ -148,7 +166,17 @@ Demo.prototype = {
     } else {
       this.api.notify('success', "你的客户端还不支持 close");
     }
-  }
+  },
+
+  getAssets: function (assets) {
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.MixinContext && window.webkit.messageHandlers.getAssets) {
+      window.webkit.messageHandlers.getAssets.postMessage([assets, 'assetsCallbackFunction']);
+    } else if (window.MixinContext && (typeof window.MixinContext.getAssets === 'function')) {
+      window.MixinContext.getAssets(assets, 'assetsCallbackFunction')
+    } else {
+      this.api.notify('success', "你的客户端还不支持 getAssets");
+    }
+  },
 
 };
 
