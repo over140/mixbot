@@ -9,7 +9,7 @@ function Store(router) {
 Store.prototype = {
 
   render: function () {
-    const data = require('./bots-zh.json');
+    const data = navigator.language.includes('zh') ? require('./bots-zh.json') : require('./bots-en.json');
     $('body').attr('class', 'bot layout');
     $('#layout-container').html(this.templateAssets({
       data: data,

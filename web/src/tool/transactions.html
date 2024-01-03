@@ -1,5 +1,5 @@
 <div class="total transactions">
-  全网共有 {{totalTransactions}} 笔正在充值，价值 ${{totalCapitalization}}
+  {{t 'data.transactions.sum' transactions=totalTransactions capitalization=totalCapitalization}}
 </div>
 <table class="transactions list">
   <tbody>
@@ -12,8 +12,8 @@
         <td>
           <span>{{amountStr}} {{symbol}}</span><br />
           <span class="description">
-            充值价值：${{capitalization}} <br/>
-            充值数量：{{number}} 笔
+            {{t 'data.transactions.deposit.value' value=capitalization}}<br/>
+            {{t 'data.transactions.deposit.number' number=number}}
           </span>
         </td>
       </tr>

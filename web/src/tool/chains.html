@@ -1,5 +1,5 @@
 <div class="total chains">
-  支持 {{totalChains}} 条公链，全网共有 {{totalWithdrawals}} 笔正在提现
+  {{t 'data.asset.sum' total=totalCapitalization}}
 </div>
 <table class="chains list">
   <tbody>
@@ -8,18 +8,18 @@
         <td>
           <img src="{{icon_url}}" /><br />
           {{#if is_synchronized}}
-            <span class="green">正常</span><br />
+            <span class="green">{{t 'data.chains.status.active'}}</span><br />
           {{else}}
-            <span class="red">异常</span><br />
+            <span class="red">{{t 'data.chains.status.error'}}</span><br />
           {{/if}}
         </td>
         <td>
           <span style="{{#if is_error}}color: #F67070;{{/if}}">{{name}}</span><br />
           <span class="description">
-            区块高度：{{deposit_block_height}}{{#if is_slow}}（慢 {{difference_block_height}} 个区块）{{/if}} <br/>
-            正在提现：{{withdrawal_pending_count}} 笔<br/>
-            充值确认数：{{threshold}} {{#if deposit_time}}（{{deposit_time}}）{{/if}}<br/>
-            提现手续费：{{withdrawal_fee}} {{symbol}}
+            {{t 'data.chains.item.height' height=deposit_block_height}}{{#if is_slow}}（{{t 'data.chains.item.height.slow' number=difference_block_height}}）{{/if}}<br/>
+            {{t 'data.chains.item.withdrawal.pending' pending=withdrawal_pending_count}}<br/>
+            {{t 'data.chains.item.confirmations' confirmations=threshold}}<br/>
+            {{t 'data.chains.item.withdrawal.fee' fee=withdrawal_fee}} {{symbol}}
           </span>
         </td>
       </tr>

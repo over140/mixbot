@@ -3,31 +3,29 @@
     <tr>
       <td>
         <div class="box">
-          总转账数：{{snapshots_count}} <br />
-          资产种类：{{assets_count}} <br />
-          TPS 峰值：{{peak_throughput}} <br />
+          {{t 'data.stats.transactions' transactions=snapshots_count}} <br />
+          {{t 'data.stats.assets' assets=assets_count}} <br />
+          {{t 'data.stats.tps' tps=peak_throughput}}<br />
         </div>
       </td>
     </tr>
     <tr>
       <td>
         <div class="box">
-        上线日期：2019-02-28 <br />
-        运行天数：{{mintings}} 天 <br />
-        拓扑高度：{{best_snapshot_height}} <br />
-        节点数量：{{accepted_nodes}} <br />
-        挖矿奖励：{{minting_reward}} XIN（节点平均每天） <br />
+        {{t 'data.stats.launch' }}<br />
+        {{t 'data.stats.topology' topology=best_snapshot_height}}<br />
+        {{t 'data.stats.accepted.nodes' nodes=accepted_nodes}}<br />
       </div>
       </td>
     </tr>
     <tr>
       <td>
         <div class="box">
-        XIN 发行量：1,000,000 XIN（恒定） <br />
-        XIN 流通量：{{circulation_xin}} XIN <br />
-        XIN 抵押量：{{staking_xin}} XIN <br />
-        XIN 发行价：20 EOS/XIN（2017-12-25）<br />
-        XIN 当前价：${{market_price_usd}} 
+        {{t 'data.stats.total.supply' }}<br />
+        {{t 'data.stats.circulation' circulation=circulation_xin}}<br />
+        {{t 'data.stats.staking' staking=staking_xin}}<br />
+        {{t 'data.stats.issue.price'}}<br />
+        {{t 'data.stats.current.price' price=market_price_usd}}
       </div>
       </td>
     </tr>

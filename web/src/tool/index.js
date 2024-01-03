@@ -44,12 +44,12 @@ Tool.prototype = {
     $('body').attr('class', 'tool layout');
     $('#layout-container').html(self.templateTools());
 
-    document.title = "Mixin 数据";
+    document.title = i18n.t('data.title');
 
     self.renderAssets();
     self.renderChains();
     self.renderStats();
-    self.renderTransactions();
+    self.renderDeposit();
     self.renderNodes();
 
     $('.tabs').on('click', '.tab', function (event) {
@@ -76,12 +76,12 @@ Tool.prototype = {
     return hash
   },
 
-  fetchTransactions: function (callback, offset, transactions) {
+  fetchDeposits: function (callback, offset, transactions) {
     const self = this;
     if (!offset) {
       offset = TimeUtils.rfc3339(new Date())
     }
-    self.api.request('GET', '/external/transactions?limit=500&offset=' + offset, undefined, function(resp) {
+    self.api.request('GET', '/safe/deposits?limit=500&offset=' + offset, undefined, function(resp) {
       if (resp.error) {
         return;
       }
@@ -92,14 +92,14 @@ Tool.prototype = {
       }
       if (resp.data.length >= 500) {
         const lastTransaction = resp.data[resp.data.length - 1];
-        self.fetchTransactions(callback, lastTransaction.created_at, transactions);
+        self.fetchDeposits(callback, lastTransaction.created_at, transactions);
       } else {
         callback(transactions);
       }
     });
   },
 
-  renderTransactions: function () {
+  renderDeposit: function () {
     const self = this;
     $('#transactions-content').html(self.loading());
 
@@ -115,13 +115,13 @@ Tool.prototype = {
       });
       var totalCapitalization = new BigNumber(0);
 
-      self.fetchTransactions(function(transactions) {
+      self.fetchDeposits(function(transactions) {
         if (resp.error) {
           return;
         }
 
         var groups = [];
-        var trasactionGroups = {};
+        var transactionGroups = {};
         for (var i = 0; i < transactions.length; i++) {
           var transaction = transactions[i];
           var asset = assetMap[transaction.asset_id];
@@ -131,10 +131,10 @@ Tool.prototype = {
           //   asset.price_usd = 0;
           // }
           if (asset && chainAsset) {
-            var trasactionGroup = trasactionGroups[transaction.asset_id];
-            if (trasactionGroup) {
-              trasactionGroup.amount = new BigNumber(trasactionGroup.amount).plus(transaction.amount);
-              trasactionGroup.number++;
+            var transactionGroup = transactionGroups[transaction.asset_id];
+            if (transactionGroup) {
+              transactionGroup.amount = new BigNumber(transactionGroup.amount).plus(transaction.amount);
+              transactionGroup.number++;
             } else {
               var group = {
                 chain_icon_url: chainAsset.icon_url,
@@ -145,7 +145,7 @@ Tool.prototype = {
                 amount: transaction.amount,
                 number: 1
               };
-              trasactionGroups[transaction.asset_id] = group;
+              transactionGroups[transaction.asset_id] = group;
               groups.push(group);
             }
             totalCapitalization = totalCapitalization.plus(new BigNumber(transaction.amount).multipliedBy(asset.price_usd));
